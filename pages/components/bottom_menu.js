@@ -69,12 +69,12 @@ export class BottomMenu extends Component {
                             </Grid.Row>
                         </Grid>
                         <Divider inverted section />
-                        <Image src='https://78.media.tumblr.com/81fcb39644fef1ff91fd5db001a86743/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg' centered size='mini' circular />
+                        <Image src='../../static/images/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg' centered size='mini' circular />
                         <List horizontal inverted divided link>
-                            <List.Item as='a' href='#'>Site Map</List.Item>
-                            <List.Item as='a' href='#'><Link href="/contact">Contact Us</Link></List.Item>
-                            <List.Item as='a' href='#'>Terms and Conditions</List.Item>
-                            <List.Item as='a' href='#'>Privacy Policy</List.Item>
+                            {/* <List.Item>Site Map</List.Item> */}
+                            <List.Item><Link href="/contact" passHref><a>Contact Us</a></Link></List.Item>
+                            {/* <List.Item as='a' href='#'>Terms and Conditions</List.Item> */}
+                            <List.Item><Link href="/contact" passHref><a>Privacy Policy</a></Link></List.Item>
                         </List><br />
                         <List horizontal inverted link>
                             <List.Item as='a' href='#'><Icon name="github" /></List.Item>
@@ -84,7 +84,6 @@ export class BottomMenu extends Component {
                             <List.Item as='a' href='#'><Icon name="twitter" /></List.Item>
                         </List>
                     </Container>
-
                 </Segment >
             </div >
 

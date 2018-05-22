@@ -25,6 +25,7 @@ export default class Resume extends Component {
                     </Header>
                     <Image src='/static/images/max-van-den-oetelaar-601242-unsplash.jpg' fluid rounded={true} bordered />
                 </div>
+                <Button centered size="big">Download Resume</Button>
                 <Container style={{ marginTop: 150, marginLeft: 10, marginRight: 10, marginBottom: 80, border: 1 }}>
                     {/* Techonology  |  Core |  Experienced*/}
                     <Grid>
