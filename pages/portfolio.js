@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import {
-    Modal, Header, Segment, Grid, Image,
+    Modal, Header, Segment, Grid, Image, Container,
     Button, List, Icon, Input, Menu
 } from 'semantic-ui-react';
 import Link from 'next/link';
 import { TopMenu } from './components/menu';
+import { BottomMenu } from './components/bottom_menu';
 
 export default class Portfolio extends Component {
     static async getInitialProps({ pathname, query }) {
@@ -43,6 +44,7 @@ export default class Portfolio extends Component {
                         </Grid.Row>
                     </Grid>
                 </Segment>
+                <BottomMenu />
             </div>
         )
     }
