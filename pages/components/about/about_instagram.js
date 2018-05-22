@@ -19,7 +19,7 @@ export class About_instagram extends Component {
                 </Header>
                 <Grid>
                     <Grid.Row columns={5}>
-                        <Grid.Column>
+                        <Grid.Column className="instagram_photos">
                             <Image src='https://react.semantic-ui.com/assets/images/wireframe/image.png' />
                         </Grid.Column>
                         <Grid.Column>

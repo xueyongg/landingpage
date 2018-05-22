@@ -1,24 +1,27 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
-    static async getInitialProps(ctx) {
-        const initialProps = await Document.getInitialProps(ctx)
-        return { ...initialProps }
-    }
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
 
-    render() {
-        return (
-            <html>
-                <Head>
-                    <style>{`body { margin: 0 } /* custom! */`}</style>
-                    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
-                    <link rel="stylesheet" href="../static/styles/main.css"></link>
-                </Head>
-                <body className="custom_class">
-                    <Main />
-                    <NextScript />
-                </body>
-            </html>
-        )
-    }
+  render() {
+    return (
+      <html>
+        <Head>
+          <style>{`body { margin: 0 } /* custom! */`}</style>
+          <link
+            rel="stylesheet"
+            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
+          />
+          <link rel="stylesheet" href="../static/styles/main.css" />
+        </Head>
+        <body className="custom_class">
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    );
+  }
 }
