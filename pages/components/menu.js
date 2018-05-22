@@ -95,6 +95,7 @@ export class TopMenu extends Component {
           borderless
           fixed={menuFixed && "top"}
           style={menuFixed ? fixedMenuStyle : menuStyle}
+          stackable
         >
           <Container text>
             <Menu.Item>

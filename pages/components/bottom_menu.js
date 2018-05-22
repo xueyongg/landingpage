@@ -26,24 +26,17 @@ export class BottomMenu extends Component {
   }
   render() {
     const { activeItem } = this.state;
-    let menuStyle = {
-      marginTop: 0,
-      marginRight: 10,
-      marginBottom: 0,
-      marginLeft: 10,
-      paddingTop: 6.18,
-      paddingRight: 0,
-      paddingBottom: 6.18,
-      paddingLeft: 0,
-      textColor: "white"
-    };
 
     return (
       <div>
         {/* Footnote */}
         <Segment
           inverted
-          style={{ margin: "5em 0em 0em", padding: "5em 0em" }}
+          style={{
+            margin: "5em 0em 0em",
+            padding: "5em 0em",
+            position: "relative"
+          }}
           vertical
         >
           <Container textAlign="center">
@@ -86,8 +79,8 @@ export class BottomMenu extends Component {
             <Divider inverted section />
             <Image
               src="../../static/images/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
-              centered
               size="mini"
+              centered
               circular
             />
             <List horizontal inverted divided link>
