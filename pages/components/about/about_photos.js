@@ -26,7 +26,7 @@ export class About_photos extends Component {
           This will show a total of 6 photos with no borders padding or margin
         </p>
         <Grid>
-          <Grid.Row columns={3} style={{padding: 0}}>
+          <Grid.Row columns={3} style={{ padding: 0 }}>
             <Grid.Column style={{ padding: 0 }}>
               <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
             </Grid.Column>
@@ -37,8 +37,8 @@ export class About_photos extends Component {
               <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
             </Grid.Column>
           </Grid.Row>
-          <Grid.Row columns={3} style={{padding: 0}}>
-            <Grid.Column style={{padding: 0}}>
+          <Grid.Row columns={3} style={{ padding: 0 }}>
+            <Grid.Column style={{ padding: 0 }}>
               <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
             </Grid.Column>
             <Grid.Column style={{ padding: 0 }}>
