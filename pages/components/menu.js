@@ -48,6 +48,11 @@ export class TopMenu extends Component {
                                 <p>Resume</p>
                             </Menu.Item>
                         </Link>
+                        <Link href={{ pathname: "/contact" }} passHref>
+                            <Menu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick} >
+                                <p>Contact</p>
+                            </Menu.Item>
+                        </Link>
                     </Menu.Menu>
                 </Menu>
             </div>

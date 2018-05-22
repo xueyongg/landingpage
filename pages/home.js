@@ -42,6 +42,7 @@ export class Home extends Component {
                         <Header as="h2" textAlign="center" style={{ marginTop: 50 }}>My life as a developer</Header>
                     </Segment>
                 </div>
+                {/* Include in an arrow from garysheng.com as reference */}
                 <BottomMenu />
             </div>
         )

@@ -17,13 +17,15 @@ export default class Resume extends Component {
             <div>
                 <TopMenu />
                 <div>
+                    <Header as="h4" textAlign="center">
+                        Find out what I have accomplished over the years
+                    </Header>
                     <Header as="h1" textAlign="center">
-                        Welcome Home
-
+                        Resume
                     </Header>
                     <Image src='/static/images/max-van-den-oetelaar-601242-unsplash.jpg' fluid rounded={true} bordered />
                 </div>
-                <Container style={{ marginTop: 150, marginLeft: 10, marginRight: 10, marginBottom: 100, border: 1 }}>
+                <Container style={{ marginTop: 150, marginLeft: 10, marginRight: 10, marginBottom: 80, border: 1 }}>
                     {/* Techonology  |  Core |  Experienced*/}
                     <Grid>
                         <Grid.Row columns={3}>
