@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import { Modal, Header, Button, List, Icon, Input, Menu, Segment } from 'semantic-ui-react';
+import {
+    Modal, Header, Segment, Grid, Image, Container,
+    Button, List, Icon, Input, Menu, Divider
+} from 'semantic-ui-react';
 import Link from 'next/link';
 import { Clock } from './clock';
 // import '../static/semantic/out/semantic.min.css';
@@ -26,40 +29,65 @@ export class BottomMenu extends Component {
         }
 
         return (
+            <div >
+                {/* Footnote */}
+                <Segment
+                    inverted
+                    style={{ margin: '5em 0em 0em', padding: '5em 0em' }}
+                    vertical
+                >
+                    <Container textAlign='center'>
+                        <Grid columns={2} divided stackable inverted>
+                            <Grid.Row>
 
-                <div style={{ height: 450, backgroundColor: "#26262a" }}>
-                    {/* Footnote */}
-                    <Segment vertical>
+                                <Grid.Column>
+                                    <Header inverted as='h4' content='Site Map' />
+                                    <List link inverted>
+                                        <List.Item as='a'>
+                                            <Link href="/" passHref>
+                                                <p>Home</p>
+                                            </Link>
+                                        </List.Item>
+                                        <List.Item as='a'>
+                                            <Link href="/about" passHref>
+                                                <p>About</p>
+                                            </Link></List.Item>
+                                        <List.Item as='a'>
+                                            <Link href="/portfolio" passHref>
+                                                <p>Portfolio</p>
+                                            </Link></List.Item>
+                                        <List.Item as='a'>
+                                            <Link href="/resume" passHref>
+                                                <p>Resume</p>
+                                            </Link></List.Item>
+                                    </List>
+                                </Grid.Column>
+                                <Grid.Column>
+                                    <Header inverted as='h4' content='Footer Header' />
+                                    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                                </Grid.Column>
+                            </Grid.Row>
+                        </Grid>
+                        <Divider inverted section />
+                        <Image src='https://78.media.tumblr.com/81fcb39644fef1ff91fd5db001a86743/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg' centered size='mini' circular />
+                        <List horizontal inverted divided link>
+                            <List.Item as='a' href='#'>Site Map</List.Item>
+                            <List.Item as='a' href='#'><Link href="/contact">Contact Us</Link></List.Item>
+                            <List.Item as='a' href='#'>Terms and Conditions</List.Item>
+                            <List.Item as='a' href='#'>Privacy Policy</List.Item>
+                        </List><br />
+                        <List horizontal inverted link>
+                            <List.Item as='a' href='#'><Icon name="github" /></List.Item>
+                            <List.Item as='a' href='#'><Icon name="linkedin" /></List.Item>
+                            <List.Item as='a' href='#'><Icon name="tumblr" /></List.Item>
+                            <List.Item as='a' href='#'><Icon name="facebook f" /></List.Item>
+                            <List.Item as='a' href='#'><Icon name="twitter" /></List.Item>
+                        </List>
+                    </Container>
 
-                        <Header as="h2" textAlign="center" style={{ marginTop: 50 }} color="white">My footnote</Header>
-                        <Menu secondary inverted>
-                            <Menu.Menu style={menuStyle}>
-                                <Link href={{ pathname: "/" }} passHref>
-                                    <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} >
-                                        <p>Home</p>
-                                    </Menu.Item>
-                                </Link>
-                                <Link href={{ pathname: "/portfolio", query: { name: "" } }} passHref>
-                                    <Menu.Item name='portfolio' active={activeItem === 'portfolio'} onClick={this.handleItemClick} >
-                                        <p>Portfolio</p>
-                                    </Menu.Item>
-                                </Link>
-                                <Link href={{ pathname: "/about" }} passHref>
-                                    <Menu.Item name='about' active={activeItem === 'about'} onClick={this.handleItemClick} >
-                                        <p>About</p>
-                                    </Menu.Item>
-                                </Link>
-                                <Link href={{ pathname: "/resume" }} passHref>
-                                    <Menu.Item name='resume' active={activeItem === 'resume'} onClick={this.handleItemClick} >
-                                        <p>Resume</p>
-                                    </Menu.Item>
-                                </Link>
-                            </Menu.Menu>
-                        </Menu>
-                        <p>All rights reserved</p>
-                        <p>Include social media</p>
-                    </Segment>
-                </div>
+                </Segment >
+            </div >
+
         )
     }
 }
