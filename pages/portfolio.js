@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { TopMenu } from './components/menu';
 import { BottomMenu } from './components/bottom_menu';
 
-export default class Portfolio extends Component {
+export class Portfolio extends Component {
     static async getInitialProps({ pathname, query }) {
         return { query }
     }

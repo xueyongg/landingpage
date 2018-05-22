@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Modal, Header, Button, List, Icon, Input, Menu, Segment, Container, Image } from 'semantic-ui-react';
 import Link from 'next/link';
 import { TopMenu } from './components/menu';
-import { Projects } from './components/home_projects';
+import { Home_projects } from './components/home_projects';
 import { BottomMenu } from './components/bottom_menu';
 import { Todo } from './todo';
 const moment = require('moment');
@@ -32,14 +32,14 @@ export class Home extends Component {
                     {/* Projects */}
                     <Segment vertical>
                         <Header as="h2" textAlign="center" style={{ marginTop: 50 }}>My latest projects</Header>
-
-                        <Projects />
+                        <Home_projects />
                     </Segment>
                 </div>
                 <div style={{ height: 400, backgroundColor: "#e3dbd7" }}>
                     {/* About */}
                     <Segment vertical>
                         <Header as="h2" textAlign="center" style={{ marginTop: 50 }}>My life as a developer</Header>
+                        <Button><Link href="/about" passHref><a>Learn more about me</a></Link></Button>
                     </Segment>
                 </div>
                 {/* Include in an arrow from garysheng.com as reference */}

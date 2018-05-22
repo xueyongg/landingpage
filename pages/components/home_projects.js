@@ -3,7 +3,7 @@ import { Modal, Header, Button, List, Icon, Input, Menu, Segment, Container, Gri
 import Link from 'next/link';
 const moment = require('moment');
 
-export class Projects extends Component {
+export class Home_projects extends Component {
     static async getInitialProps({ query }) {
         // console.log(query);
         return true;
@@ -32,7 +32,8 @@ export class Projects extends Component {
                         <Grid.Row columns={3}>
                             <Grid.Column />
                             <Grid.Column >
-                                <Button >View more projects</Button>
+
+                                <Button ><Link href="/about" passHref><a>View more projects</a></Link></Button>
                             </Grid.Column>
                         </Grid.Row>
                     </Grid>
