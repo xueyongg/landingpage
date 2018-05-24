@@ -16,43 +16,87 @@ import {
   Dropdown,
   Divider,
   Visibility,
-  Form
+  Form,
+  TextArea
 } from "semantic-ui-react";
 import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
 
 export default class Contact extends Component {
   state = {
-    menuFixed: false,
-    overlayFixed: false
+    first_name_error: false,
+    last_name_error: false,
+    email_error: false,
+    about_error: false,
+    hideSuccessMessage: true,
+    hideErrorMessage: true,
+    disableSubmit: true,
+    form: {
+      first_name: "",
+      last_name: "",
+      email: "",
+      about: ""
+    },
+    loading: false
   };
 
-  handleOverlayRef = c => {
-    const { overlayRect } = this.state;
+  onChange(e) {
+    let target = e.target.name;
+    let value = e.target.value;
+    let state = this.state;
+    switch (target) {
+      case "first_name":
+        state.firstName = value;
+        break;
+      case "last_name":
+        state.last_name = value;
+        break;
+      case "email":
+        state.email = value;
+        break;
+      case "about":
+        state.about = value;
+        break;
+    }
+    if (value.length === 0) {
+      state[`${target}_error`] = true;
+    } else {
+      state[`${target}_error`] = false;
+    }
+    state.hideErrorMessage = true;
+    this.setState(state);
+  }
 
-    if (!overlayRect)
-      this.setState({
-        overlayRect: _.pick(c.getBoundingClientRect(), "height", "width")
-      });
-  };
-
-  stickOverlay = () => this.setState({ overlayFixed: true });
-
-  stickTopMenu = () => {
-    this.setState({ menuFixed: true });
-    console.log("stickTopMenu");
-  };
-
-  unStickOverlay = () => this.setState({ overlayFixed: false });
-
-  unStickTopMenu = () => {
-    this.setState({ menuFixed: false });
-    console.log("unStickTopMenu");
-  };
-
+  onSubmit(event) {
+    event.preventDefault();
+    let state = this.state;
+    let { first_name, last_name, email, about } = state.form;
+    if (!first_name || !last_name || !email || !about) {
+      state.hideErrorMessage = false;
+      if (!first_name) {
+        state.first_name_error = true;
+      }
+      if (!last_name) {
+        state.last_name_error = true;
+      }
+      if (!email) {
+        state.email_error = true;
+      }
+      if (!about) {
+        state.about_error = true;
+      }
+    } else {
+      // Submit form, callback, change hideErrorMessage state to be false
+      setTimeout(() => {
+        state.loading = false;
+        state.hideSuccessMessage = false;
+        state.hideErrorMessage = true;
+      }, 1000);
+      state.loading = true;
+    }
+    this.setState(state);
+  }
   render() {
-    const { menuFixed, overlayFixed, overlayRect } = this.state;
-
     return (
       <div>
         <TopMenu />
@@ -73,38 +117,95 @@ export default class Contact extends Component {
         <Container text>
           <div className="login-form">
             <Grid
-              textAlign="center"
               style={{ height: "100%" }}
               verticalAlign="middle"
+              textAlign="center"
             >
               <Grid.Column style={{ maxWidth: 450 }}>
                 <Header as="h2" color="teal" textAlign="center">
-                  <Image src="/logo.png" /> Log-in to your account
+                  Fix up a meet up with me
                 </Header>
-                <Form size="large">
+                <Form
+                  size="large"
+                  
+                  loading={this.state.loading}
+                  style={{ textAlign: "left" }}
+                >
                   <Segment stacked>
+                    <Form.Group widths="equal">
+                      <Form.Input
+                        fluid
+                        id="form-subcomponent-shorthand-input-first-name"
+                        label="First name"
+                        placeholder="First name"
+                        error={this.state.first_name_error}
+                        value={this.state.first_name}
+                        name="first_name"
+                        onChange={(e, value) => this.onChange(e)}
+                        autoFocus
+                        required
+                      />
+                      <Form.Input
+                        fluid
+                        id="form-subcomponent-shorthand-input-last-name"
+                        label="Last name"
+                        placeholder="Last name"
+                        error={this.state.last_name_error}
+                        value={this.state.last_name}
+                        onChange={(e, value) => this.onChange(e)}
+                        name="last_name"
+                        required
+                      />
+                    </Form.Group>
                     <Form.Input
                       fluid
                       icon="user"
+                      label="Email Address"
                       iconPosition="left"
-                      placeholder="E-mail address"
+                      placeholder="Email Address"
+                      error={this.state.email_error}
+                      value={this.state.email}
+                      onChange={(e, value) => this.onChange(e)}
+                      name="email"
+                      required
                     />
-                    <Form.Input
-                      fluid
-                      icon="lock"
-                      iconPosition="left"
-                      placeholder="Password"
-                      type="password"
+                    <Form.Field
+                      control={TextArea}
+                      label="About"
+                      placeholder="Tell us more about you..."
+                      error={this.state.about_error}
+                      value={this.state.about}
+                      onChange={(e, value) => {
+                        this.onChange(e);
+                      }}
+                      name="about"
+                      required
                     />
 
-                    <Button color="teal" fluid size="large">
-                      Login
+                    <Button
+                      color="teal"
+                      fluid
+                      size="large"
+                      onClick={event => this.onSubmit(event)}
+                    >
+                      Send Inquiry
                     </Button>
                   </Segment>
                 </Form>
-                <Message>
-                  New to us? <a href="#">Sign Up</a>
-                </Message>
+                <Message
+                  hidden={this.state.hideSuccessMessage}
+                  style={{ textAlign: "centered" }}
+                  success
+                  header="Form Completed"
+                  content="Your request has been sent."
+                />
+                <Message
+                  hidden={this.state.hideErrorMessage}
+                  style={{ textAlign: "centered" }}
+                  error
+                  header="Error"
+                  content="All fields should be filled in."
+                />
               </Grid.Column>
             </Grid>
           </div>
