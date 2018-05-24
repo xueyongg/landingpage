@@ -69,7 +69,6 @@ export class Home_about extends Component {
       hover,
       normalStyle
     } = this.state;
-    console.log(this.state);
     const content = (
       <div>
         <Header as="h2" inverted>

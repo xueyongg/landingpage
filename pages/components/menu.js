@@ -60,8 +60,11 @@ export class TopMenu extends Component {
     console.log("unStickTopMenu: menufixed is false");
   };
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  handleItemClick(e, { name }) {
+    this.setState({ activeItem: name });
+  }
   static async getInitialprops({}) {
+    let activeLink = "home";
     return activeLink;
   }
   render() {
@@ -72,6 +75,7 @@ export class TopMenu extends Component {
       activeItem,
       visible
     } = this.state;
+    console.log(activeItem);
     let menuStyle = {
       border: "none",
       borderRadius: 0,
@@ -135,7 +139,9 @@ export class TopMenu extends Component {
                     <Menu.Item
                       name="home"
                       active={activeItem === "home"}
-                      onClick={this.handleItemClick}
+                      onClick={() => {
+                        this.handleItemClick();
+                      }}
                     >
                       <p>Home</p>
                     </Menu.Item>
@@ -144,7 +150,9 @@ export class TopMenu extends Component {
                     <Menu.Item
                       name="portfolio"
                       active={activeItem === "portfolio"}
-                      onClick={this.handleItemClick}
+                      onClick={() => {
+                        this.handleItemClick();
+                      }}
                     >
                       <p>Portfolio</p>
                     </Menu.Item>
@@ -153,7 +161,9 @@ export class TopMenu extends Component {
                     <Menu.Item
                       name="about"
                       active={activeItem === "about"}
-                      onClick={this.handleItemClick}
+                      onClick={() => {
+                        this.handleItemClick();
+                      }}
                     >
                       <p>About</p>
                     </Menu.Item>
@@ -162,7 +172,9 @@ export class TopMenu extends Component {
                     <Menu.Item
                       name="resume"
                       active={activeItem === "resume"}
-                      onClick={this.handleItemClick}
+                      onClick={() => {
+                        this.handleItemClick();
+                      }}
                     >
                       <p>Resume</p>
                     </Menu.Item>
@@ -171,7 +183,9 @@ export class TopMenu extends Component {
                     <Menu.Item
                       name="contact"
                       active={activeItem === "contact"}
-                      onClick={this.handleItemClick}
+                      onClick={() => {
+                        this.handleItemClick();
+                      }}
                     >
                       <p>Contact</p>
                     </Menu.Item>
@@ -186,7 +200,6 @@ export class TopMenu extends Component {
           onUpdate={() => {
             this.handleOnUpdate();
           }}
-        
           minWidth={150}
           maxWidth={Responsive.onlyMobile.maxWidth}
         >
