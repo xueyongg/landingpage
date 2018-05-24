@@ -98,7 +98,7 @@ export class Home_about extends Component {
             >
               <Link href="/about" passHref>
                 <Button
-                  info
+                  icon
                   size="huge"
                   color="black"
                   inverted

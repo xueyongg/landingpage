@@ -28,6 +28,10 @@ export class TopMenu extends Component {
     visible: false
   };
 
+  handleOnUpdate() {
+    this.setState({});
+  }
+
   toggleVisibility() {
     this.setState({ visible: !this.state.visible });
   }
@@ -99,7 +103,11 @@ export class TopMenu extends Component {
 
     return (
       <div>
-        <Responsive {...Responsive.onlyComputer && Responsive.onlyTablet}>
+        <Responsive
+          // {...Responsive.onlyComputer}
+          minWidth={Responsive.onlyTablet.minWidth}
+          maxWidth={Responsive.onlyWidescreen.maxWidth}
+        >
           <Visibility
             onBottomPassed={this.stickTopMenu}
             onBottomVisible={this.unStickTopMenu}
@@ -174,7 +182,14 @@ export class TopMenu extends Component {
           </Visibility>
         </Responsive>
 
-        <Responsive {...Responsive.onlyMobile}>
+        <Responsive
+          onUpdate={() => {
+            this.handleOnUpdate();
+          }}
+        
+          minWidth={150}
+          maxWidth={Responsive.onlyMobile.maxWidth}
+        >
           <Sidebar.Pushable as={Segment}>
             <Sidebar
               as={Menu}
