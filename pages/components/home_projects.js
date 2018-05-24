@@ -10,7 +10,8 @@ import {
   Segment,
   Container,
   Grid,
-  Image
+  Image,
+  Dimmer
 } from "semantic-ui-react";
 import Link from "next/link";
 const moment = require("moment");
@@ -21,9 +22,29 @@ export class Home_projects extends Component {
     return true;
   }
   state = {};
+  handleShow = num => {
+    let state = this.state;
+    state[`active${num}`] = true;
+    this.setState({ active: true, active1: true });
+  };
+  handleHide = num => {
+    let state = this.state;
+    state[`active${num}`] = false;
+    this.setState({ active: false, active1: false });
+  };
 
   render() {
-    const { activeItem } = this.state;
+    const { active, active1, active2, active3 } = this.state;
+    const content = (
+      <div>
+        <Header as="h2" inverted>
+          Title
+        </Header>
+
+        <Button primary>Add</Button>
+        <Button>View</Button>
+      </div>
+    );
 
     return (
       <div>
@@ -33,7 +54,19 @@ export class Home_projects extends Component {
           <Grid>
             <Grid.Row columns={3}>
               <Grid.Column>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                <Dimmer.Dimmable
+                  as={Image}
+                  dimmed={active}
+                  dimmer={{ active, content }}
+                  onMouseEnter={e => {
+                    this.handleShow(1);
+                  }}
+                  onMouseLeave={e => {
+                    this.handleHide(1);
+                  }}
+                  src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
+                />
+                {/* <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" /> */}
               </Grid.Column>
               <Grid.Column>
                 <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />

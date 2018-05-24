@@ -29,7 +29,6 @@ export class BottomMenu extends Component {
 
     return (
       <div>
-        
         {/* Footnote */}
         <Segment
           inverted
@@ -83,6 +82,7 @@ export class BottomMenu extends Component {
               size="mini"
               centered
               circular
+              style={{ marginBottom: 10 }}
             />
             <List horizontal inverted divided link>
               {/* <List.Item>Site Map</List.Item> */}
@@ -118,7 +118,6 @@ export class BottomMenu extends Component {
             </List>
           </Container>
         </Segment>
-        
       </div>
     );
   }
