@@ -26,18 +26,18 @@ export default class Resume extends Component {
       <div>
         <TopMenu />
         <div>
-          <Header as="h4" textAlign="center">
-            Find out what I have accomplished over the years
-          </Header>
-          <Header as="h1" textAlign="center">
-            Resume
-          </Header>
           <Image
             src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
             fluid
             rounded={true}
             bordered
           />
+          <Header as="h4" textAlign="center">
+            Find out what I have accomplished over the years
+          </Header>
+          <Header as="h1" textAlign="center">
+            Resume
+          </Header>
         </div>
         <Button centered size="big">
           Download Resume

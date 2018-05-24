@@ -40,14 +40,14 @@ export class TopMenu extends Component {
 
   stickTopMenu = () => {
     this.setState({ menuFixed: true });
-    console.log("stickTopMenu");
+    console.log("stickTopMenu: menufixed is true");
   };
 
   unStickOverlay = () => this.setState({ overlayFixed: false });
 
   unStickTopMenu = () => {
     this.setState({ menuFixed: false });
-    console.log("unStickTopMenu");
+    console.log("unStickTopMenu: menufixed is false");
   };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -87,13 +87,13 @@ export class TopMenu extends Component {
 
     return (
       <Visibility
-        // onBottomPassed={this.stickTopMenu}
-        // onBottomVisible={this.unStickTopMenu}
+        onBottomPassed={this.stickTopMenu}
+        onBottomVisible={this.unStickTopMenu}
         once={false}
       >
         <Menu
           borderless
-          fixed={menuFixed && "top"}
+          fixed={menuFixed ? "top" : ""}
           style={menuFixed ? fixedMenuStyle : menuStyle}
           stackable
         >

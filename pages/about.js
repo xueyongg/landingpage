@@ -26,21 +26,25 @@ export default class About extends Component {
   render() {
     return (
       <div>
+        <style>{`
+          html, body {
+            background: #fff;
+          }
+        `}</style>
         <TopMenu />
-        <div>
-          <Header as="h4" textAlign="center">
-            Discover more about me and my personhood
-          </Header>
-          <Header as="h1" textAlign="center">
-            About me
-          </Header>
-          <Image
-            src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
-            fluid
-            rounded={true}
-            bordered
-          />
-        </div>
+
+        <Image
+          src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
+          fluid
+          rounded={true}
+          bordered
+        />
+        <Header as="h4" textAlign="center">
+          Discover more about me and my personhood
+        </Header>
+        <Header as="h1" textAlign="center">
+          About me
+        </Header>
 
         <div
           style={{

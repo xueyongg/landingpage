@@ -30,15 +30,15 @@ export class Home extends Component {
 
     return (
       <div>
-        <Header as="h1" textAlign="center">
-          Welcome Home
-        </Header>
         <Image
           src="/static/images/homeImage.jpg"
           fluid
           rounded={true}
           bordered
         />
+        <Header as="h1" textAlign="center">
+          Welcome Home
+        </Header>
         <div class="centered">Centered</div>
         <div style={{ height: 400, backgroundColor: "white" }}>
           {/* Simple Summary of me and what i am passionate about */}

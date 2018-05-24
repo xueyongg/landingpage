@@ -56,18 +56,19 @@ export default class Contact extends Component {
     return (
       <div>
         <TopMenu />
-        <Header as="h4" textAlign="center">
-          Let's have a little chat
-        </Header>
-        <Header as="h1" textAlign="center">
-          Contact me
-        </Header>
+
         <Image
           src="/static/images/lili-kovac-444033-unsplash.jpg"
           fluid
           rounded={true}
           bordered
         />
+        <Header as="h4" textAlign="center">
+          Let's have a little chat
+        </Header>
+        <Header as="h1" textAlign="center">
+          Contact me
+        </Header>
 
         <Container text>
           <div className="login-form">
