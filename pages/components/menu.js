@@ -14,17 +14,23 @@ import {
   Menu,
   Divider,
   Visibility,
-  Dropdown
+  Dropdown,
+  Responsive,
+  Sidebar
 } from "semantic-ui-react";
 import Link from "next/link";
 import { Clock } from "./clock";
-// import '../static/semantic/out/semantic.min.css';
 
 export class TopMenu extends Component {
   state = {
     menuFixed: false,
-    overlayFixed: false
+    overlayFixed: false,
+    visible: false
   };
+
+  toggleVisibility() {
+    this.setState({ visible: !this.state.visible });
+  }
 
   handleOverlayRef = c => {
     const { overlayRect } = this.state;
@@ -55,7 +61,13 @@ export class TopMenu extends Component {
     return activeLink;
   }
   render() {
-    const { menuFixed, overlayFixed, overlayRect, activeItem } = this.state;
+    const {
+      menuFixed,
+      overlayFixed,
+      overlayRect,
+      activeItem,
+      visible
+    } = this.state;
     let menuStyle = {
       border: "none",
       borderRadius: 0,
@@ -86,78 +98,151 @@ export class TopMenu extends Component {
     };
 
     return (
-      <Visibility
-        onBottomPassed={this.stickTopMenu}
-        onBottomVisible={this.unStickTopMenu}
-        once={false}
-      >
-        <Menu
-          borderless
-          fixed={menuFixed ? "top" : ""}
-          style={menuFixed ? fixedMenuStyle : menuStyle}
-          stackable
-        >
-          <Container text>
-            <Menu.Item>
-              <Link href="/" passHref>
-                <Image
-                  size="mini"
-                  src="https://78.media.tumblr.com/81fcb39644fef1ff91fd5db001a86743/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
-                  circular
-                />
-              </Link>
-            </Menu.Item>
+      <div>
+        <Responsive {...Responsive.onlyComputer && Responsive.onlyTablet}>
+          <Visibility
+            onBottomPassed={this.stickTopMenu}
+            onBottomVisible={this.unStickTopMenu}
+            once={false}
+          >
+            <Menu
+              borderless
+              fixed={menuFixed ? "top" : ""}
+              style={menuFixed ? fixedMenuStyle : menuStyle}
+              stackable
+            >
+              <Container text>
+                <Menu.Item>
+                  <Link href="/" passHref>
+                    <Image
+                      size="mini"
+                      src="https://78.media.tumblr.com/81fcb39644fef1ff91fd5db001a86743/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
+                      circular
+                    />
+                  </Link>
+                </Menu.Item>
 
-            <Menu.Menu position="right">
-              <Link href={{ pathname: "/" }} passHref>
-                <Menu.Item
-                  name="home"
-                  active={activeItem === "home"}
-                  onClick={this.handleItemClick}
-                >
-                  <p>Home</p>
+                <Menu.Menu position="right">
+                  <Link href={{ pathname: "/" }} passHref>
+                    <Menu.Item
+                      name="home"
+                      active={activeItem === "home"}
+                      onClick={this.handleItemClick}
+                    >
+                      <p>Home</p>
+                    </Menu.Item>
+                  </Link>
+                  <Link href={{ pathname: "/portfolio" }} passHref>
+                    <Menu.Item
+                      name="portfolio"
+                      active={activeItem === "portfolio"}
+                      onClick={this.handleItemClick}
+                    >
+                      <p>Portfolio</p>
+                    </Menu.Item>
+                  </Link>
+                  <Link href={{ pathname: "/about" }} passHref>
+                    <Menu.Item
+                      name="about"
+                      active={activeItem === "about"}
+                      onClick={this.handleItemClick}
+                    >
+                      <p>About</p>
+                    </Menu.Item>
+                  </Link>
+                  <Link href={{ pathname: "/resume" }} passHref>
+                    <Menu.Item
+                      name="resume"
+                      active={activeItem === "resume"}
+                      onClick={this.handleItemClick}
+                    >
+                      <p>Resume</p>
+                    </Menu.Item>
+                  </Link>
+                  <Link href={{ pathname: "/contact" }} passHref>
+                    <Menu.Item
+                      name="contact"
+                      active={activeItem === "contact"}
+                      onClick={this.handleItemClick}
+                    >
+                      <p>Contact</p>
+                    </Menu.Item>
+                  </Link>
+                </Menu.Menu>
+              </Container>
+            </Menu>
+          </Visibility>
+        </Responsive>
+
+        <Responsive {...Responsive.onlyMobile}>
+          <Sidebar.Pushable as={Segment}>
+            <Sidebar
+              as={Menu}
+              animation="overlay"
+              width="very thin"
+              visible={visible}
+              icon
+              direction="top"
+              inverted
+              style={{
+                height: "100%",
+                overflowX: "hidden",
+                overflowY: "hidden"
+              }}
+            >
+              <Menu.Item
+                name="toggle"
+                onClick={() => {
+                  this.toggleVisibility();
+                }}
+              >
+                <Icon name="align justify" size="large" />
+              </Menu.Item>
+
+              <Link href="/" passHref>
+                <Menu.Item name="home">
+                  <Icon name="home" size="large" />
                 </Menu.Item>
               </Link>
               <Link href={{ pathname: "/portfolio" }} passHref>
-                <Menu.Item
-                  name="portfolio"
-                  active={activeItem === "portfolio"}
-                  onClick={this.handleItemClick}
-                >
-                  <p>Portfolio</p>
+                <Menu.Item name="portfolio">
+                  <Icon name="folder open outline" size="large" />
                 </Menu.Item>
               </Link>
               <Link href={{ pathname: "/about" }} passHref>
-                <Menu.Item
-                  name="about"
-                  active={activeItem === "about"}
-                  onClick={this.handleItemClick}
-                >
-                  <p>About</p>
+                <Menu.Item name="about">
+                  <Icon name="user outline" size="large" />
                 </Menu.Item>
               </Link>
               <Link href={{ pathname: "/resume" }} passHref>
-                <Menu.Item
-                  name="resume"
-                  active={activeItem === "resume"}
-                  onClick={this.handleItemClick}
-                >
-                  <p>Resume</p>
+                <Menu.Item name="resume">
+                  <Icon name="folder open outline" size="large" />
                 </Menu.Item>
               </Link>
               <Link href={{ pathname: "/contact" }} passHref>
-                <Menu.Item
-                  name="contact"
-                  active={activeItem === "contact"}
-                  onClick={this.handleItemClick}
-                >
-                  <p>Contact</p>
+                <Menu.Item name="contact" link>
+                  <Icon name="add user" size="large" />
                 </Menu.Item>
               </Link>
-            </Menu.Menu>
-          </Container>
-        </Menu>
-      </Visibility>
+            </Sidebar>
+            <Sidebar.Pusher width="very thin">
+              <Menu borderless fluid icon style={{ border: 0 }}>
+                <Menu.Menu position="left" borderless>
+                  <Menu.Item
+                    borderless
+                    name="mobile-home"
+                    onClick={() => {
+                      this.toggleVisibility();
+                    }}
+                  >
+                    <Icon name="align justify" size="large" link />
+                  </Menu.Item>
+                </Menu.Menu>
+              </Menu>
+            </Sidebar.Pusher>
+          </Sidebar.Pushable>
+        </Responsive>
+      </div>
     );
   }
 }
