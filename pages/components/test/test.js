@@ -14,6 +14,7 @@ import {
   Visibility
 } from "semantic-ui-react";
 import { TopMenu } from "../menu";
+import { BottomMenu } from "../bottom_menu";
 
 const menuStyle = {
   border: "none",
@@ -67,7 +68,7 @@ const RightImage = () => (
     floated="right"
     size="medium"
     src="/assets/images/wireframe/square-image.png"
-    style={{ margin: "2em -4em 2em 2em" }}
+    // style={{ margin: "2em -4em 2em 2em" }}
   />
 );
 
@@ -238,7 +239,7 @@ export default class StickyLayout extends Component {
           {_.times(2, i => <Paragraph key={i} />)}
         </Container>
 
-        <Segment
+        {/* <Segment
           inverted
           style={{ margin: "5em 0em 0em", padding: "5em 0em" }}
           vertical
@@ -283,7 +284,12 @@ export default class StickyLayout extends Component {
               </Grid.Row>
             </Grid>
             <Divider inverted section />
-            <Image src="/logo.png" centered size="mini" />
+            <Image
+              src="../../static/images/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
+              circular
+              centered
+              size="mini"
+            />
             <List horizontal inverted divided link>
               <List.Item as="a" href="#">
                 Site Map
@@ -299,7 +305,8 @@ export default class StickyLayout extends Component {
               </List.Item>
             </List>
           </Container>
-        </Segment>
+        </Segment> */}
+        <BottomMenu />
       </div>
     );
   }

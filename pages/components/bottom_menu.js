@@ -29,6 +29,7 @@ export class BottomMenu extends Component {
 
     return (
       <div>
+        
         {/* Footnote */}
         <Segment
           inverted
@@ -117,6 +118,7 @@ export class BottomMenu extends Component {
             </List>
           </Container>
         </Segment>
+        
       </div>
     );
   }
