@@ -33,7 +33,7 @@ export default class extends Component {
             key="viewport"
           />
         </Head>
-        <TopMenu />
+        <TopMenu currentPage/>
         <Home />
       </div>
     );

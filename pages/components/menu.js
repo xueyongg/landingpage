@@ -20,8 +20,13 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 import { Clock } from "./clock";
+import { PropTypes } from "prop-types";
 
 export class TopMenu extends Component {
+  getInitialprops({ pathname }) {
+    console.log(currentPage);
+    return currentPage;
+  }
   state = {
     menuFixed: false,
     overlayFixed: false,
@@ -75,7 +80,7 @@ export class TopMenu extends Component {
       activeItem,
       visible
     } = this.state;
-    
+
     let menuStyle = {
       border: "none",
       borderRadius: 0,
@@ -125,7 +130,7 @@ export class TopMenu extends Component {
             >
               <Container text>
                 <Menu.Item>
-                  <Link href="/" passHref>
+                  <Link prefetch href="/" passHref>
                     <Image
                       size="mini"
                       src="https://78.media.tumblr.com/81fcb39644fef1ff91fd5db001a86743/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
@@ -135,7 +140,7 @@ export class TopMenu extends Component {
                 </Menu.Item>
 
                 <Menu.Menu position="right">
-                  <Link href={{ pathname: "/" }} passHref>
+                  <Link prefetch href={{ pathname: "/" }} passHref>
                     <Menu.Item
                       name="home"
                       active={activeItem === "home"}
@@ -146,7 +151,7 @@ export class TopMenu extends Component {
                       <p>Home</p>
                     </Menu.Item>
                   </Link>
-                  <Link href={{ pathname: "/portfolio" }} passHref>
+                  <Link prefetch href={{ pathname: "/portfolio" }} passHref>
                     <Menu.Item
                       name="portfolio"
                       active={activeItem === "portfolio"}
@@ -157,7 +162,7 @@ export class TopMenu extends Component {
                       <p>Portfolio</p>
                     </Menu.Item>
                   </Link>
-                  <Link href={{ pathname: "/about" }} passHref>
+                  <Link prefetch href={{ pathname: "/about" }} passHref>
                     <Menu.Item
                       name="about"
                       active={activeItem === "about"}
@@ -168,7 +173,7 @@ export class TopMenu extends Component {
                       <p>About</p>
                     </Menu.Item>
                   </Link>
-                  <Link href={{ pathname: "/resume" }} passHref>
+                  <Link prefetch href={{ pathname: "/resume" }} passHref>
                     <Menu.Item
                       name="resume"
                       active={activeItem === "resume"}
@@ -179,7 +184,7 @@ export class TopMenu extends Component {
                       <p>Resume</p>
                     </Menu.Item>
                   </Link>
-                  <Link href={{ pathname: "/contact" }} passHref>
+                  <Link prefetch href={{ pathname: "/contact" }} passHref>
                     <Menu.Item
                       name="contact"
                       active={activeItem === "contact"}
@@ -224,7 +229,7 @@ export class TopMenu extends Component {
                   this.toggleVisibility();
                 }}
               >
-                <Icon name="align justify" size="large" />
+                <Icon name="sidebar" size="large" />
               </Menu.Item>
 
               <Link href="/" passHref>
@@ -244,12 +249,12 @@ export class TopMenu extends Component {
               </Link>
               <Link href={{ pathname: "/resume" }} passHref>
                 <Menu.Item name="resume">
-                  <Icon name="folder open outline" size="large" />
+                  <Icon name="file text outline" size="large" />
                 </Menu.Item>
               </Link>
               <Link href={{ pathname: "/contact" }} passHref>
                 <Menu.Item name="contact" link>
-                  <Icon name="add user" size="large" />
+                  {<Icon name="mail outline" size="large" />}
                 </Menu.Item>
               </Link>
             </Sidebar>
@@ -263,7 +268,7 @@ export class TopMenu extends Component {
                       this.toggleVisibility();
                     }}
                   >
-                    <Icon name="align justify" size="large" link />
+                    <Icon name="sidebar" size="large" link />
                   </Menu.Item>
                 </Menu.Menu>
               </Menu>
@@ -274,3 +279,7 @@ export class TopMenu extends Component {
     );
   }
 }
+
+TopMenu.prototypes = {
+  currentPage: PropTypes.string
+};

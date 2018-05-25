@@ -79,7 +79,7 @@ export default class Resume extends Component {
                 <Header as="h4" textAlign="center">
                   Find out what I have accomplished over the years
                 </Header>
-                <Header as="h1" textAlign="center" color="white">
+                <Header as="h1" textAlign="center">
                   Resume
                 </Header>
               </Grid.Column>
@@ -88,6 +88,7 @@ export default class Resume extends Component {
               <Grid.Column>
                 <Button
                   size="big"
+                  icon
                   style={
                     hover
                       ? {
@@ -104,6 +105,7 @@ export default class Resume extends Component {
                     this.offHover();
                   }}
                 >
+                  <Icon name="download" />
                   Download Resume
                 </Button>
               </Grid.Column>
@@ -124,7 +126,10 @@ export default class Resume extends Component {
           <Grid>
             <Grid.Row columns={3}>
               <Grid.Column>
-                <Header as="h2">Teachnologies</Header>
+                <Header as="h2" textAlign="left">
+                  <Image src="../static/images/tech.png" circular />
+                  <Header.Content>Technologies</Header.Content>
+                </Header>
               </Grid.Column>
               <Grid.Column>
                 <Header as="h3">Core Technology</Header>
@@ -162,7 +167,7 @@ export default class Resume extends Component {
           <Grid>
             <Grid.Column width={6}>
               <Header as="h2" textAlign="left">
-                <Icon name="users" circular />
+                <Icon name="users" />
                 <Header.Content>Work Experience</Header.Content>
               </Header>
             </Grid.Column>
@@ -184,7 +189,7 @@ export default class Resume extends Component {
           <Grid>
             <Grid.Column width={6}>
               <Header as="h2" textAlign="left">
-                <Icon name="student" circular />
+                <Icon name="student" />
                 <Header.Content>Education</Header.Content>
               </Header>
             </Grid.Column>

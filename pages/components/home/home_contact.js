@@ -17,7 +17,7 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 
-export class Home_introduction extends Component {
+export class Home_contact extends Component {
   static async getInitialProps({ query }) {
     // console.log(query);
     return true;
@@ -35,7 +35,7 @@ export class Home_introduction extends Component {
       border: "2px solid",
       borderColor: "#272727",
       borderShadow: "0",
-      backgroundColor: "#ffff",
+      backgroundColor: "transparent",
       transition: {
         transitionDuration: 0.3
       }
@@ -76,60 +76,66 @@ export class Home_introduction extends Component {
       normalStyle
     } = this.state;
 
+    const testLink =
+      "https://react.semantic-ui.com/assets/images/wireframe/image.png";
+    const content = (
+      <div>
+        <Header as="h2" inverted>
+          Title
+        </Header>
+        <Button primary>Add</Button>
+        <Button>View</Button>
+      </div>
+    );
+
     return (
       <div>
         <div>
           {/* About */}
-          <Segment vertical>
+          <Segment
+            vertical
+            style={{ margin: "5em 0em 0em 0em", padding: "0em 0em" }}
+          >
+            <Image
+              src="/static/images/homeImage.jpg"
+              fluid
+              style={{ opacity: "0.5", maxHeight: 550 }}
+            />
             <Container
-              style={{ backgroundColor: "#ffff", padding: "96px 48px" }}
+              text
+              style={{
+                backgroundColor: "transparent",
+                padding: "96px 48px",
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)"
+              }}
             >
-              <Header
-                as="H2"
-                textAlign="center"
-                content="My life as a developer"
-              />
-
-              <Grid style={{ padding: 0 }} stackable textAlign="center">
-                <Grid.Row columns={3}>
+              <Grid textAlign="center">
+                <Grid.Row>
                   <Grid.Column>
                     <Header as="h2" icon>
-                      <Icon name="wait" size="huge" />
-                      Account Settings
+                      <Header.Subheader>
+                        Need help for your website?
+                      </Header.Subheader>
+                      <Responsive
+                        minWidth={Responsive.onlyTablet.minWidth}
+                        maxWidth={Responsive.onlyWidescreen.maxWidth}
+                      >
+                        <p style={{ fontSize: 72, textTransform: "uppercase" }}>
+                          Hire a web designer
+                        </p>
+                      </Responsive>
+                      <Responsive
+                        minWidth={150}
+                        maxWidth={Responsive.onlyMobile.maxWidth}
+                      >
+                        <p style={{ fontSize: 48, textTransform: "uppercase" }}>
+                          Hire a web designer
+                        </p>
+                      </Responsive>
                     </Header>
-                    <p style={{ fontSize: "1.33em" }}>
-                      Instead of focusing on content creation and hard work, we
-                      have learned how to master the art of doing nothing by
-                      providing massive amounts of whitespace and generic
-                      content that can seem massive, monolithic and worth your
-                      attention.
-                    </p>
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Header as="h2" icon>
-                      <Icon name="browser" size="huge" />
-                      Account Settings
-                    </Header>
-                    <p style={{ fontSize: "1.33em" }}>
-                      Instead of focusing on content creation and hard work, we
-                      have learned how to master the art of doing nothing by
-                      providing massive amounts of whitespace and generic
-                      content that can seem massive, monolithic and worth your
-                      attention.
-                    </p>
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Header as="h2" icon>
-                      <Icon name="code" size="huge" />
-                      Account Settings
-                    </Header>
-                    <p style={{ fontSize: "1.33em" }}>
-                      Instead of focusing on content creation and hard work, we
-                      have learned how to master the art of doing nothing by
-                      providing massive amounts of whitespace and generic
-                      content that can seem massive, monolithic and worth your
-                      attention.
-                    </p>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
@@ -137,7 +143,7 @@ export class Home_introduction extends Component {
               <Grid>
                 <Grid.Row>
                   <Grid.Column textAlign="center">
-                    <Link href="/resume" passHref>
+                    <Link href="/contact" passHref>
                       <Button
                         className="home_buttons"
                         icon
@@ -158,8 +164,8 @@ export class Home_introduction extends Component {
                           this.offHover();
                         }}
                       >
-                        <Icon name="file text outline" />
-                        View my resume
+                        <Icon name="mail outline" />
+                        Contact me today
                       </Button>
                     </Link>
                   </Grid.Column>

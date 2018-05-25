@@ -18,14 +18,15 @@ import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
 
 export default class Portfolio extends Component {
-  static async getInitialProps({ query }) {
-    return { query };
+  static async getInitialProps({ pathname }) {
+    console.log(pathname);
+    return { pathname };
   }
 
   render() {
     return (
       <div>
-        <TopMenu />
+        <TopMenu currentPage={this.props.pathname} />
         <Image
           src="../static/images/neil-rosenstech-516210-unsplash.jpg"
           fluid

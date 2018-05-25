@@ -92,7 +92,6 @@ export class Home_about extends Component {
       <div>
         <div>
           {/* About */}
-
           <Container style={{ backgroundColor: "#ffff", padding: "96px 48px" }}>
             <Header
               as="h2"

@@ -16,6 +16,7 @@ import {
 import Link from "next/link";
 import { Clock } from "./clock";
 // import '../static/semantic/out/semantic.min.css';
+import { Home_contact } from "./home/home_contact";
 
 export class BottomMenu extends Component {
   state = {};
@@ -30,10 +31,12 @@ export class BottomMenu extends Component {
     return (
       <div>
         {/* Footnote */}
+
+        <Home_contact />
         <Segment
           inverted
           style={{
-            margin: "5em 0em 0em",
+            margin: "0em 0em 0em",
             padding: "5em 0em",
             position: "relative"
           }}
