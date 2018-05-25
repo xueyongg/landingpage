@@ -11,7 +11,8 @@ import {
   Container,
   Grid,
   Image,
-  Dimmer, Divider
+  Dimmer,
+  Divider
 } from "semantic-ui-react";
 import Link from "next/link";
 const moment = require("moment");
@@ -21,7 +22,26 @@ export class Home_projects extends Component {
     // console.log(query);
     return true;
   }
-  state = {};
+  state = {
+    normalStyle: {
+      padding: "21px 34px",
+      textTransform: "uppercase",
+      fontSize: "15px",
+      fontStyle: "normal",
+      fontWeight: "400",
+      letterSpacing: ".1em",
+      fontFamily: "proxima-nova",
+      color: "black",
+      border: "2px solid",
+      borderColor: "#272727",
+      borderShadow: "0",
+      backgroundColor: "#DDDDDD",
+      transition: {
+        transitionDuration: 0.3
+      }
+    },
+    hover: false
+  };
   handleShow = num => {
     let state = this.state;
     state[`active${num}`] = true;
@@ -33,11 +53,32 @@ export class Home_projects extends Component {
     this.setState({ active: false, active1: false });
   };
 
+  onHover() {
+    let state = this.state;
+    state.hover = true;
+    this.setState(state);
+    console.log("Hoverr");
+  }
+
+  offHover() {
+    let state = this.state;
+    state.hover = false;
+    this.setState(state);
+    console.log("Not Hoverr");
+  }
+
   render() {
     const testLink =
       "https://react.semantic-ui.com/assets/images/wireframe/image.png";
 
-    const { active, active1, active2, active3 } = this.state;
+    const {
+      active,
+      active1,
+      active2,
+      active3,
+      hover,
+      normalStyle
+    } = this.state;
     const content = (
       <div>
         <Header as="h2" inverted>
@@ -51,16 +92,16 @@ export class Home_projects extends Component {
 
     return (
       <div>
-        <div style={{ backgroundColor: "grey" }}>
+        <div style={{ backgroundColor: "#DDDDDD", padding: "96px 48px" }}>
           {/* Projects */}
           <Segment vertical>
             <Divider
-              as="h4"
+              as="h2"
               className="header"
               horizontal
               style={{ margin: "3em 0em", textTransform: "uppercase" }}
             >
-              <a href="#">Case Studies</a>
+              Case Studies
             </Divider>
             <Container
               style={{
@@ -98,18 +139,22 @@ export class Home_projects extends Component {
                   <Grid.Column>
                     <Link href="/portfolio" passHref>
                       <Button
-                        size="huge"
-                        color="black"
-                        basic
                         icon
-                        style={{
-                          padding: "21px 34px",
-                          textTransform: "uppercase",
-                          fontSize: "15px",
-                          fontStyle: "normal",
-                          fontWeight: "400",
-                          letterSpacing: ".1em",
-                          fontFamily: "proxima-nova"
+                        size="huge"
+                        style={
+                          hover
+                            ? {
+                                ...normalStyle,
+                                color: "white",
+                                backgroundColor: "black"
+                              }
+                            : normalStyle
+                        }
+                        onMouseOver={() => {
+                          this.onHover();
+                        }}
+                        onMouseOut={() => {
+                          this.offHover();
                         }}
                       >
                         <Icon name="clone" />

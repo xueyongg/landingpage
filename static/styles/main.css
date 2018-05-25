@@ -11,7 +11,7 @@ body {
   background: #fff;
 }
 
-.home-button {
+.home_buttons button{
   padding: "21px 34px";
   text-transform: "uppercase";
   font-size: "15px";
@@ -20,4 +20,5 @@ body {
   letter-spacing: ".1em";
   font-family: "proxima-nova";
   background-color: "transparent";
+  color: "black";
 }

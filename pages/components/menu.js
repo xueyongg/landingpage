@@ -197,9 +197,9 @@ export class TopMenu extends Component {
         </Responsive>
 
         <Responsive
-          onUpdate={() => {
-            this.handleOnUpdate();
-          }}
+          // onUpdate={() => {
+          //   this.handleOnUpdate();
+          // }}
           minWidth={150}
           maxWidth={Responsive.onlyMobile.maxWidth}
         >

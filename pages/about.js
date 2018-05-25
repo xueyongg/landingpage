@@ -17,6 +17,7 @@ import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
 import { About_instagram } from "./components/about/about_instagram";
 import { About_photos } from "./components/about/about_photos";
+import { About_resume } from "./components/about/about_resume";
 
 export default class About extends Component {
   static async getInitialProps({ pathname, query }) {
@@ -46,33 +47,22 @@ export default class About extends Component {
           About me
         </Header>
 
-        <div
-          style={{
-            marginTop: 0,
-            marginLeft: 0,
-            marginRight: 0,
-            marginBottom: 100,
-            border: 1,
-            backgroundColor: "grey"
-          }}
-        >
+        <div>
           <Container>
             {/* Fun fact about myself*/}
-
-            <Header as="h2" textAlign="center">
-              <Icon name="student" />
-              <Header.Content>Funfacts about myself</Header.Content>
-            </Header>
-            <Image src="https://react.semantic-ui.com/assets/images/wireframe/paragraph.png" />
+            <Grid>
+              <Header as="h2" textAlign="center">
+                <Icon name="student" />
+                <Header.Content>Funfacts about myself</Header.Content>
+              </Header>
+              <Image src="https://react.semantic-ui.com/assets/images/wireframe/paragraph.png" />
+            </Grid>
           </Container>
         </div>
 
         <div
           style={{
-            marginTop: 150,
-            marginLeft: 10,
-            marginRight: 10,
-            marginBottom: 100,
+            padding: "150 10 10 100",
             border: 1
           }}
         >
@@ -85,11 +75,11 @@ export default class About extends Component {
               border: 1
             }}
           >
-            {/* Some photos of Canada and nature */}
-
-            <About_photos />
-          </Container>
+                    </Container>
         </div>
+            {/* Some photos of Canada and nature */}
+            <About_photos />
+
         <div
           style={{
             marginTop: 150,
@@ -112,38 +102,12 @@ export default class About extends Component {
             </p>
           </Container>
         </div>
-        <div
-          style={{
-            marginTop: 150,
-            marginLeft: 10,
-            marginRight: 10,
-            marginBottom: 100,
-            border: 1
-          }}
-        >
-          <Container>
-            {/* Instagram Feed */}
-            <About_instagram />
-          </Container>
-        </div>
-        <div
-          style={{
-            marginTop: 150,
-            marginLeft: 10,
-            marginRight: 10,
-            marginBottom: 100,
-            border: 1
-          }}
-        >
-          <Container>
-            {/* What I've done and what I can do */}
-            <Header as="h2" textAlign="left">
-              <Icon name="vcard outline" />
-              <Header.Content>What I've done and what I can do</Header.Content>
-            </Header>
-            <p>Link to resume</p>
-          </Container>
-        </div>
+
+        {/* Instagram Feed */}
+        <About_instagram />
+
+        {/* Resume segment */}
+        <About_resume />
 
         <BottomMenu />
       </div>

@@ -32,6 +32,10 @@ export class Home_about extends Component {
       letterSpacing: ".1em",
       fontFamily: "proxima-nova",
       color: "black",
+      border: "2px solid",
+      borderColor: "#272727",
+      borderShadow: "0",
+      backgroundColor: "#ffff",
       transition: {
         transitionDuration: 0.3
       }
@@ -141,7 +145,7 @@ export class Home_about extends Component {
               </Responsive>
 
               <Responsive
-                minWidth={150}
+                minWidth={150} 
                 maxWidth={Responsive.onlyMobile.maxWidth}
               >
                 <Grid style={{ padding: 0 }}>
@@ -192,13 +196,16 @@ export class Home_about extends Component {
                   <Grid.Column>
                     <Link href="/about" passHref>
                       <Button
+                        className="home_buttons"
                         icon
                         size="huge"
-                        color="black"
-                        inverted
                         style={
                           hover
-                            ? { ...normalStyle, color: "white" }
+                            ? {
+                                ...normalStyle,
+                                color: "white",
+                                backgroundColor: "black"
+                              }
                             : normalStyle
                         }
                         onMouseOver={() => {
