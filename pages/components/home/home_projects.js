@@ -48,7 +48,7 @@ export class Home_projects extends Component {
 
     return (
       <div>
-        <div style={{ maxHeight: 750, height: 500, backgroundColor: "grey" }}>
+        <div style={{ backgroundColor: "grey" }}>
           {/* Projects */}
           <Segment vertical>
             <Header as="h2" textAlign="center" style={{ marginTop: 50 }}>
@@ -86,26 +86,30 @@ export class Home_projects extends Component {
                     <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
                   </Grid.Column>
                 </Grid.Row>
-                <Link href="/portfolio" passHref>
-                  <Button
-                    size="huge"
-                    color="black"
-                    basic
-                    icon
-                    style={{
-                      padding: "21px 34px",
-                      textTransform: "uppercase",
-                      fontSize: "15px",
-                      fontStyle: "normal",
-                      fontWeight: "400",
-                      letterSpacing: ".1em",
-                      fontFamily: "proxima-nova"
-                    }}
-                  >
-                    <Icon name="clone" />
-                    View more projects
-                  </Button>
-                </Link>
+                <Grid.Row>
+                  <Grid.Column>
+                    <Link href="/portfolio" passHref>
+                      <Button
+                        size="huge"
+                        color="black"
+                        basic
+                        icon
+                        style={{
+                          padding: "21px 34px",
+                          textTransform: "uppercase",
+                          fontSize: "15px",
+                          fontStyle: "normal",
+                          fontWeight: "400",
+                          letterSpacing: ".1em",
+                          fontFamily: "proxima-nova"
+                        }}
+                      >
+                        <Icon name="clone" />
+                        View more projects
+                      </Button>
+                    </Link>
+                  </Grid.Column>
+                </Grid.Row>
               </Grid>
             </Container>
           </Segment>

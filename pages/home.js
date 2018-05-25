@@ -9,7 +9,7 @@ import {
   Menu,
   Segment,
   Container,
-  Image,
+  Image, Message,
   Responsive
 } from "semantic-ui-react";
 import Link from "next/link";
@@ -27,9 +27,7 @@ export class Home extends Component {
     return true;
   }
   state = {};
-  handleOnUpdate() {
-
-  }
+  handleOnUpdate() {}
 
   render() {
     const { activeItem } = this.state;
@@ -77,9 +75,7 @@ export class Home extends Component {
           <Header as="h1" textAlign="center">
             Welcome Home
           </Header>
-          <div class="centered">Centered</div>
-
-          <Todo />
+          <Message textAlign="center" content="Center"/>
 
           {/* Projects */}
           <Home_projects />

@@ -119,7 +119,7 @@ export class TopMenu extends Component {
           >
             <Menu
               borderless
-              fixed={menuFixed ? "top" : ""}
+              fixed={menuFixed ? "top" : false}
               style={menuFixed ? fixedMenuStyle : menuStyle}
               stackable
             >

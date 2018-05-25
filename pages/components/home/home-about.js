@@ -69,6 +69,9 @@ export class Home_about extends Component {
       hover,
       normalStyle
     } = this.state;
+
+    const testLink =
+      "https://react.semantic-ui.com/assets/images/wireframe/image.png";
     const content = (
       <div>
         <Header as="h2" inverted>
@@ -81,7 +84,7 @@ export class Home_about extends Component {
 
     return (
       <div>
-        <div style={{ height: 500, backgroundColor: "#ffff" }}>
+        <div style={{ backgroundColor: "#ffff" }}>
           {/* About */}
           <Segment vertical>
             <Header as="h2" textAlign="center" style={{ marginTop: 50 }}>
@@ -95,6 +98,48 @@ export class Home_about extends Component {
                 border: 1
               }}
             >
+              <Image.Group size="small">
+                <Image
+                  src={testLink}
+                  fluid
+                  style={{ width: "45%", maxWidth: 222 }}
+                />
+                <Image
+                  src={testLink}
+                  fluid
+                  style={{ width: "45%", maxWidth: 222 }}
+                />
+                <Image
+                  src={testLink}
+                  fluid
+                  style={{ width: "45%", maxWidth: 222 }}
+                />
+                <Image
+                  src={testLink}
+                  fluid
+                  style={{ width: "45%", maxWidth: 222 }}
+                />
+                <Image
+                  src={testLink}
+                  fluid
+                  style={{ width: "45%", maxWidth: 222 }}
+                />
+                <Image
+                  src={testLink}
+                  fluid
+                  style={{ width: "45%", maxWidth: 222 }}
+                />
+                <Image
+                  src={testLink}
+                  fluid
+                  style={{ width: "45%", maxWidth: 222 }}
+                />
+                <Image
+                  src={testLink}
+                  fluid
+                  style={{ width: "45%", maxWidth: 222 }}
+                />
+              </Image.Group>
               <Link href="/about" passHref>
                 <Button
                   icon
