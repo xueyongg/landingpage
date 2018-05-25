@@ -11,7 +11,9 @@ import {
   Container,
   Grid,
   Image,
-  Dimmer
+  Dimmer,
+  Divider,
+  Responsive
 } from "semantic-ui-react";
 import Link from "next/link";
 
@@ -87,79 +89,132 @@ export class Home_about extends Component {
         <div style={{ backgroundColor: "#ffff" }}>
           {/* About */}
           <Segment vertical>
-            <Header as="h2" textAlign="center" style={{ marginTop: 50 }}>
-              My life as a developer
-            </Header>
-            <Container
-              style={{
-                marginTop: 0,
-                marginLeft: "auto",
-                marginRight: "auto",
-                border: 1
-              }}
-            >
-              <Image.Group size="small">
-                <Image
-                  src={testLink}
-                  fluid
-                  style={{ width: "45%", maxWidth: 222 }}
-                />
-                <Image
-                  src={testLink}
-                  fluid
-                  style={{ width: "45%", maxWidth: 222 }}
-                />
-                <Image
-                  src={testLink}
-                  fluid
-                  style={{ width: "45%", maxWidth: 222 }}
-                />
-                <Image
-                  src={testLink}
-                  fluid
-                  style={{ width: "45%", maxWidth: 222 }}
-                />
-                <Image
-                  src={testLink}
-                  fluid
-                  style={{ width: "45%", maxWidth: 222 }}
-                />
-                <Image
-                  src={testLink}
-                  fluid
-                  style={{ width: "45%", maxWidth: 222 }}
-                />
-                <Image
-                  src={testLink}
-                  fluid
-                  style={{ width: "45%", maxWidth: 222 }}
-                />
-                <Image
-                  src={testLink}
-                  fluid
-                  style={{ width: "45%", maxWidth: 222 }}
-                />
-              </Image.Group>
-              <Link href="/about" passHref>
-                <Button
-                  icon
-                  size="huge"
-                  color="black"
-                  inverted
-                  style={
-                    hover ? { ...normalStyle, color: "white" } : normalStyle
-                  }
-                  onMouseOver={() => {
-                    this.onHover();
-                  }}
-                  onMouseOut={() => {
-                    this.offHover();
-                  }}
-                >
-                  <Icon name="user outline" />
-                  Learn more about me
-                </Button>
-              </Link>
+            <Container>
+              <Divider
+                as="h2"
+                className="header"
+                horizontal
+                style={{ margin: "3em 0em", textTransform: "uppercase" }}
+              >
+                <a href="#">My life as a developer</a>
+              </Divider>
+              <Responsive
+                minWidth={Responsive.onlyTablet.minWidth}
+                maxWidth={Responsive.onlyWidescreen.maxWidth}
+              >
+                <Grid>
+                  <Grid.Row columns={5}>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row columns={5}>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+              </Responsive>
+
+              <Responsive
+                minWidth={150}
+                maxWidth={Responsive.onlyMobile.maxWidth}
+              >
+                <Grid style={{ padding: 0 }}>
+                  <Grid.Row columns={2}>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row columns={2}>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row columns={2}>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row columns={2}>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row columns={2}>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                    <Grid.Column>
+                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+              </Responsive>
+              <Grid>
+                <Grid.Row>
+                  <Grid.Column>
+                    <Link href="/about" passHref>
+                      <Button
+                        icon
+                        size="huge"
+                        color="black"
+                        inverted
+                        style={
+                          hover
+                            ? { ...normalStyle, color: "white" }
+                            : normalStyle
+                        }
+                        onMouseOver={() => {
+                          this.onHover();
+                        }}
+                        onMouseOut={() => {
+                          this.offHover();
+                        }}
+                      >
+                        <Icon name="user outline" />
+                        Learn more about me
+                      </Button>
+                    </Link>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
             </Container>
           </Segment>
         </div>

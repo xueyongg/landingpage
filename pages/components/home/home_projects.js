@@ -11,7 +11,7 @@ import {
   Container,
   Grid,
   Image,
-  Dimmer
+  Dimmer, Divider
 } from "semantic-ui-react";
 import Link from "next/link";
 const moment = require("moment");
@@ -34,6 +34,9 @@ export class Home_projects extends Component {
   };
 
   render() {
+    const testLink =
+      "https://react.semantic-ui.com/assets/images/wireframe/image.png";
+
     const { active, active1, active2, active3 } = this.state;
     const content = (
       <div>
@@ -51,9 +54,14 @@ export class Home_projects extends Component {
         <div style={{ backgroundColor: "grey" }}>
           {/* Projects */}
           <Segment vertical>
-            <Header as="h2" textAlign="center" style={{ marginTop: 50 }}>
-              My latest projects
-            </Header>
+            <Divider
+              as="h4"
+              className="header"
+              horizontal
+              style={{ margin: "3em 0em", textTransform: "uppercase" }}
+            >
+              <a href="#">Case Studies</a>
+            </Divider>
             <Container
               style={{
                 marginTop: 0,
