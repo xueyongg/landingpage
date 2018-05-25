@@ -86,7 +86,6 @@ export class Home extends Component {
             <Header as="h1" textAlign="center">
               Welcome Home
             </Header>
-            <Message textAlign="center" content="Center" />
           </Container>
 
           {/* Introduction */}

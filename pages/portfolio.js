@@ -26,12 +26,26 @@ export default class Portfolio extends Component {
     return (
       <div>
         <TopMenu />
-        <Image src="../static/images/neil-rosenstech-516210-unsplash.jpg" />
-        <Container>
+        <Image
+          src="../static/images/neil-rosenstech-516210-unsplash.jpg"
+          fluid
+          style={{ opacity: "0.8", maxHeight: 750 }}
+        />
+        <Container
+          text
+          style={{
+            position: "absolute",
+            top: "40%",
+            left: "50%",
+            transform: "translate(-50%, -50%)"
+          }}
+        >
           <Header as="h1" textAlign="center">
             Portfolio
           </Header>
-          <Grid celled stackable>
+        </Container>
+        <Container>
+          <Grid celled stackable columns={3}>
             <Grid.Row>
               <Grid.Column width={3}>
                 <Header as="h4" content="Date and duration of project" />

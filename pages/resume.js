@@ -21,29 +21,96 @@ export default class Resume extends Component {
     return { query };
   }
 
+  state = {
+    normalStyle: {
+      padding: "21px 34px",
+      textTransform: "uppercase",
+      fontSize: "15px",
+      fontStyle: "normal",
+      fontWeight: "400",
+      letterSpacing: ".1em",
+      fontFamily: "proxima-nova",
+      color: "white",
+      border: "2px solid",
+      borderColor: "white",
+      borderShadow: "0",
+      backgroundColor: "transparent",
+      transition: {
+        transitionDuration: 0.3
+      }
+    },
+    hover: false
+  };
+
+  onHover() {
+    let state = this.state;
+    state.hover = true;
+    this.setState(state);
+  }
+
+  offHover() {
+    let state = this.state;
+    state.hover = false;
+    this.setState(state);
+  }
+
   render() {
+    const { hover, normalStyle } = this.state;
     return (
       <div>
         <TopMenu />
-        <div>
-          <Image
-            src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
-            fluid
-            rounded={true}
-            bordered
-          />
-          <Header as="h4" textAlign="center">
-            Find out what I have accomplished over the years
-          </Header>
-          <Header as="h1" textAlign="center">
-            Resume
-          </Header>
-        </div>
-        <Grid>
-          <Grid.Column textAlign="center">
-            <Button size="big">Download Resume</Button>
-          </Grid.Column>
-        </Grid>
+        <Image
+          src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
+          fluid
+          style={{ opacity: "0.8", maxHeight: 750 }}
+        />
+        <Container
+          text
+          style={{
+            position: "absolute",
+            top: "40%",
+            left: "50%",
+            transform: "translate(-50%, -50%)"
+          }}
+        >
+          <Grid textAlign="center">
+            <Grid.Row>
+              <Grid.Column>
+                <Header as="h4" textAlign="center">
+                  Find out what I have accomplished over the years
+                </Header>
+                <Header as="h1" textAlign="center" color="white">
+                  Resume
+                </Header>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column>
+                <Button
+                  size="big"
+                  style={
+                    hover
+                      ? {
+                          ...normalStyle,
+                          color: "white",
+                          backgroundColor: "black"
+                        }
+                      : normalStyle
+                  }
+                  onMouseOver={() => {
+                    this.onHover();
+                  }}
+                  onMouseOut={() => {
+                    this.offHover();
+                  }}
+                >
+                  Download Resume
+                </Button>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+
         <Container
           style={{
             marginTop: 150,

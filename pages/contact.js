@@ -104,17 +104,41 @@ export default class Contact extends Component {
         <Image
           src="/static/images/lili-kovac-444033-unsplash.jpg"
           fluid
-          rounded={true}
-          bordered
+          style={{ opacity: "0.8", maxHeight: 750 }}
         />
-        <Header as="h4" textAlign="center">
-          Let's have a little chat
-        </Header>
-        <Header as="h1" textAlign="center">
-          Contact me
-        </Header>
+        <Container
+          text
+          style={{
+            position: "absolute",
+            top: "40%",
+            left: "50%",
+            transform: "translate(-50%, -50%)"
+          }}
+        >
+          <Header
+            as="h4"
+            textAlign="center"
+            style={{ textTransform: "uppercase" }}
+          >
+            Let's have a little chat
+          </Header>
+          <Header
+            as="h1"
+            textAlign="center"
+            style={{
+              textTransform: "uppercase",
+              fontSize: 52,
+              fontWight: 700
+            }}
+          >
+            Contact me
+          </Header>
+        </Container>
 
-        <Container text>
+        <Container
+          text
+          style={{ backgroundColor: "#ffff", padding: "96px 48px" }}
+        >
           <div className="login-form">
             <Grid
               style={{ height: "100%" }}
@@ -127,7 +151,6 @@ export default class Contact extends Component {
                 </Header>
                 <Form
                   size="large"
-                  
                   loading={this.state.loading}
                   style={{ textAlign: "left" }}
                 >
