@@ -65,6 +65,11 @@ export class BottomMenu extends Component {
                         <p>Resume</p>
                       </Link>
                     </List.Item>
+                    <List.Item as="a">
+                      <Link href="/contact" passHref>
+                        <p>Contact</p>
+                      </Link>
+                    </List.Item>
                   </List>
                 </Grid.Column>
                 <Grid.Column>
@@ -84,36 +89,36 @@ export class BottomMenu extends Component {
               circular
               style={{ marginBottom: 10 }}
             />
-            <List horizontal inverted divided link>
-              {/* <List.Item>Site Map</List.Item> */}
+            {/* <List horizontal inverted divided link>
+              <List.Item>Site Map</List.Item>
               <List.Item>
                 <Link href="/contact" passHref>
                   <a>Contact Us</a>
                 </Link>
               </List.Item>
-              {/* <List.Item as='a' href='#'>Terms and Conditions</List.Item> */}
+              <List.Item as='a' href='#'>Terms and Conditions</List.Item>
               <List.Item>
                 <Link href="/contact" passHref>
                   <a>Privacy Policy</a>
                 </Link>
               </List.Item>
-            </List>
+            </List> */}
             <br />
             <List horizontal inverted link>
-              <List.Item as="a" href="#">
-                <Icon name="github" />
+              <List.Item as="a" href="https://github.com/xueyongg">
+                <Icon name="github" size="large" />
               </List.Item>
               <List.Item as="a" href="#">
-                <Icon name="linkedin" />
+                <Icon name="linkedin" size="large" />
               </List.Item>
-              <List.Item as="a" href="#">
-                <Icon name="tumblr" />
+              {/* <List.Item as="a" href="">
+                <Icon name="tumblr" size="large" />
+              </List.Item> */}
+              <List.Item as="a" href="https://www.facebook.com/joshuaphua">
+                <Icon name="facebook f" size="large" />
               </List.Item>
-              <List.Item as="a" href="#">
-                <Icon name="facebook f" />
-              </List.Item>
-              <List.Item as="a" href="#">
-                <Icon name="twitter" />
+              <List.Item as="a" href="https://www.twitter/soGonnaOwnYou">
+                <Icon name="twitter" size="large" />
               </List.Item>
             </List>
           </Container>

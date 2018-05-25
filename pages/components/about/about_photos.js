@@ -35,10 +35,10 @@ export class About_photos extends Component {
               <Grid.Column style={{ padding: 0 }}>
                 <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
               </Grid.Column>
-              <Grid.Column style={{ padding: 0 }}>
+              <Grid.Column style={{ padding: 0 }} size="medium">
                 <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
               </Grid.Column>
-              <Grid.Column style={{ padding: 0 }}>
+              <Grid.Column style={{ padding: 0 }} size="medium">
                 <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
               </Grid.Column>
             </Grid.Row>

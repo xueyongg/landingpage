@@ -92,137 +92,133 @@ export class Home_about extends Component {
       <div>
         <div>
           {/* About */}
-          <Segment vertical>
-            <Container
-              style={{ backgroundColor: "#ffff", padding: "96px 48px" }}
-            >
-              <Header
-                as="H2"
-                textAlign="center"
-                content="My life as a developer"
-              />
-              <Responsive
-                minWidth={Responsive.onlyTablet.minWidth}
-                maxWidth={Responsive.onlyWidescreen.maxWidth}
-              >
-                <Grid>
-                  <Grid.Row columns={5}>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                  </Grid.Row>
-                  <Grid.Row columns={5}>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
-              </Responsive>
 
-              <Responsive
-                minWidth={150}
-                maxWidth={Responsive.onlyMobile.maxWidth}
-              >
-                <Grid style={{ padding: 0 }}>
-                  <Grid.Row columns={2}>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                  </Grid.Row>
-                  <Grid.Row columns={2}>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                  </Grid.Row>
-                  <Grid.Row columns={2}>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                  </Grid.Row>
-                  <Grid.Row columns={2}>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                  </Grid.Row>
-                  <Grid.Row columns={2}>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
-              </Responsive>
+          <Container style={{ backgroundColor: "#ffff", padding: "96px 48px" }}>
+            <Header
+              as="h2"
+              textAlign="center"
+              content="My life as a developer"
+            />
+            <Responsive
+              minWidth={Responsive.onlyTablet.minWidth}
+              maxWidth={Responsive.onlyWidescreen.maxWidth}
+            >
               <Grid>
-                <Grid.Row>
-                  <Grid.Column textAlign="center">
-                    <Link href="/about" passHref>
-                      <Button
-                        className="home_buttons"
-                        icon
-                        size="huge"
-                        style={
-                          hover
-                            ? {
-                                ...normalStyle,
-                                color: "white",
-                                backgroundColor: "black"
-                              }
-                            : normalStyle
-                        }
-                        onMouseOver={() => {
-                          this.onHover();
-                        }}
-                        onMouseOut={() => {
-                          this.offHover();
-                        }}
-                      >
-                        <Icon name="user outline" />
-                        Learn more about me
-                      </Button>
-                    </Link>
+                <Grid.Row columns={5}>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={5}>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
-            </Container>
-          </Segment>
+            </Responsive>
+            <Responsive
+              minWidth={150}
+              maxWidth={Responsive.onlyMobile.maxWidth}
+            >
+              <Grid style={{ padding: 0 }}>
+                <Grid.Row columns={2}>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={2}>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={2}>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={2}>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                </Grid.Row>
+                <Grid.Row columns={2}>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </Responsive>
+            <Grid>
+              <Grid.Row>
+                <Grid.Column textAlign="center">
+                  <Link href="/about" passHref>
+                    <Button
+                      className="home_buttons"
+                      icon
+                      size="huge"
+                      style={
+                        hover
+                          ? {
+                              ...normalStyle,
+                              color: "white",
+                              backgroundColor: "black"
+                            }
+                          : normalStyle
+                      }
+                      onMouseOver={() => {
+                        this.onHover();
+                      }}
+                      onMouseOut={() => {
+                        this.offHover();
+                      }}
+                    >
+                      <Icon name="user outline" />
+                      Learn more about me
+                    </Button>
+                  </Link>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Container>
         </div>
       </div>
     );
