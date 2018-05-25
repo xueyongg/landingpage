@@ -75,7 +75,7 @@ export class TopMenu extends Component {
       activeItem,
       visible
     } = this.state;
-    console.log(activeItem);
+    
     let menuStyle = {
       border: "none",
       borderRadius: 0,

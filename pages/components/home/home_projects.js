@@ -57,14 +57,14 @@ export class Home_projects extends Component {
     let state = this.state;
     state.hover = true;
     this.setState(state);
-    console.log("Hoverr");
+    
   }
 
   offHover() {
     let state = this.state;
     state.hover = false;
     this.setState(state);
-    console.log("Not Hoverr");
+    
   }
 
   render() {

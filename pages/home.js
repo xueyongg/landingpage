@@ -9,7 +9,8 @@ import {
   Menu,
   Segment,
   Container,
-  Image, Message,
+  Image,
+  Message,
   Responsive
 } from "semantic-ui-react";
 import Link from "next/link";
@@ -18,6 +19,7 @@ import { Home_projects } from "./components/home/home_projects";
 import { Home_about } from "./components/home/home-about";
 import { BottomMenu } from "./components/bottom_menu";
 import { Todo } from "./components/todo";
+import { Home_introduction } from "./components/home/home_introduction";
 
 const moment = require("moment");
 
@@ -69,13 +71,26 @@ export class Home extends Component {
           <Image
             src="/static/images/homeImage.jpg"
             fluid
-            rounded={true}
-            bordered
+            style={{ opacity: "0.5", maxHeight: 750 }}
           />
-          <Header as="h1" textAlign="center">
-            Welcome Home
-          </Header>
-          <Message textAlign="center" content="Center"/>
+
+          <Container
+            text
+            style={{
+              position: "absolute",
+              top: "40%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <Header as="h1" textAlign="center">
+              Welcome Home
+            </Header>
+            <Message textAlign="center" content="Center" />
+          </Container>
+
+          {/* Introduction */}
+          <Home_introduction />
 
           {/* Projects */}
           <Home_projects />

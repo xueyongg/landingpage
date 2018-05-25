@@ -90,10 +90,12 @@ export class Home_about extends Component {
 
     return (
       <div>
-        <div style={{ backgroundColor: "#ffff" }}>
+        <div>
           {/* About */}
           <Segment vertical>
-            <Container>
+            <Container
+              style={{ backgroundColor: "#ffff", padding: "96px 48px" }}
+            >
               <Header
                 as="H2"
                 textAlign="center"
