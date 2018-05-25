@@ -94,14 +94,11 @@ export class Home_about extends Component {
           {/* About */}
           <Segment vertical>
             <Container>
-              <Divider
-                as="h2"
-                className="header"
-                horizontal
-                style={{ margin: "3em 0em", textTransform: "uppercase" }}
-              >
-                <a href="#">My life as a developer</a>
-              </Divider>
+              <Header
+                as="H2"
+                textAlign="center"
+                content="My life as a developer"
+              />
               <Responsive
                 minWidth={Responsive.onlyTablet.minWidth}
                 maxWidth={Responsive.onlyWidescreen.maxWidth}
@@ -145,7 +142,7 @@ export class Home_about extends Component {
               </Responsive>
 
               <Responsive
-                minWidth={150} 
+                minWidth={150}
                 maxWidth={Responsive.onlyMobile.maxWidth}
               >
                 <Grid style={{ padding: 0 }}>
@@ -193,7 +190,7 @@ export class Home_about extends Component {
               </Responsive>
               <Grid>
                 <Grid.Row>
-                  <Grid.Column>
+                  <Grid.Column textAlign="center">
                     <Link href="/about" passHref>
                       <Button
                         className="home_buttons"

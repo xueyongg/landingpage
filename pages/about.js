@@ -18,6 +18,8 @@ import { BottomMenu } from "./components/bottom_menu";
 import { About_instagram } from "./components/about/about_instagram";
 import { About_photos } from "./components/about/about_photos";
 import { About_resume } from "./components/about/about_resume";
+import { About_funfact } from "./components/about/about_funfact";
+import { About_understand } from "./components/about/about_whoiam";
 
 export default class About extends Component {
   static async getInitialProps({ pathname, query }) {
@@ -25,6 +27,7 @@ export default class About extends Component {
   }
 
   render() {
+    let mobile = false;
     return (
       <div>
         <style>{`
@@ -37,28 +40,31 @@ export default class About extends Component {
         <Image
           src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
           fluid
-          rounded={true}
           bordered
+          style={{
+            opacity: "0.5",
+            maxHeight: 750
+          }}
         />
-        <Header as="h4" textAlign="center">
-          Discover more about me and my personhood
-        </Header>
-        <Header as="h1" textAlign="center">
-          About me
-        </Header>
+        <Container
+          text
+          style={{
+            position: "absolute",
+            top: "40%",
+            left: "50%",
+            transform: "translate(-50%, -50%)"
+          }}
+        >
+          <Header as="h1" textAlign="center">
+            About me
+          </Header>
+          <Header as="h4" textAlign="center">
+            Discover more about me and my personhood
+          </Header>
+        </Container>
 
-        <div>
-          <Container>
-            {/* Fun fact about myself*/}
-            <Grid>
-              <Header as="h2" textAlign="center">
-                <Icon name="student" />
-                <Header.Content>Funfacts about myself</Header.Content>
-              </Header>
-              <Image src="https://react.semantic-ui.com/assets/images/wireframe/paragraph.png" />
-            </Grid>
-          </Container>
-        </div>
+        {/* Fun fact about myself*/}
+        <About_funfact />
 
         <div
           style={{
@@ -74,34 +80,13 @@ export default class About extends Component {
               marginBottom: 80,
               border: 1
             }}
-          >
-                    </Container>
+          />
         </div>
-            {/* Some photos of Canada and nature */}
-            <About_photos />
+        {/* Some photos of Canada and nature */}
+        <About_photos />
 
-        <div
-          style={{
-            marginTop: 150,
-            marginLeft: 10,
-            marginRight: 10,
-            marginBottom: 100,
-            border: 1
-          }}
-        >
-          <Container>
-            {/* Understand who I am as a person */}
-            <Header as="h2" textAlign="center">
-              <Icon name="smile" />
-              <Header.Content>Understand who I am as a person</Header.Content>
-            </Header>
-            <Image src="https://react.semantic-ui.com/assets/images/wireframe/paragraph.png" />
-            <p>
-              Talkabout what is the path i chose, why Javascript <br /> Talk
-              about what is my passion and what i want to do moving forward
-            </p>
-          </Container>
-        </div>
+        {/* Understand who I am as a person */}
+        <About_understand />
 
         {/* Instagram Feed */}
         <About_instagram />

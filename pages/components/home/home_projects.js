@@ -136,7 +136,7 @@ export class Home_projects extends Component {
                   </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                  <Grid.Column>
+                  <Grid.Column textAlign="center">
                     <Link href="/portfolio" passHref>
                       <Button
                         icon

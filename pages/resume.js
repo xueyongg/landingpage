@@ -39,9 +39,11 @@ export default class Resume extends Component {
             Resume
           </Header>
         </div>
-        <Button centered size="big">
-          Download Resume
-        </Button>
+        <Grid>
+          <Grid.Column textAlign="center">
+            <Button size="big">Download Resume</Button>
+          </Grid.Column>
+        </Grid>
         <Container
           style={{
             marginTop: 150,

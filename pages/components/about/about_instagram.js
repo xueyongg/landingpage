@@ -23,11 +23,13 @@ export class About_instagram extends Component {
     return (
       <div>
         <Container>
-          <Header as="h2" textAlign="center">
-            <Icon name="instagram" />
-            <Header.Content>Instagram Feed</Header.Content>
-          </Header>
           <Grid>
+            <Grid.Row>
+              <Header as="h2" textAlign="center">
+                <Icon name="instagram" />
+                <Header.Content>Instagram Feed</Header.Content>
+              </Header>
+            </Grid.Row>
             <Grid.Row columns={5}>
               <Grid.Column className="instagram_photos">
                 <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
