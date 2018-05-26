@@ -38,7 +38,7 @@ export default class About extends Component {
         <TopMenu />
 
         <Image
-          src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
+          src="/static/images/about.jpg"
           fluid
           bordered
           style={{
@@ -50,7 +50,7 @@ export default class About extends Component {
           text
           style={{
             position: "absolute",
-            top: "40%",
+            top: "30%",
             left: "50%",
             transform: "translate(-50%, -50%)"
           }}

@@ -60,7 +60,7 @@ export default class Resume extends Component {
       <div>
         <TopMenu />
         <Image
-          src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
+          src="/static/images/resume.jpg"
           fluid
           style={{ opacity: "0.6", maxHeight: 750 }}
         />
@@ -68,7 +68,7 @@ export default class Resume extends Component {
           text
           style={{
             position: "absolute",
-            top: "40%",
+            top: "30%",
             left: "50%",
             transform: "translate(-50%, -50%)"
           }}

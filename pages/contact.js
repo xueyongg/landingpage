@@ -101,7 +101,7 @@ export default class Contact extends Component {
       <div>
         <TopMenu />
         <Image
-          src="/static/images/lili-kovac-444033-unsplash.jpg"
+          src="/static/images/contact.jpg"
           fluid
           style={{
             opacity: "0.8",
@@ -113,7 +113,7 @@ export default class Contact extends Component {
           text
           style={{
             position: "absolute",
-            top: "40%",
+            top: "30%",
             left: "50%",
             transform: "translate(-50%, -50%)"
           }}
