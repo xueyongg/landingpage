@@ -21,12 +21,14 @@ import {
 import Link from "next/link";
 import { Clock } from "./clock";
 import { PropTypes } from "prop-types";
+import Router from "next/router";
 
 export class TopMenu extends Component {
   getInitialprops({ pathname }) {
     console.log(currentPage);
     return currentPage;
   }
+
   state = {
     menuFixed: false,
     overlayFixed: false,
@@ -77,9 +79,13 @@ export class TopMenu extends Component {
       menuFixed,
       overlayFixed,
       overlayRect,
-      activeItem,
+
       visible
     } = this.state;
+    let activeItem;
+    Router.onRouteChangeStart = url => {
+      console.log("App is changing to: ", url);
+    };
 
     let menuStyle = {
       border: "none",

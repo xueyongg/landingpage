@@ -19,7 +19,6 @@ import { BottomMenu } from "./components/bottom_menu";
 
 export default class Portfolio extends Component {
   static async getInitialProps({ pathname }) {
-    console.log(pathname);
     return { pathname };
   }
 
