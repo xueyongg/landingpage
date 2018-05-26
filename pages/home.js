@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+const Typed = require("typed");
 import {
   Modal,
   Header,
@@ -34,6 +35,11 @@ export class Home extends Component {
 
   render() {
     const { activeItem } = this.state;
+    // var typed = new Typed(".element", {
+    //   stringsElement: "#typed-strings",
+    //   strings: ["First sentence.", "Second sentence."],
+    //   typeSpeed: 30
+    // });
 
     return (
       <div>
@@ -53,6 +59,15 @@ export class Home extends Component {
               transform: "translate(-50%, -50%)"
             }}
           >
+            {/* <div id="typed-strings">
+              <p>
+                Typed.js is a <strong>JavaScript</strong> library.
+              </p>
+              <p>
+                It <em>types</em> out sentences.
+              </p>
+            </div>
+            <span id="typed" /> */}
             <Header as="h1" textAlign="center">
               Welcome Home
             </Header>
