@@ -13,9 +13,7 @@ import {
 import Link from "next/link";
 import Head from "next/head";
 import { TopMenu } from "./components/menu";
-
 import { Home } from "./home";
-// import '../static/semantic/out/semantic.min.css';
 
 export default class extends Component {
   state = {};
@@ -26,14 +24,18 @@ export default class extends Component {
     return (
       <div>
         <Head>
-          <title>My own page title</title>
+          <link
+            rel="shortcut icon"
+            href="/static/images/favicon/favicon.ico?v=2"
+          />
+          <title>Xueyong's Site</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
             key="viewport"
           />
         </Head>
-        <TopMenu currentPage/>
+        <TopMenu currentPage />
         <Home />
       </div>
     );
