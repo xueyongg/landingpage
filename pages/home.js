@@ -41,14 +41,14 @@ export class Home extends Component {
           <Image
             src="/static/images/homeImage.jpg"
             fluid
-            style={{ opacity: "0.5", maxHeight: 750 }}
+            style={{ opacity: "0.5", maxHeight: 750, width: "100%" }}
           />
 
           <Container
             text
             style={{
               position: "absolute",
-              top: "40%",
+              top: "30%",
               left: "50%",
               transform: "translate(-50%, -50%)"
             }}
