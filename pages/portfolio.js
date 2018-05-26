@@ -27,9 +27,9 @@ export default class Portfolio extends Component {
       <div>
         <TopMenu currentPage={this.props.pathname} />
         <Image
-          src="../static/images/neil-rosenstech-516210-unsplash.jpg"
+          src="../static/images/portfolio.jpg"
           fluid
-          style={{ opacity: "0.8", maxHeight: 750 }}
+          style={{ opacity: "0.5", maxHeight: 750 }}
         />
         <Container
           text
@@ -40,8 +40,16 @@ export default class Portfolio extends Component {
             transform: "translate(-50%, -50%)"
           }}
         >
-          <Header as="h1" textAlign="center">
-            Portfolio
+          <Header
+            as="h1"
+            textAlign="center"
+            style={{
+              textTransform: "uppercase",
+              fontSize: 52,
+              fontWight: 700
+            }}
+          >
+            My humble portfolio
           </Header>
         </Container>
         <Container>

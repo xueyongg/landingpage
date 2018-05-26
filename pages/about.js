@@ -55,11 +55,23 @@ export default class About extends Component {
             transform: "translate(-50%, -50%)"
           }}
         >
-          <Header as="h1" textAlign="center">
-            About me
-          </Header>
-          <Header as="h4" textAlign="center">
+          <Header
+            as="h4"
+            textAlign="center"
+            style={{ textTransform: "uppercase" }}
+          >
             Discover more about me and my personhood
+          </Header>
+          <Header
+            as="h1"
+            textAlign="center"
+            style={{
+              textTransform: "uppercase",
+              fontSize: 52,
+              fontWight: 700
+            }}
+          >
+            About me
           </Header>
         </Container>
 

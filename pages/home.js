@@ -45,7 +45,7 @@ export class Home extends Component {
       <div>
         <Responsive onUpdate={this.handleOnUpdate}>
           <Image
-            src="/static/images/homeImage.jpg"
+            src="/static/images/workdesk.jpg"
             fluid
             style={{ opacity: "0.5", maxHeight: 750, width: "100%" }}
           />
@@ -68,8 +68,16 @@ export class Home extends Component {
               </p>
             </div>
             <span id="typed" /> */}
-            <Header as="h1" textAlign="center">
-              Welcome Home
+            <Header
+              as="h1"
+              textAlign="center"
+              style={{
+                textTransform: "uppercase",
+                fontSize: 52,
+                fontWight: 700
+              }}
+            >
+              Take a peek into Xueyong's life
             </Header>
           </Container>
 

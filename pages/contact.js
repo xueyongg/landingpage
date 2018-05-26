@@ -100,11 +100,14 @@ export default class Contact extends Component {
     return (
       <div>
         <TopMenu />
-
         <Image
           src="/static/images/lili-kovac-444033-unsplash.jpg"
           fluid
-          style={{ opacity: "0.8", maxHeight: 750 }}
+          style={{
+            opacity: "0.8",
+            maxHeight: 750,
+            
+          }}
         />
         <Container
           text

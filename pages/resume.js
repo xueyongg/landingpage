@@ -62,7 +62,7 @@ export default class Resume extends Component {
         <Image
           src="/static/images/max-van-den-oetelaar-601242-unsplash.jpg"
           fluid
-          style={{ opacity: "0.8", maxHeight: 750 }}
+          style={{ opacity: "0.6", maxHeight: 750 }}
         />
         <Container
           text
@@ -79,7 +79,15 @@ export default class Resume extends Component {
                 <Header as="h4" textAlign="center">
                   Find out what I have accomplished over the years
                 </Header>
-                <Header as="h1" textAlign="center">
+                <Header
+                  as="h1"
+                  textAlign="center"
+                  style={{
+                    textTransform: "uppercase",
+                    fontSize: 52,
+                    fontWight: 700
+                  }}
+                >
                   Resume
                 </Header>
               </Grid.Column>
@@ -93,8 +101,8 @@ export default class Resume extends Component {
                     hover
                       ? {
                           ...normalStyle,
-                          color: "white",
-                          backgroundColor: "black"
+                          color: "black",
+                          backgroundColor: "white"
                         }
                       : normalStyle
                   }
