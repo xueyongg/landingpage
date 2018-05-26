@@ -94,26 +94,13 @@ export class TopMenu extends Component {
       marginBottom: "1em",
       marginTop: "1em",
       transition: "box-shadow 0.5s ease, padding 0.5s ease"
-
-      // marginTop: '1em',
-      // borderRadius: 0,
-      // boxShadow: 'none',
-      // transition: 'box-shadow 0.5s ease, padding 0.5s ease',
-
-      // marginRight: 0,
-      // marginBottom: 0,
-      // marginLeft: 0,
-      // paddingTop: 6.18,
-      // paddingRight: 0,
-      // paddingBottom: 6.18,
-      // paddingLeft: 0,
-      // border: 'none',
     };
 
     const fixedMenuStyle = {
       backgroundColor: "#fff",
       border: "1px solid #ddd",
-      boxShadow: "0px 3px 5px rgba(0, 0, 0, 0.2)"
+      boxShadow: "0px 3px 5px rgba(0, 0, 0, 0.2)",
+      opacity: "0.9"
     };
 
     return (
@@ -132,7 +119,6 @@ export class TopMenu extends Component {
               borderless
               fixed={menuFixed ? "top" : false}
               style={menuFixed ? fixedMenuStyle : menuStyle}
-              stackable
             >
               <Container text>
                 <Menu.Item>
@@ -207,13 +193,7 @@ export class TopMenu extends Component {
           </Visibility>
         </Responsive>
 
-        <Responsive
-          // onUpdate={() => {
-          //   this.handleOnUpdate();
-          // }}
-          minWidth={150}
-          maxWidth={Responsive.onlyMobile.maxWidth}
-        >
+        <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
           <Sidebar.Pushable as={Segment}>
             <Sidebar
               as={Menu}
