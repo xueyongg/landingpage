@@ -16,14 +16,14 @@ import {
 import Link from "next/link";
 import { Clock } from "./clock";
 // import '../static/semantic/out/semantic.min.css';
-import { Home_contact } from "./home/home_contact";
+import { Page_contact } from "./page/page_contact";
 const data = require("../../static/assets/data.json");
 
 export class BottomMenu extends Component {
   state = {};
 
   componentDidMount() {
-    console.log(this.props);
+    // console.log(this.props);
     this.setState({
       currentPage: this.props.currentPage
     });
@@ -40,7 +40,7 @@ export class BottomMenu extends Component {
       <div>
         {/* Footnote */}
 
-        {currentPage !== "contact" ? <Home_contact /> : ""}
+        {currentPage !== "contact" ? <Page_contact /> : ""}
 
         <Segment
           inverted

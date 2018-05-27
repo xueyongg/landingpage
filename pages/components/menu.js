@@ -30,13 +30,9 @@ export class TopMenu extends Component {
     visible: false,
     normalStyle: {}
   };
-  getInitialprops({ pathname }) {
-    console.log(currentPage);
-    return currentPage;
-  }
 
   componentDidMount() {
-    console.log(this.props);
+    // console.log(this.props);
     this.setState({
       activeItem: this.props.currentPage
     });
