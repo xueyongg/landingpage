@@ -135,6 +135,8 @@ export class TopMenu extends Component {
           >
             <Menu
               borderless
+              secondary={!menuFixed}
+              pointing={!menuFixed}
               fixed={menuFixed ? "top" : false}
               style={menuFixed ? fixedMenuStyle : menuStyle}
               size="large"
