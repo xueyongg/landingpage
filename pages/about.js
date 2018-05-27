@@ -49,23 +49,6 @@ export default class About extends Component {
 
         {/* Fun fact about myself*/}
         <About_funfact />
-
-        <div
-          style={{
-            padding: "150 10 10 100",
-            border: 1
-          }}
-        >
-          <Container
-            style={{
-              marginTop: 150,
-              marginLeft: 10,
-              marginRight: 10,
-              marginBottom: 80,
-              border: 1
-            }}
-          />
-        </div>
         {/* Some photos of Canada and nature */}
         <About_photos />
 

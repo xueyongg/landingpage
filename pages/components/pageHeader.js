@@ -101,7 +101,7 @@ export class PageHeader extends Component {
             content={
               subHeaderContent
                 ? subHeaderContent
-                : "Do whatever you want when you want to."
+                : "Loading, please wait.."
             }
             inverted
             style={{
@@ -115,7 +115,7 @@ export class PageHeader extends Component {
           />
           <Header
             as="h1"
-            content={headerContent ? headerContent : "Imagine-a-company"}
+            content={headerContent ? headerContent : "Welcome to Xueyong's site"}
             inverted
             style={{
               fontSize: mobile ? "2em" : "4em",

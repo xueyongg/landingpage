@@ -93,13 +93,17 @@ export class BottomMenu extends Component {
               </Grid.Row>
             </Grid>
             <Divider inverted section />
-            <Image
+            {/* <Image
               src="../../static/images/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
               size="mini"
               centered
               circular
               style={{ marginBottom: 10 }}
-            />
+            /> */}
+            <p style={{ marginBottom: "0.025em", fontColor: "white"}}>
+              "I can do all this through him who gives me strength." -<br />
+              Philippians 4:13
+            </p>
             {/* <List horizontal inverted divided link>
               <List.Item>Site Map</List.Item>
               <List.Item>
