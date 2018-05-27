@@ -47,24 +47,25 @@
       "header": "",
       "icon": "",
       "core_technology": [
-        { "name": "Java/JSP" },
-        { "name": "Javascript" },
+        { "name": "JavaScript" },
         { "name": "React.js" },
+        { "name": "Node.js" },
         { "name": "Meteor Framework" },
         { "name": "MongoDB" },
-        { "name": "Webpack" },
         { "name": "Semantic UI" },
-        { "name": "Webpack" }
+        { "name": "Webpack.js" },
+        { "name": "Java / JSP" }
       ],
       "experienced_with": [
         { "name": "Version Control (GIT)" },
         { "name": "Next.js" },
+        { "name": "Vue.js" },
         { "name": "VBA" },
         { "name": "Matlab" },
-        { "name": "Vue.js" },
-        { "name": "HTML5" },
-        { "name": "Vuejs" },
-        { "name": "SAP" }
+        { "name": "HTML5/ CSS3" },
+        { "name": "SAP / LSMW Tool" },
+        { "name": "Ruby" },
+        { "name": "Microsoft SQL" }
       ]
     },
     "work_experience": {
@@ -85,10 +86,10 @@
             "Debugged up to 100 bugs over 3 months, which helped to speed up the operations of KeyReply and meet deadlines promptly"
           ],
           "skills": [
+            { "icon": "feed", "name": "JavaScript" },
             { "icon": "feed", "name": "Vue.js" },
             { "icon": "feed", "name": "Node.js" },
-            { "icon": "feed", "name": "Javascript" },
-            { "icon": "feed", "name": "Vue.js" }
+            { "icon": "feed", "name": "Microsoft SQL" }
           ]
         },
         {
@@ -104,7 +105,10 @@
             "Actively involved in the data reconciliation and financial disprepancy investigation for a client’s 90 company codes",
             "Assisted the Data Migration Team Lead with Full Dream Rehearsal Planning and execution processes prior to Actual Cut Over"
           ],
-          "skills": [{ "icon": "", "name": "SAP" }]
+          "skills": [
+            { "icon": "feed", "name": "SAP" },
+            { "icon": "feed", "name": "VBA" }
+          ]
         },
         {
           "company":
@@ -118,7 +122,7 @@
             "Laid out multiple marketing strategies, which helped the company effectively reach out to youths via school platforms",
             "Applied analytics on data collected via market research (surveys and focus groups), which helped the company identify timely trends in the marketing industry"
           ],
-          "skills": [{ "icon": "feed", "name": "Vue.js" }]
+          "skills": [{ "icon": "", "name": "" }]
         },
         {
           "company": "",
