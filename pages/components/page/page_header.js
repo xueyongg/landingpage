@@ -1,7 +1,9 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import Link from 'next/link';
 import {
   Button,
+  
   Container,
   Divider,
   Grid,
@@ -13,7 +15,7 @@ import {
   Responsive,
   Segment,
   Sidebar,
-  Visibility
+  Visibility,
 } from "semantic-ui-react";
 
 export class PageHeader extends Component {
@@ -48,6 +50,7 @@ export class PageHeader extends Component {
     }
   };
   componentDidMount() {
+    // console.log(this.props);
     this.setState(this.props);
   }
 
@@ -99,9 +102,7 @@ export class PageHeader extends Component {
           <Header
             as="h4"
             content={
-              subHeaderContent
-                ? subHeaderContent
-                : "Loading, please wait.."
+              subHeaderContent ? subHeaderContent : "Loading, please wait.."
             }
             inverted
             style={{
@@ -115,7 +116,9 @@ export class PageHeader extends Component {
           />
           <Header
             as="h1"
-            content={headerContent ? headerContent : "Welcome to Xueyong's site"}
+            content={
+              headerContent ? headerContent : "Welcome to Xueyong's site"
+            }
             inverted
             style={{
               fontSize: mobile ? "2em" : "4em",
@@ -157,6 +160,32 @@ export class PageHeader extends Component {
                 Download Resume
               </Button>
             </a>
+          ) : url === "home" ? (
+            <Link href="/about" passHref>
+              <Button
+                className="home_buttons"
+                icon
+                size="huge"
+                style={
+                  hover
+                    ? {
+                        ...normalStyle,
+                        color: "white",
+                        backgroundColor: "black"
+                      }
+                    : normalStyle
+                }
+                onMouseOver={() => {
+                  this.onHover();
+                }}
+                onMouseOut={() => {
+                  this.offHover();
+                }}
+              >
+                <Icon name="user outline" />
+                Learn more about me
+              </Button>
+            </Link>
           ) : (
             ""
           )}

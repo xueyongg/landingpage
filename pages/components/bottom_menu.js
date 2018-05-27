@@ -44,8 +44,7 @@ export class BottomMenu extends Component {
 
         <Segment
           inverted
-          style={{
-            margin: "0em 0em 0em",
+          style={{            
             padding: "5em 0em",
             position: "relative"
           }}

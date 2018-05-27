@@ -18,7 +18,6 @@ import Link from "next/link";
 const moment = require("moment");
 
 export class Home_projects extends Component {
-
   state = {
     normalStyle: {
       padding: "21px 34px",
@@ -54,20 +53,15 @@ export class Home_projects extends Component {
     let state = this.state;
     state.hover = true;
     this.setState(state);
-    
   }
 
   offHover() {
     let state = this.state;
     state.hover = false;
     this.setState(state);
-    
   }
 
   render() {
-    const testLink =
-      "https://react.semantic-ui.com/assets/images/wireframe/image.png";
-
     const {
       active,
       active1,
@@ -86,84 +80,84 @@ export class Home_projects extends Component {
         <Button>View</Button>
       </div>
     );
+    const testLink =
+      "https://react.semantic-ui.com/assets/images/wireframe/image.png";
 
     return (
       <div>
-        <div style={{ backgroundColor: "#DDDDDD", padding: "96px 48px" }}>
-          {/* Projects */}
-          <Segment vertical>
-            <Divider
-              as="h2"
-              className="header"
-              horizontal
-              style={{ margin: "3em 0em", textTransform: "uppercase" }}
-            >
-              Case Studies
-            </Divider>
-            <Container
-              style={{
-                marginTop: 0,
-                marginLeft: 10,
-                marginRight: 10,
-                border: 1
-              }}
-            >
-              <Grid stackable>
-                <Grid.Row columns={3}>
-                  <Grid.Column>
-                    <Dimmer.Dimmable
-                      as={Image}
-                      dimmed={active}
-                      dimmer={{ active, content }}
-                      onMouseEnter={e => {
-                        this.handleShow(1);
+        {/* Projects */}
+        <Segment
+          
+          style={{
+            backgroundColor: "#D3D3D3",
+            padding: "96px 48px",
+            margin: 0,
+            borderRadius: 0,
+            borderShadow: 0,
+            border: 0
+          }}
+        >
+          <Header
+            as="h2"
+            textAlign="center"
+            content="My projects over the years"
+          />
+          <Container>
+            <Grid stackable>
+              <Grid.Row columns={3}>
+                <Grid.Column>
+                  <Dimmer.Dimmable
+                    as={Image}
+                    dimmed={active}
+                    dimmer={{ active, content }}
+                    onMouseEnter={e => {
+                      this.handleShow(1);
+                    }}
+                    onMouseLeave={e => {
+                      this.handleHide(1);
+                    }}
+                    src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
+                  />
+                 
+                </Grid.Column>
+                <Grid.Column>
+                  <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                </Grid.Column>
+                <Grid.Column>
+                  <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                <Grid.Column textAlign="center">
+                  <Link href="/portfolio" passHref>
+                    <Button
+                      icon
+                      size="huge"
+                      style={
+                        hover
+                          ? {
+                              ...normalStyle,
+                              color: "white",
+                              backgroundColor: "black"
+                            }
+                          : normalStyle
+                      }
+                      onMouseOver={() => {
+                        this.onHover();
                       }}
-                      onMouseLeave={e => {
-                        this.handleHide(1);
+                      onMouseOut={() => {
+                        this.offHover();
                       }}
-                      src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
-                    />
-                    {/* <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" /> */}
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-                  </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                  <Grid.Column textAlign="center">
-                    <Link href="/portfolio" passHref>
-                      <Button
-                        icon
-                        size="huge"
-                        style={
-                          hover
-                            ? {
-                                ...normalStyle,
-                                color: "white",
-                                backgroundColor: "black"
-                              }
-                            : normalStyle
-                        }
-                        onMouseOver={() => {
-                          this.onHover();
-                        }}
-                        onMouseOut={() => {
-                          this.offHover();
-                        }}
-                      >
-                        <Icon name="clone" />
-                        View more projects
-                      </Button>
-                    </Link>
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
-            </Container>
-          </Segment>
-        </div>
+                    >
+                      <Icon name="clone" />
+                      View more projects
+                    </Button>
+                  </Link>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Container>
+        </Segment>
       </div>
     );
   }

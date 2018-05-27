@@ -49,7 +49,7 @@ export class Home extends Component {
             subHeaderColor={"black"}
             imageName={"workdesk"}
             subHeaderContent={"Find out more about me here."}
-            headerContent={"Peek into Xueyong's life"}
+            headerContent={"Peek into my life"}
             additionalSegmentStyle={{}}
             additionalSubHeaderStyle={{ zIndex: 1 }}
             additionalHeaderStyle={{ zIndex: 1 }}
@@ -62,8 +62,7 @@ export class Home extends Component {
           <Home_projects />
 
           {/* Projects */}
-          <Home_about />
-
+          {/* <Home_about /> */}
           {/* Include in an arrow from garysheng.com as reference */}
           <BottomMenu currentPage={this.state.currentPage} />
         </Responsive>

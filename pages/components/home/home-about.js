@@ -18,7 +18,6 @@ import {
 import Link from "next/link";
 
 export class Home_about extends Component {
-
   state = {
     normalStyle: {
       padding: "21px 34px",
@@ -37,9 +36,9 @@ export class Home_about extends Component {
         transitionDuration: 0.3
       }
     },
-    hover: false
+    hover: false,
+    mobile: false
   };
-
   onHover() {
     let state = this.state;
     state.hover = true;
@@ -70,20 +69,9 @@ export class Home_about extends Component {
       active2,
       active3,
       hover,
-      normalStyle
+      normalStyle,
+      mobile
     } = this.state;
-
-    const testLink =
-      "https://react.semantic-ui.com/assets/images/wireframe/image.png";
-    const content = (
-      <div>
-        <Header as="h2" inverted>
-          Title
-        </Header>
-        <Button primary>Add</Button>
-        <Button>View</Button>
-      </div>
-    );
 
     return (
       <div>
@@ -93,14 +81,15 @@ export class Home_about extends Component {
             <Header
               as="h2"
               textAlign="center"
-              content="My life as a developer"
+              content="Me as a person"
+              style={{ textTransform: "uppercase" }}
             />
             <Responsive
               minWidth={Responsive.onlyTablet.minWidth}
               maxWidth={Responsive.onlyWidescreen.maxWidth}
             >
               <Grid>
-                <Grid.Row columns={5}>
+                <Grid.Row columns={2}>
                   <Grid.Column>
                     <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
                   </Grid.Column>
@@ -136,12 +125,13 @@ export class Home_about extends Component {
                 </Grid.Row>
               </Grid>
             </Responsive>
+
             <Responsive
               minWidth={150}
               maxWidth={Responsive.onlyMobile.maxWidth}
             >
               <Grid style={{ padding: 0 }}>
-                <Grid.Row columns={2}>
+                <Grid.Row columns={5}>
                   <Grid.Column>
                     <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
                   </Grid.Column>
@@ -183,35 +173,10 @@ export class Home_about extends Component {
                 </Grid.Row>
               </Grid>
             </Responsive>
+
             <Grid>
               <Grid.Row>
-                <Grid.Column textAlign="center">
-                  <Link href="/about" passHref>
-                    <Button
-                      className="home_buttons"
-                      icon
-                      size="huge"
-                      style={
-                        hover
-                          ? {
-                              ...normalStyle,
-                              color: "white",
-                              backgroundColor: "black"
-                            }
-                          : normalStyle
-                      }
-                      onMouseOver={() => {
-                        this.onHover();
-                      }}
-                      onMouseOut={() => {
-                        this.offHover();
-                      }}
-                    >
-                      <Icon name="user outline" />
-                      Learn more about me
-                    </Button>
-                  </Link>
-                </Grid.Column>
+                <Grid.Column textAlign="center" />
               </Grid.Row>
             </Grid>
           </Container>
