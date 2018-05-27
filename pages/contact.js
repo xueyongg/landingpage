@@ -21,6 +21,7 @@ import {
 } from "semantic-ui-react";
 import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
+import { PageHeader } from "./components/pageHeader";
 
 export default class Contact extends Component {
   state = {
@@ -37,7 +38,8 @@ export default class Contact extends Component {
       email: "",
       about: ""
     },
-    loading: false
+    loading: false,
+    currentPage: "contact"
   };
 
   onChange(e) {
@@ -99,43 +101,19 @@ export default class Contact extends Component {
   render() {
     return (
       <div>
-        <TopMenu currentPage="contact" />
-        <Image
-          src="/static/images/contact.jpg"
-          fluid
-          style={{
-            opacity: "0.8",
-            maxHeight: 750
-          }}
+        <TopMenu currentPage={this.state.currentPage} />
+        <PageHeader
+          mobile={false}
+          url={this.state.currentPage}
+          headerColor={"black"}
+          subHeaderColor={"black"}
+          imageName={"contact"}
+          headerContent={"Contact me"}
+          subHeaderContent={"Let's have a little chat"}
+          additionalSegmentStyle={{}}
+          additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
+          additionalSubHeaderStyle={{ zIndex: 1 }}
         />
-        <Container
-          text
-          style={{
-            position: "absolute",
-            top: "35%",
-            left: "50%",
-            transform: "translate(-50%, -50%)"
-          }}
-        >
-          <Header
-            as="h4"
-            textAlign="center"
-            style={{ textTransform: "uppercase" }}
-          >
-            Let's have a little chat
-          </Header>
-          <Header
-            as="h1"
-            textAlign="center"
-            style={{
-              textTransform: "uppercase",
-              fontSize: 52,
-              fontWight: 700
-            }}
-          >
-            Contact me
-          </Header>
-        </Container>
 
         <Container
           text

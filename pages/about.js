@@ -20,60 +20,35 @@ import { About_photos } from "./components/about/about_photos";
 import { About_resume } from "./components/about/about_resume";
 import { About_funfact } from "./components/about/about_funfact";
 import { About_understand } from "./components/about/about_whoiam";
+import { PageHeader } from "./components/pageHeader";
 
 export default class About extends Component {
   static async getInitialProps({ pathname, query }) {
     return { query };
   }
+  state = {
+    currentPage: "about"
+  };
 
   render() {
     let mobile = false;
+    let { currentPage } = this.state;
+
     return (
       <div>
-        <style>{`
-          html, body {
-            background: #fff;
-          }
-        `}</style>
-        <TopMenu currentPage="about"/>
-
-        <Image
-          src="/static/images/about.jpg"
-          fluid
-          bordered
-          style={{
-            opacity: "0.5",
-            maxHeight: 750
-          }}
+        <TopMenu currentPage={this.state.currentPage} />
+        <PageHeader
+          mobile={false}
+          url={this.state.currentPage}
+          headerColor={"white"}
+          subHeaderColor={"white"}
+          imageName={"about"}
+          headerContent={"about me"}
+          subHeaderContent={"discover more about my personhood"}
+          additionalSegmentStyle={{}}
+          additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
+          additionalSubHeaderStyle={{ zIndex: 1 }}
         />
-        <Container
-          text
-          style={{
-            position: "absolute",
-            top: "35%",
-            left: "50%",
-            transform: "translate(-50%, -50%)"
-          }}
-        >
-          <Header
-            as="h4"
-            textAlign="center"
-            style={{ textTransform: "uppercase" }}
-          >
-            Discover more about me and my personhood
-          </Header>
-          <Header
-            as="h1"
-            textAlign="center"
-            style={{
-              textTransform: "uppercase",
-              fontSize: 52,
-              fontWight: 700
-            }}
-          >
-            About me
-          </Header>
-        </Container>
 
         {/* Fun fact about myself*/}
         <About_funfact />
@@ -106,7 +81,7 @@ export default class About extends Component {
         {/* Resume segment */}
         <About_resume />
 
-        <BottomMenu currentPage="about"/>
+        <BottomMenu currentPage={this.state.currentPage} />
       </div>
     );
   }

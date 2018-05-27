@@ -16,49 +16,32 @@ import {
 import Link from "next/link";
 import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
+import { PageHeader } from "./components/pageHeader";
 
 export default class Portfolio extends Component {
   static async getInitialProps({ pathname }) {
     return { pathname };
   }
+  state = {
+    currentPage: "portfolio"
+  };
 
   render() {
     return (
       <div>
         <TopMenu currentPage="portfolio" />
-        <Image
-          src="../static/images/portfolio.jpg"
-          fluid
-          style={{ opacity: "0.5", maxHeight: 750 }}
+        <PageHeader
+          mobile={false}
+          url={this.state.currentPage}
+          headerColor={"black"}
+          subHeaderColor={"white"}
+          imageName={"portfolio"}
+          headerContent={"My humble portfolio"}
+          subHeaderContent={"Take a look at what I've done"}
+          additionalSegmentStyle={{}}
+          additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
+          additionalSubHeaderStyle={{ zIndex: 1 }}
         />
-        <Container
-          text
-          style={{
-            position: "absolute",
-            top: "35%",
-            left: "50%",
-            transform: "translate(-50%, -50%)"
-          }}
-        >
-          <Header
-            as="h4"
-            textAlign="center"
-            style={{ textTransform: "uppercase" }}
-          >
-            Take a look at what I've done
-          </Header>
-          <Header
-            as="h1"
-            textAlign="center"
-            style={{
-              textTransform: "uppercase",
-              fontSize: 52,
-              fontWight: 700
-            }}
-          >
-            My humble portfolio
-          </Header>
-        </Container>
         <Container>
           <Grid celled stackable columns={3}>
             <Grid.Row>
@@ -181,7 +164,7 @@ export default class Portfolio extends Component {
             </Grid.Row>
           </Grid>
         </Container>
-        <BottomMenu currentPage="portfolio" />
+        <BottomMenu currentPage={this.state.currentPage} />
       </div>
     );
   }

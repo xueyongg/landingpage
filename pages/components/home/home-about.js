@@ -18,10 +18,7 @@ import {
 import Link from "next/link";
 
 export class Home_about extends Component {
-  static async getInitialProps({ query }) {
-    // console.log(query);
-    return true;
-  }
+
   state = {
     normalStyle: {
       padding: "21px 34px",

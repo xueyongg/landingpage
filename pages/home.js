@@ -22,15 +22,14 @@ import { BottomMenu } from "./components/bottom_menu";
 import { Todo } from "./components/todo";
 import { Home_introduction } from "./components/home/home_introduction";
 import { Home_contact } from "./components/home/home_contact";
+import { PageHeader } from "./components/pageHeader";
 
 const moment = require("moment");
 
 export class Home extends Component {
-  // static async getInitialProps({ currentPage }) {
-  //   console.log(currentPage);
-  //   return true;
-  // }
-  state = {};
+  state = {
+    currentPage: "home"
+  };
   handleOnUpdate() {}
 
   render() {
@@ -44,49 +43,18 @@ export class Home extends Component {
     return (
       <div>
         <Responsive onUpdate={this.handleOnUpdate}>
-          <Image
-            src="/static/images/workdesk.jpg"
-            fluid
-            style={{ opacity: "0.5", maxHeight: 750, width: "100%" }}
+          <PageHeader
+            mobile={false}
+            url={this.state.currentPage}
+            headerColor={"black"}
+            subHeaderColor={"black"}
+            imageName={"workdesk"}
+            headerContent={"Take a peek into Xueyong's life"}
+            subHeaderContent={"Find out more about me here"}
+            additionalSegmentStyle={{}}
+            additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
+            additionalSubHeaderStyle={{ zIndex: 1 }}
           />
-
-          <Container
-            text
-            style={{
-              position: "absolute",
-              top: "35%",
-              left: "50%",
-              transform: "translate(-50%, -50%)"
-            }}
-          >
-            {/* <div id="typed-strings">
-              <p>
-                Typed.js is a <strong>JavaScript</strong> library.
-              </p>
-              <p>
-                It <em>types</em> out sentences.
-              </p>
-            </div>
-            <span id="typed" /> */}
-            <Header
-              as="h4"
-              textAlign="center"
-              style={{ textTransform: "uppercase" }}
-            >
-              Find out more about me here
-            </Header>
-            <Header
-              as="h1"
-              textAlign="center"
-              style={{
-                textTransform: "uppercase",
-                fontSize: 52,
-                fontWight: 700
-              }}
-            >
-              Take a peek into Xueyong's life
-            </Header>
-          </Container>
 
           {/* Introduction */}
           <Home_introduction />
@@ -98,7 +66,7 @@ export class Home extends Component {
           <Home_about />
 
           {/* Include in an arrow from garysheng.com as reference */}
-          <BottomMenu currentPage="home" />
+          <BottomMenu currentPage={this.state.currentPage} />
         </Responsive>
       </div>
     );

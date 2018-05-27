@@ -36,6 +36,7 @@ export class TopMenu extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
     this.setState({
       activeItem: this.props.currentPage
     });

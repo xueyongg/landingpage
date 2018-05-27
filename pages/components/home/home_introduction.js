@@ -18,10 +18,7 @@ import {
 import Link from "next/link";
 
 export class Home_introduction extends Component {
-  static async getInitialProps({ query }) {
-    // console.log(query);
-    return true;
-  }
+
   state = {
     normalStyle: {
       padding: "21px 34px",
@@ -82,10 +79,10 @@ export class Home_introduction extends Component {
           {/* About */}
           <Segment vertical>
             <Container
-              style={{ backgroundColor: "#ffff", padding: "96px 48px" }}
+              style={{ backgroundColor: "#ffff", padding: "80px 48px" }}
             >
               <Header
-                as="H2"
+                as="h2"
                 textAlign="center"
                 content="My life as a developer"
               />

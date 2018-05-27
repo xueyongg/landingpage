@@ -18,10 +18,7 @@ import Link from "next/link";
 const moment = require("moment");
 
 export class Home_projects extends Component {
-  static async getInitialProps({ query }) {
-    // console.log(query);
-    return true;
-  }
+
   state = {
     normalStyle: {
       padding: "21px 34px",

@@ -16,125 +16,33 @@ import {
 import Link from "next/link";
 import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
+import { PageHeader } from "./components/pageHeader";
 
 export default class Resume extends Component {
-  static async getInitialProps({ pathname, query }) {
-    return { query };
-  }
-
   state = {
-    normalStyle: {
-      padding: "21px 34px",
-      textTransform: "uppercase",
-      fontSize: "15px",
-      fontStyle: "normal",
-      fontWeight: "400",
-      letterSpacing: ".1em",
-      fontFamily: "proxima-nova",
-      color: "black",
-      border: "2px solid",
-      borderColor: "black",
-      borderShadow: "0",
-      backgroundColor: "transparent",
-      transition: {
-        transitionDuration: 0.3
-      }
-      
-    },
-    hover: false
+    currentPage: "resume"
   };
-
-  onHover() {
-    let state = this.state;
-    state.hover = true;
-    this.setState(state);
-  }
-
-  offHover() {
-    let state = this.state;
-    state.hover = false;
-    this.setState(state);
-  }
-
   render() {
     const { hover, normalStyle } = this.state;
     return (
       <div>
-        <TopMenu currentPage="resume" />
-        <Image
-          src="/static/images/resume.jpg"
-          fluid
-          style={{ opacity: "0.6", maxHeight: 750 }}
+        <TopMenu currentPage={this.state.currentPage} />
+        <PageHeader
+          mobile={false}
+          url={this.state.currentPage}
+          headerColor={"black"}
+          subHeaderColor={"black"}
+          imageName={"resume"}
+          headerContent={"resume"}
+          subHeaderContent={"Find out what i have accomplished over the years"}
+          additionalSegmentStyle={{}}
+          additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
+          additionalSubHeaderStyle={{ zIndex: 1 }}
         />
-        <Container
-          text
-          style={{
-            position: "absolute",
-            top: "35%",
-            left: "50%",
-            transform: "translate(-50%, -50%)"
-          }}
-        >
-          <Grid textAlign="center">
-            <Grid.Row>
-              <Grid.Column>
-                <Header as="h4" textAlign="center">
-                  Find out what I have accomplished over the years
-                </Header>
-                <Header
-                  as="h1"
-                  textAlign="center"
-                  style={{
-                    textTransform: "uppercase",
-                    fontSize: 52,
-                    fontWight: 700
-                  }}
-                >
-                  Resume
-                </Header>
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row>
-              <Grid.Column>
-                <a
-                  href="/static/assets/resume/Resume - Phua Xue Yong Joshua.pdf"
-                  download
-                >
-                  <Button
-                    size="big"
-                    icon
-                    style={
-                      hover
-                        ? {
-                            ...normalStyle,
-                            color: "white",
-                            backgroundColor: "black"
-                          }
-                        : normalStyle
-                    }
-                    onMouseOver={() => {
-                      this.onHover();
-                    }}
-                    onMouseOut={() => {
-                      this.offHover();
-                    }}
-                  >
-                    <Icon name="download" />
-                    Download Resume
-                  </Button>
-                </a>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
 
         <Container
           style={{
-            marginTop: 150,
-            marginLeft: 10,
-            marginRight: 10,
-            marginBottom: 80,
-            border: 1
+            padding: "96px 48px"
           }}
         >
           {/* Techonology  |  Core |  Experienced*/}
