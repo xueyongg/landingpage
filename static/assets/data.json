@@ -1,0 +1,64 @@
+{
+  "home": {
+    "introduction": {},
+    "projects": {},
+    "about": {}
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "",
+        "description": "",
+        "date": "",
+        "duration": "",
+        "skills": [{ "icon": "", "name": "" }]
+      },
+      {
+        "title": "",
+        "description": "",
+        "date": "",
+        "duration": "",
+        "skills": [{ "icon": "", "name": "" }]
+      }
+    ]
+  },
+  "about": {
+    "funfact": {
+      "header": "",
+      "icon": "",
+      "description": ""
+    },
+    "images": [""],
+    "about": {
+      "header": "",
+      "icon": "",
+      "description": ""
+    },
+    "instagram": [""],
+    "about_resume": {
+      "header": "",
+      "icon": "",
+      "description": "",
+      "link": ""
+    }
+  },
+  "resume": {
+    "technology": {
+      "header": "",
+      "icon": "",
+      "core_technology": [{ "name": "" }],
+      "experienced_with": [{ "name": "" }]
+    },
+    "work_experience": {
+      "header": "",
+      "icon": "",
+      "decription": [{ "name": "", "description": "" }]
+    },
+    "education": {
+      "header": "",
+      "icon": "",
+      "decription": [{ "name": "", "description": "" }]
+    }
+  },
+  "contact": {}
+}
