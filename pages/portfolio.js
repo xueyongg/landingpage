@@ -25,7 +25,7 @@ export default class Portfolio extends Component {
   render() {
     return (
       <div>
-        <TopMenu currentPage={this.props.pathname} />
+        <TopMenu currentPage="portfolio" />
         <Image
           src="../static/images/portfolio.jpg"
           fluid
@@ -181,7 +181,7 @@ export default class Portfolio extends Component {
             </Grid.Row>
           </Grid>
         </Container>
-        <BottomMenu currentPage="portfolio"/>
+        <BottomMenu currentPage="portfolio" />
       </div>
     );
   }

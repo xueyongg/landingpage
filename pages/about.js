@@ -35,7 +35,7 @@ export default class About extends Component {
             background: #fff;
           }
         `}</style>
-        <TopMenu />
+        <TopMenu currentPage="about"/>
 
         <Image
           src="/static/images/about.jpg"

@@ -99,7 +99,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div>
-        <TopMenu />
+        <TopMenu currentPage="contact" />
         <Image
           src="/static/images/contact.jpg"
           fluid

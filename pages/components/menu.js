@@ -24,16 +24,22 @@ import { PropTypes } from "prop-types";
 import Router from "next/router";
 
 export class TopMenu extends Component {
+  state = {
+    menuFixed: false,
+    overlayFixed: false,
+    visible: false,
+    normalStyle: {}
+  };
   getInitialprops({ pathname }) {
     console.log(currentPage);
     return currentPage;
   }
 
-  state = {
-    menuFixed: false,
-    overlayFixed: false,
-    visible: false
-  };
+  componentDidMount() {
+    this.setState({
+      activeItem: this.props.currentPage
+    });
+  }
 
   handleOnUpdate() {
     this.setState({});
@@ -67,9 +73,6 @@ export class TopMenu extends Component {
     console.log("unStickTopMenu: menufixed is false");
   };
 
-  handleItemClick(e, { name }) {
-    this.setState({ activeItem: name });
-  }
   static async getInitialprops({}) {
     let activeLink = "home";
     return activeLink;
@@ -79,13 +82,9 @@ export class TopMenu extends Component {
       menuFixed,
       overlayFixed,
       overlayRect,
-
+      activeItem,
       visible
     } = this.state;
-    let activeItem;
-    Router.onRouteChangeStart = url => {
-      console.log("App is changing to: ", url);
-    };
 
     let menuStyle = {
       border: "none",
@@ -152,15 +151,9 @@ export class TopMenu extends Component {
                 </Menu.Item>
               </Menu.Menu>
 
-              <Menu.Menu position="right" >
+              <Menu.Menu position="right">
                 <Link prefetch href={{ pathname: "/" }} passHref>
-                  <Menu.Item
-                    name="home"
-                    active={activeItem === "home"}
-                    onClick={() => {
-                      this.handleItemClick();
-                    }}
-                  >
+                  <Menu.Item name="home" active={activeItem === "home"}>
                     <p>Home</p>
                   </Menu.Item>
                 </Link>
@@ -168,43 +161,22 @@ export class TopMenu extends Component {
                   <Menu.Item
                     name="portfolio"
                     active={activeItem === "portfolio"}
-                    onClick={() => {
-                      this.handleItemClick();
-                    }}
                   >
                     <p>Portfolio</p>
                   </Menu.Item>
                 </Link>
                 <Link prefetch href={{ pathname: "/about" }} passHref>
-                  <Menu.Item
-                    name="about"
-                    active={activeItem === "about"}
-                    onClick={() => {
-                      this.handleItemClick();
-                    }}
-                  >
+                  <Menu.Item name="about" active={activeItem === "about"}>
                     <p>About</p>
                   </Menu.Item>
                 </Link>
                 <Link prefetch href={{ pathname: "/resume" }} passHref>
-                  <Menu.Item
-                    name="resume"
-                    active={activeItem === "resume"}
-                    onClick={() => {
-                      this.handleItemClick();
-                    }}
-                  >
+                  <Menu.Item name="resume" active={activeItem === "resume"}>
                     <p>Resume</p>
                   </Menu.Item>
                 </Link>
                 <Link prefetch href={{ pathname: "/contact" }} passHref>
-                  <Menu.Item
-                    name="contact"
-                    active={activeItem === "contact"}
-                    onClick={() => {
-                      this.handleItemClick();
-                    }}
-                  >
+                  <Menu.Item name="contact" active={activeItem === "contact"}>
                     <p>Contact</p>
                   </Menu.Item>
                 </Link>

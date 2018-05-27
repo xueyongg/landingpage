@@ -39,6 +39,7 @@ export default class Resume extends Component {
       transition: {
         transitionDuration: 0.3
       }
+      
     },
     hover: false
   };
@@ -59,7 +60,7 @@ export default class Resume extends Component {
     const { hover, normalStyle } = this.state;
     return (
       <div>
-        <TopMenu />
+        <TopMenu currentPage="resume" />
         <Image
           src="/static/images/resume.jpg"
           fluid
@@ -212,7 +213,7 @@ export default class Resume extends Component {
             </Grid.Column>
           </Grid>
         </Container>
-        <BottomMenu currentPage="resume"/>
+        <BottomMenu currentPage="resume" />
       </div>
     );
   }
