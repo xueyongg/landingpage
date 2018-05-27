@@ -34,7 +34,7 @@ export default class Resume extends Component {
           subHeaderColor={"black"}
           imageName={"resume"}
           headerContent={"resume"}
-          subHeaderContent={"Find out what i have accomplished over the years"}
+          subHeaderContent={"Find out what I have accomplished over the years."}
           additionalSegmentStyle={{}}
           additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
           additionalSubHeaderStyle={{ zIndex: 1 }}
@@ -121,7 +121,7 @@ export default class Resume extends Component {
             </Grid.Column>
           </Grid>
         </Container>
-        <BottomMenu currentPage="resume" />
+        <BottomMenu currentPage={this.state.currentPage} />
       </div>
     );
   }

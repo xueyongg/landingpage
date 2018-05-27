@@ -29,15 +29,15 @@ export default class Portfolio extends Component {
   render() {
     return (
       <div>
-        <TopMenu currentPage="portfolio" />
+        <TopMenu currentPage={this.state.currentPage} />
         <PageHeader
           mobile={false}
           url={this.state.currentPage}
           headerColor={"black"}
-          subHeaderColor={"white"}
-          imageName={"portfolio"}
-          headerContent={"My humble portfolio"}
+          subHeaderColor={"black"}
+          imageName={"portfoliotest"}
           subHeaderContent={"Take a look at what I've done"}
+          headerContent={"My humble portfolio"}
           additionalSegmentStyle={{}}
           additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
           additionalSubHeaderStyle={{ zIndex: 1 }}

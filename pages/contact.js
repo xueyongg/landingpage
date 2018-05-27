@@ -108,8 +108,8 @@ export default class Contact extends Component {
           headerColor={"black"}
           subHeaderColor={"black"}
           imageName={"contact"}
+          subHeaderContent={"Let's have a little chat."}
           headerContent={"Contact me"}
-          subHeaderContent={"Let's have a little chat"}
           additionalSegmentStyle={{}}
           additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
           additionalSubHeaderStyle={{ zIndex: 1 }}
@@ -213,7 +213,7 @@ export default class Contact extends Component {
             </Grid>
           </div>
         </Container>
-        <BottomMenu currentPage="contact" />
+        <BottomMenu currentPage={this.state.currentPage} />
       </div>
     );
   }

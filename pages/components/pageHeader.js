@@ -86,7 +86,7 @@ export class PageHeader extends Component {
           minHeight: 700,
           marginTop: 0,
           padding: "1em 0em",
-          backgroundImage: `url(/static/images/${imageName}.jpg), url('https://www.istockphoto.com/photos/grey-background')`,
+          backgroundImage: `url(/static/images/${imageName}.jpg), url(/static/images/default.jpg)`,
           backgroundColor: "#ffff",
           backgroundSize: "cover",
           borderRadius: 0,
@@ -96,20 +96,6 @@ export class PageHeader extends Component {
         }}
       >
         <Container text>
-          <Header
-            as="h1"
-            content={headerContent ? headerContent : "Imagine-a-company"}
-            inverted
-            style={{
-              fontSize: mobile ? "2em" : "4em",
-              fontWeight: "normal",
-              marginBottom: 0,
-              marginTop: mobile ? "1.5em" : "3em",
-              textTransform: "uppercase",
-              color: headerColor ? headerColor : "white",
-              ...additionalHeaderStyle
-            }}
-          />
           <Header
             as="h4"
             content={
@@ -121,12 +107,28 @@ export class PageHeader extends Component {
             style={{
               fontSize: mobile ? "1.5em" : "1.7em",
               fontWeight: "normal",
-              marginTop: mobile ? "0.5em" : "1.5em",
-              textTransform: "uppercase",
+              marginTop: mobile ? "3.3em" : "10em",
+              textTransform: "none",
               color: subHeaderColor ? subHeaderColor : "white",
               ...additionalSubHeaderStyle
             }}
           />
+          <Header
+            as="h1"
+            content={headerContent ? headerContent : "Imagine-a-company"}
+            inverted
+            style={{
+              fontSize: mobile ? "2em" : "4em",
+              fontWeight: "normal",
+              marginBottom: 0,
+              marginTop: mobile ? "0.2em" : "0.4em",
+              marginBottom: mobile ? "0.05em" : "0.1em",
+              textTransform: "uppercase",
+              color: headerColor ? headerColor : "white",
+              ...additionalHeaderStyle
+            }}
+          />
+
           {url === "resume" ? (
             <a
               href="/static/assets/resume/Resume - Phua Xue Yong Joshua.pdf"

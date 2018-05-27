@@ -23,6 +23,16 @@ import {
 const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
+      as="h2"
+      content="Do whatever you want when you want to."
+      inverted
+      style={{
+        fontSize: mobile ? "1.5em" : "1.7em",
+        fontWeight: "normal",
+        marginTop: mobile ? "2em" : "6em"
+      }}
+    />
+    <Header
       as="h1"
       content="Imagine-a-Company"
       inverted
@@ -30,17 +40,8 @@ const HomepageHeading = ({ mobile }) => (
         fontSize: mobile ? "2em" : "4em",
         fontWeight: "normal",
         marginBottom: 0,
-        marginTop: mobile ? "1.5em" : "3em"
-      }}
-    />
-    <Header
-      as="h2"
-      content="Do whatever you want when you want to."
-      inverted
-      style={{
-        fontSize: mobile ? "1.5em" : "1.7em",
-        fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em"
+        marginTop: mobile ? "0.2em" : "0.4em",
+        marginBottom: mobile ? "0.05em" : "0.1em"
       }}
     />
     <Button primary size="huge">

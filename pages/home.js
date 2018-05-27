@@ -49,11 +49,11 @@ export class Home extends Component {
             headerColor={"black"}
             subHeaderColor={"black"}
             imageName={"workdesk"}
-            headerContent={"Take a peek into Xueyong's life"}
-            subHeaderContent={"Find out more about me here"}
+            subHeaderContent={"Find out more about me here."}
+            headerContent={"Peek into Xueyong's life"}
             additionalSegmentStyle={{}}
-            additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
             additionalSubHeaderStyle={{ zIndex: 1 }}
+            additionalHeaderStyle={{ zIndex: 1 }}
           />
 
           {/* Introduction */}
