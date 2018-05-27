@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {
   Modal,
   Header,
@@ -32,49 +33,7 @@ export class Page_contact extends Component {
     subHeaderColor: "",
     additionalSegmentStyle: {},
     additionalHeaderStyle: {},
-    additionalSubHeaderStyle: {},
-    normalStyle: {
-      padding: "21px 34px",
-      textTransform: "uppercase",
-      fontSize: "15px",
-      fontStyle: "normal",
-      fontWeight: "400",
-      letterSpacing: ".1em",
-      fontFamily: "proxima-nova",
-      color: "black",
-      border: "2px solid",
-      borderColor: "#272727",
-      borderShadow: "0",
-      backgroundColor: "transparent",
-      zIndex: 10,
-      transition: {
-        transitionDuration: 0.3
-      }
-    },
-    hover: false
-  };
-
-  onHover() {
-    let state = this.state;
-    state.hover = true;
-    this.setState(state);
-  }
-
-  offHover() {
-    let state = this.state;
-    state.hover = false;
-    this.setState(state);
-  }
-
-  handleShow = num => {
-    let state = this.state;
-    state[`active${num}`] = true;
-    this.setState({ active: true, active1: true });
-  };
-  handleHide = num => {
-    let state = this.state;
-    state[`active${num}`] = false;
-    this.setState({ active: false, active1: false });
+    additionalSubHeaderStyle: {}
   };
 
   render() {
@@ -101,22 +60,23 @@ export class Page_contact extends Component {
             textAlign="center"
             style={{
               margin: "0em 0em 0em 0em",
-              padding: "0em 0em",
+              padding: "2em 0em 0em 0em ",
               borderRadius: 0,
-              borderShadow: 0
+              borderShadow: 0,
+              border: 0
             }}
           >
             <Image
               src="/static/images/homeImage.jpg"
               fluid
-              style={{ opacity: "0.5", maxHeight: 550 }}
+              style={{ opacity: "0.5", width: "100%", maxHeight: 500 }}
             />
             <Container
               text
               style={{
                 backgroundColor: "transparent",
                 position: "absolute",
-                top: "50%",
+                top: "60%",
                 left: "50%",
                 transform: "translate(-50%, -50%)"
               }}
@@ -127,45 +87,34 @@ export class Page_contact extends Component {
                   minWidth={Responsive.onlyTablet.minWidth}
                   maxWidth={Responsive.onlyWidescreen.maxWidth}
                 >
-                  <p style={{ fontSize: 72, textTransform: "uppercase" }}>
+                  <p
+                    style={{
+                      fontSize: 72,
+                      textTransform: "uppercase",
+                      marginBottom: "0.25em"
+                    }}
+                  >
                     Hire a web designer
                   </p>
+                  <ResponsiveButton />
                 </Responsive>
 
                 <Responsive
                   minWidth={150}
                   maxWidth={Responsive.onlyMobile.maxWidth}
                 >
-                  <p style={{ fontSize: 24, textTransform: "uppercase" }}>
+                  <p
+                    style={{
+                      fontSize: 24,
+                      textTransform: "uppercase",
+                      marginBottom: "0.5em"
+                    }}
+                  >
                     Hire a web designer
                   </p>
+                  <ResponsiveButton mobile />
                 </Responsive>
               </Header>
-              <Link href="/contact" passHref>
-                <Button
-                  className="home_buttons"
-                  icon
-                  size="huge"
-                  style={
-                    hover
-                      ? {
-                          ...normalStyle,
-                          color: "white",
-                          backgroundColor: "black"
-                        }
-                      : normalStyle
-                  }
-                  onMouseOver={() => {
-                    this.onHover();
-                  }}
-                  onMouseOut={() => {
-                    this.offHover();
-                  }}
-                >
-                  <Icon name="mail outline" />
-                  Contact me today
-                </Button>
-              </Link>
             </Container>
           </Segment>
         </div>
@@ -173,3 +122,58 @@ export class Page_contact extends Component {
     );
   }
 }
+
+const ResponsiveButton = ({ mobile }) => {
+  let normalStyle = {
+    padding: "21px 34px",
+    textTransform: "uppercase",
+    fontSize: "15px",
+    fontStyle: "normal",
+    fontWeight: "400",
+    letterSpacing: ".1em",
+    fontFamily: "proxima-nova",
+    color: "black",
+    border: "2px solid",
+    borderColor: "#272727",
+    borderShadow: "0",
+    backgroundColor: "transparent",
+    maxWidth: 250,
+    zIndex: 10,
+    transition: {
+      transitionDuration: 0.3
+    }
+  };
+  let hover = false;
+
+  let modifiedNormal = mobile
+    ? { ...normalStyle, padding: "10px 4.5px" }
+    : normalStyle;
+
+  return (
+    <Link href="/contact" passHref>
+      <Button
+        style={
+          hover
+            ? {
+                ...modifiedNormal,
+                color: "white",
+                backgroundColor: "black"
+              }
+            : modifiedNormal
+        }
+        onMouseOver={() => {
+          this.onHover();
+        }}
+        onMouseOut={() => {
+          this.offHover();
+        }}
+      >
+        {/* <Icon name="mail outline" size="small" /> */}
+        Contact me today
+      </Button>
+    </Link>
+  );
+};
+ResponsiveButton.propTypes = {
+  mobile: PropTypes.bool
+};

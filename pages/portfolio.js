@@ -41,7 +41,7 @@ export default class Portfolio extends Component {
           additionalSubHeaderStyle={{ zIndex: 1 }}
         />
         <Container>
-          <Grid celled stackable columns={3}>
+          <Grid celled stackable columns={3} textAlign="center" stretched>
             {data.portfolio.projects.map((project, index) => {
               let {
                 title,
@@ -58,8 +58,8 @@ export default class Portfolio extends Component {
                     <Header as="h4" content="Date and duration of project" />
                     <p>{date}</p>
                   </Grid.Column>
-                  <Grid.Column width={10}>
-                    <Header as="h4" content={title} />
+                  <Grid.Column width={10} textAlign="left">
+                    <Header as="h3" content={title} textAlign="center" />
                     {descriptions.map((description, i) => {
                       return <p key={i}>{description}</p>;
                     })}
