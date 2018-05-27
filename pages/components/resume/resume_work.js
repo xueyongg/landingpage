@@ -22,13 +22,11 @@ export default class Resume_work extends Component {
   render() {
     return (
       <div>
-        
         <Container
           style={{
             padding: "96px 16px 24px 16px"
           }}
         >
-
           <Grid>
             <Grid.Column width={5}>
               <Header as="h2" textAlign="left">
@@ -77,11 +75,17 @@ export default class Resume_work extends Component {
                               {skills.map((skill, i) => {
                                 if (skill.icon)
                                   return (
-                                    <Label
-                                      key={skill + "-" + i}
-                                      icon={skill.icon}
-                                      content={skill.name}
-                                    />
+                                    <Label key={skill + "-" + i}>
+                                      {skill.icon.includes("devicon") ? (
+                                        <i
+                                          class={skill.icon}
+                                          style={{ paddingRight: 8 }}
+                                        />
+                                      ) : (
+                                        <Icon name={skill.icon} />
+                                      )}
+                                      {skill.name}
+                                    </Label>
                                   );
                               })}
                             </Item.Extra>

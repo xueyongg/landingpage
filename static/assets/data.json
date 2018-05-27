@@ -131,9 +131,9 @@
             "Debugged up to 100 bugs over 3 months, which helped to speed up the operations of KeyReply and meet deadlines promptly"
           ],
           "skills": [
-            { "icon": "feed", "name": "JavaScript" },
-            { "icon": "feed", "name": "Vue.js" },
-            { "icon": "feed", "name": "Node.js" },
+            { "icon": "devicon-javascript-plain", "name": "JavaScript" },
+            { "icon": "devicon-vuejs-plain", "name": "Vue.js" },
+            { "icon": "devicon-nodejs-plain", "name": "Node.js" },
             { "icon": "feed", "name": "Microsoft SQL" }
           ]
         },
@@ -159,7 +159,7 @@
           "company":
             "UOB-SMU Asian Enterprise Institute | Aesthetic Clinic Industry & Oral Care Industry",
           "companyWebsite": "",
-          "jobTitle": "Student-Consultant, ConsultingInternship",
+          "jobTitle": "Student-Consultant, Consulting Internship",
           "jobDescriptionLink": "",
           "date": "",
           "duration": "Jul 2015 – Jul 2016",
