@@ -70,13 +70,38 @@ export default class Portfolio extends Component {
                           if (screenshot)
                             return (
                               <Grid.Column>
-                                <Image
-                                  src={baseurl + screenshot}
-                                  rounded
-                                  bordered
-                                  style={{ borderWidth: 3 }}
-                                  alt={baseurl + screenshot}
-                                />
+                                <Modal
+                                  basic
+                                  trigger={
+                                    <Image
+                                      src={baseurl + screenshot}
+                                      rounded
+                                      bordered
+                                      style={{ borderWidth: 3 }}
+                                      alt={baseurl + screenshot}
+                                    />
+                                  }
+                                  closeIcon
+                                >
+                                  <Modal.Content>
+                                    <Image
+                                      fluid
+                                      rounded
+                                      alt={
+                                        baseurl +
+                                        "large/" +
+                                        screenshot.replace("tn_", "")
+                                      }
+                                      size="medium"
+                                      src={
+                                        baseurl +
+                                        "large/" +
+                                        screenshot.replace("tn_", "")
+                                      }
+                                      style={{ width: "100%" }}
+                                    />
+                                  </Modal.Content>
+                                </Modal>
                               </Grid.Column>
                             );
                         })}
