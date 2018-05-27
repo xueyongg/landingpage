@@ -19,9 +19,6 @@ import { BottomMenu } from "./components/bottom_menu";
 import { PageHeader } from "./components/pageHeader";
 
 export default class Portfolio extends Component {
-  static async getInitialProps({ pathname }) {
-    return { pathname };
-  }
   state = {
     currentPage: "portfolio"
   };

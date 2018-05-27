@@ -23,9 +23,6 @@ import { About_understand } from "./components/about/about_whoiam";
 import { PageHeader } from "./components/pageHeader";
 
 export default class About extends Component {
-  static async getInitialProps({ pathname, query }) {
-    return { query };
-  }
   state = {
     currentPage: "about"
   };

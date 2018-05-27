@@ -15,9 +15,6 @@ import {
 import Link from "next/link";
 
 export class About_understand extends Component {
-  static async getInitialProps({ pathname, query }) {
-    return { query };
-  }
 
   render() {
     return (
