@@ -131,7 +131,6 @@ export class TopMenu extends Component {
             once={false}
           >
             <Menu
-              borderless
               secondary={!menuFixed}
               pointing={!menuFixed}
               fixed={menuFixed ? "top" : false}
@@ -237,9 +236,8 @@ export class TopMenu extends Component {
             </Sidebar>
             <Sidebar.Pusher width="very thin">
               <Menu borderless fluid icon style={{ border: 0 }}>
-                <Menu.Menu position="left" borderless>
+                <Menu.Menu position="left">
                   <Menu.Item
-                    borderless
                     name="mobile-home"
                     onClick={() => {
                       this.toggleVisibility();

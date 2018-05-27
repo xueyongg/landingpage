@@ -3,6 +3,7 @@ module.exports = {
   exportPathMap: function(defaultPathMap) {
     return {
       "/": { page: "/" },
+      "/home": { page: "/" },
       "/about": { page: "/about" },
       "/resume": { page: "/resume" },
       "/portfolio": { page: "/portfolio" },
@@ -11,9 +12,9 @@ module.exports = {
   },
   link: [
     {
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: './static/images/favicon/favicon.ico',
-    },
-  ],
+      rel: "icon",
+      type: "image/x-icon",
+      href: "./static/images/favicon/favicon.ico"
+    }
+  ]
 };
