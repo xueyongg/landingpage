@@ -18,6 +18,14 @@ import { Home } from "./home";
 export default class extends Component {
   state = {};
 
+  onKeyPress(e) {
+    console.log(e);
+  }
+
+  onClickUp = () => {};
+
+  onClickDown = () => {};
+
   render() {
     const { activeItem } = this.state;
 
@@ -37,6 +45,16 @@ export default class extends Component {
         </Head>
         <TopMenu currentPage="home" />
         <Home />
+        <span style={{ position: "fixed", right: "2em", bottom: "5em" }}>
+          <Button icon onClick={this.onClickUp}>
+            <Icon name="chevron up" />
+          </Button>
+        </span>
+        <span style={{ position: "fixed", right: "2em", bottom: "2em" }}>
+          <Button icon onClick={this.onClickDown}>
+            <Icon name="chevron down" />
+          </Button>
+        </span>
       </div>
     );
   }
