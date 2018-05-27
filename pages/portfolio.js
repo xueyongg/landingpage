@@ -81,8 +81,11 @@ export default class Portfolio extends Component {
                                       alt={baseurl + screenshot}
                                     />
                                   }
-                                  closeIcon
+                                  // style={{ textAlign: "right" }}
                                 >
+                                  {/* <Modal.Header>
+                                    <Icon name="remove" />
+                                  </Modal.Header> */}
                                   <Modal.Content>
                                     <Image
                                       fluid
