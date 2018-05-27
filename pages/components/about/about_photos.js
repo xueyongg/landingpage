@@ -16,13 +16,20 @@ import {
 import Link from "next/link";
 
 export class About_photos extends Component {
-
   render() {
     return (
       <div>
         <Responsive
-          minWidth={Responsive.onlyTablet.minWidth}
-          maxWidth={Responsive.onlyWidescreen.maxWidth}
+          minWidth={
+            Responsive.onlyTablet.minWidth
+              ? Responsive.onlyTablet.minWidth
+              : 500
+          }
+          maxWidth={
+            Responsive.onlyWidescreen.maxWidth
+              ? Responsive.onlyWidescreen.maxWidth
+              : 1500
+          }
         >
           <p>
             This will show a total of 6 photos with no borders padding or margin
