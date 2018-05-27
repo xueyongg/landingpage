@@ -46,19 +46,133 @@
     "technology": {
       "header": "",
       "icon": "",
-      "core_technology": [{ "name": "" }],
-      "experienced_with": [{ "name": "" }]
+      "core_technology": [
+        { "name": "Java/JSP" },
+        { "name": "Javascript" },
+        { "name": "React.js" },
+        { "name": "Meteor Framework" },
+        { "name": "MongoDB" },
+        { "name": "Webpack" },
+        { "name": "Semantic UI" },
+        { "name": "Webpack" }
+      ],
+      "experienced_with": [
+        { "name": "Version Control (GIT)" },
+        { "name": "Next.js" },
+        { "name": "VBA" },
+        { "name": "Matlab" },
+        { "name": "Vue.js" },
+        { "name": "HTML5" },
+        { "name": "Vuejs" },
+        { "name": "SAP" }
+      ]
     },
     "work_experience": {
-      "header": "",
-      "icon": "",
-      "decription": [{ "name": "", "description": "" }]
+      "header": "Work Experience",
+      "icon": "user",
+      "experiences": [
+        {
+          "company": "KeyReply",
+          "companyWebsite": "",
+          "jobTitle": "Forward Deployed Software Engineer",
+          "jobDescriptionLink": "",
+          "year": "2018",
+          "date": "Jan 2018 – Mar 2018",
+          "duration": "2018",
+          "description": [
+            "Indepdently dealt with clients from gathering requirements to technical implementation, with 0 complains",
+            "Implemented users’ requirements based on Javascript NodeJS",
+            "Debugged up to 100 bugs over 3 months, which helped to speed up the operations of KeyReply and meet deadlines promptly"
+          ],
+          "skills": [
+            { "icon": "feed", "name": "Vue.js" },
+            { "icon": "feed", "name": "Node.js" },
+            { "icon": "feed", "name": "Javascript" },
+            { "icon": "feed", "name": "Vue.js" }
+          ]
+        },
+        {
+          "company": "Accenture Pte Ltd",
+          "companyWebsite": "#",
+          "jobTitle": "Accenture Discovery Internship Programme",
+          "jobDescriptionLink": "",
+          "date": "May – Jul 2016; May – Jul 2017",
+          "duration": "2017",
+          "description": [
+            "Anchored the VBA scripts used for internal reporting and external communications in raising service request that is used daily by clients, which helped to streamline the business service request process by at least 50%",
+            "Independently created a SAP Financial Data Migration and Data Reconciliation Manual for the internal project team’s usage, which helped to reduce more than 50% of required operational effort through the consolidated instructions and knowledge transfer from the overseas team",
+            "Actively involved in the data reconciliation and financial disprepancy investigation for a client’s 90 company codes",
+            "Assisted the Data Migration Team Lead with Full Dream Rehearsal Planning and execution processes prior to Actual Cut Over"
+          ],
+          "skills": [{ "icon": "", "name": "SAP" }]
+        },
+        {
+          "company":
+            "UOB-SMU Asian Enterprise Institute | Aesthetic Clinic Industry & Oral Care Industry",
+          "companyWebsite": "",
+          "jobTitle": "Student-Consultant, ConsultingInternship",
+          "jobDescriptionLink": "",
+          "date": "",
+          "duration": "Jul 2015 – Jul 2016",
+          "description": [
+            "Laid out multiple marketing strategies, which helped the company effectively reach out to youths via school platforms",
+            "Applied analytics on data collected via market research (surveys and focus groups), which helped the company identify timely trends in the marketing industry"
+          ],
+          "skills": [{ "icon": "feed", "name": "Vue.js" }]
+        },
+        {
+          "company": "",
+          "companyWebsite": "",
+          "jobTitle": "",
+          "jobDescriptionLink": "",
+          "date": "",
+          "duration": "",
+          "description": ["test", "test"],
+          "skills": [{ "icon": "feed", "name": "Javascript" }]
+        },
+        {
+          "company": "",
+          "companyWebsite": "",
+          "jobTitle": "",
+          "jobDescriptionLink": "",
+          "date": "",
+          "duration": "",
+          "description": ["test", "test"],
+          "skills": [{ "icon": "", "name": "" }]
+        }
+      ]
     },
     "education": {
-      "header": "",
-      "icon": "",
-      "decription": [{ "name": "", "description": "" }]
+      "header": "Education",
+      "icon": "education",
+      "description": [
+        {
+          "school": "Singapore Management University",
+          "academicFocus":
+            "Bachelor of Science in Information Systems, BSc (ISM), 2nd Major in Finance - Magna Cum Laude",
+          "date": "Aug 2014 – Aug 2018",
+          "description": [
+            "Placed on School of Information’s Systems Dean’s list for AY2015-2016 & AY2016-2017"
+          ]
+        },
+        {
+          "school": "Mcmaster University",
+          "academicFocus": "Business Student Exchange",
+          "date": "Aug 2017 – Dec 2017",
+          "description": [""]
+        },
+        {
+          "school": "Yishun Junior College",
+          "academicFocus": "General Education",
+          "date": "Jan 2011 – Dec 2012",
+          "description": [""]
+        }
+      ]
     }
   },
-  "contact": {}
+  "contact": {},
+  "bottom_menu": {
+    "verse":
+      "I can do all this through him who gives me strength - Philippians 4:13"
+  }
 }

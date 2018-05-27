@@ -17,6 +17,7 @@ import Link from "next/link";
 import { Clock } from "./clock";
 // import '../static/semantic/out/semantic.min.css';
 import { Home_contact } from "./home/home_contact";
+const data = require("../../static/assets/data.json");
 
 export class BottomMenu extends Component {
   state = {};
@@ -100,9 +101,8 @@ export class BottomMenu extends Component {
               circular
               style={{ marginBottom: 10 }}
             /> */}
-            <p style={{ marginBottom: "0.025em", fontColor: "white"}}>
-              "I can do all this through him who gives me strength." -<br />
-              Philippians 4:13
+            <p style={{ marginBottom: "0.025em", fontColor: "white" }}>
+              {data.bottom_menu.verse}
             </p>
             {/* <List horizontal inverted divided link>
               <List.Item>Site Map</List.Item>
