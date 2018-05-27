@@ -17,6 +17,7 @@ import Link from "next/link";
 import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
 import { PageHeader } from "./components/pageHeader";
+const data = require("../static/assets/data.json");
 
 export default class Portfolio extends Component {
   state = {
@@ -41,124 +42,72 @@ export default class Portfolio extends Component {
         />
         <Container>
           <Grid celled stackable columns={3}>
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <Header as="h4" content="Date and duration of project" />
+            {data.portfolio.projects.map((project, index) => {
+              let {
+                title,
+                link,
+                descriptions,
+                date,
+                skills,
+                baseurl,
+                screenshots
+              } = project;
+              return (
+                <Grid.Row key={index}>
+                  <Grid.Column width={3}>
+                    <Header as="h4" content="Date and duration of project" />
+                    <p>{date}</p>
+                  </Grid.Column>
+                  <Grid.Column width={10}>
+                    <Header as="h4" content={title} />
+                    {descriptions.map((description, i) => {
+                      return <p key={i}>{description}</p>;
+                    })}
 
-                <p>Date and duration of project</p>
-              </Grid.Column>
-              <Grid.Column width={10}>
-                <Header as="h4" content="Project Description and screenshots" />
-                <p>Description comes here</p>
-                <p>Screenshots comes here</p>
-                <Grid>
-                  <Grid.Row columns={3}>
-                    <Grid.Column>
-                      <Image
-                        src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
-                        rounded
-                      />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image
-                        src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
-                        rounded
-                      />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image
-                        src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
-                        rounded
-                      />
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
-              </Grid.Column>
-              <Grid.Column width={3}>
-                <Header as="h4" content="Skills" />
-                <List link>
-                  <List.Item>
-                    <Label>
-                      <Icon name="mail" /> Javascript
-                    </Label>
-                  </List.Item>
-                  <List.Item>
-                    <Label>
-                      <Icon name="mail" /> BootStrap
-                    </Label>
-                  </List.Item>
-                  <List.Item>
-                    <Label>
-                      <Icon name="mail" /> Nodejs
-                    </Label>
-                  </List.Item>
-                  <List.Item>
-                    <Label>
-                      <Icon name="mail" /> Semantic UI
-                    </Label>
-                  </List.Item>
-                </List>
-              </Grid.Column>
-            </Grid.Row>
-
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <Header as="h4" content="Date and duration of project" />
-                <p>Date and duration of project</p>
-              </Grid.Column>
-              <Grid.Column width={10}>
-                <Header as="h4" content="Project Description and screenshots" />
-                <p>Description comes here</p>
-                <p>Screenshots comes here</p>
-                <Grid>
-                  <Grid.Row columns={3}>
-                    <Grid.Column>
-                      <Image
-                        src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
-                        rounded
-                      />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image
-                        src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
-                        rounded
-                      />
-                    </Grid.Column>
-                    <Grid.Column>
-                      <Image
-                        src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
-                        rounded
-                      />
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
-              </Grid.Column>
-              <Grid.Column width={3}>
-                <Header as="h4" content="Skills" />
-                <List link>
-                  <List.Item>
-                    <Label>
-                      <Icon name="mail" /> Javascript
-                    </Label>
-                  </List.Item>
-                  <List.Item>
-                    <Label>
-                      <Icon name="mail" /> BootStrap
-                    </Label>
-                  </List.Item>
-                  <List.Item>
-                    <Label>
-                      <Icon name="mail" /> Nodejs
-                    </Label>
-                  </List.Item>
-                  <List.Item>
-                    <Label>
-                      <Icon name="mail" /> Semantic UI
-                    </Label>
-                  </List.Item>
-                </List>
-              </Grid.Column>
-            </Grid.Row>
+                    <Grid>
+                      <Grid.Row columns={3}>
+                        {screenshots.map((screenshot, i) => {
+                          if (screenshot)
+                            return (
+                              <Grid.Column>
+                                <Image
+                                  src={baseurl + screenshot}
+                                  rounded
+                                  bordered
+                                  style={{ borderWidth: 3 }}
+                                  alt={baseurl + screenshot}
+                                />
+                              </Grid.Column>
+                            );
+                        })}
+                      </Grid.Row>
+                    </Grid>
+                  </Grid.Column>
+                  <Grid.Column width={3}>
+                    <List link>
+                      <Header as="h4" content="Skills" />
+                      {skills.map((skill, i) => {
+                        return (
+                          <List.Item key={i}>
+                            <Label>
+                              {skill.icon.includes("devicon") ? (
+                                <i
+                                  class={skill.icon}
+                                  style={{ paddingRight: 8 }}
+                                />
+                              ) : (
+                                <Icon name={skill.icon} />
+                              )}
+                              {skill.name}
+                            </Label>
+                          </List.Item>
+                        );
+                      })}
+                    </List>
+                  </Grid.Column>
+                </Grid.Row>
+              );
+            })}
           </Grid>
         </Container>
         <BottomMenu currentPage={this.state.currentPage} />

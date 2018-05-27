@@ -7,18 +7,63 @@
   "portfolio": {
     "projects": [
       {
-        "title": "",
-        "description": "",
-        "date": "",
+        "title": "MaiMai (Final Year Project)",
+        "link": "https://app.maimai.com",
+        "descriptions": ["eCommerce Transaction Platform"],
+        "date": "Jun 2016 - Dec 2016",
         "duration": "",
-        "skills": [{ "icon": "", "name": "" }]
+        "baseurl": "/static/images/maimai/",
+        "screenshots": [
+          "tn_MaiMai Landing Page.png",
+          "tn_MaiMai View Listing.png",
+          "tn_MaiMai Accepting Offer.png",
+          "tn_MaiMai Real Time Chat and Smart Contract.png",
+          "tn_MaiMai Create New Listing.png",
+          "tn_MaiMai Rating System.png"
+        ],
+        "skills": [
+          { "icon": "devicon-javascript-plain", "name": "JavaScript" },
+          { "icon": "devicon-meteor-plain", "name": "Meteor" },
+          { "icon": "devicon-react-original", "name": "React.js" },
+          { "icon": "feed", "name": "Semantic UI" },
+          { "icon": "devicon-nodejs-plain", "name": "Node.js" },
+          { "icon": "devicon-mongodb-plain", "name": "MongoDB" }
+        ]
       },
       {
-        "title": "",
-        "description": "",
-        "date": "",
+        "title": "PHDIS web Application",
+        "link": "",
+        "descriptions": [
+          "Leave Management System for PHD Students in SMU",
+          "Engaged in numerous open source Javascript APIs to implement more user-friendly functions."
+        ],
+        "date": "Jun 2015 – Dec 2016",
         "duration": "",
-        "skills": [{ "icon": "", "name": "" }]
+        "baseurl": "/static/images/phdis/",
+        "screenshots": [""],
+        "skills": [
+          { "icon": "devicon-java-plain", "name": "Java/JSP" },
+          { "icon": "devicon-mysql-plain", "name": "mySQL" },
+          { "icon": "devicon-bootstrap-plain", "name": "Bootstrap" }
+        ]
+      },
+      {
+        "title": "Telegram Bot - @bible_butler_bot",
+        "link": "",
+        "descriptions": [
+          "Implemented up to 10 different APIs across different platforms, such as telegram, yelp and google, to acquire data for different functions",
+          "Utilized webpack to bundle and reduced response time by up to ~1000ms per reply."
+        ],
+        "date": "Jun 2015 – Dec 2016",
+        "duration": "",
+        "baseurl": "/static/images/marvin/",
+        "screenshots": [""],
+        "skills": [
+          { "icon": "devicon-nodejs-plain", "name": "Node.js" },
+          { "icon": "devicon-webpack-plain", "name": "Webpack" },
+          { "icon": "feed", "name": "Jest" },
+          { "icon": "devicon-github-plain", "name": "Github" }
+        ]
       }
     ]
   },
@@ -74,7 +119,7 @@
       "experiences": [
         {
           "company": "KeyReply",
-          "companyWebsite": "",
+          "companyWebsite": "http://keyreply.com/",
           "jobTitle": "Forward Deployed Software Engineer",
           "jobDescriptionLink": "",
           "year": "2018",
@@ -94,7 +139,7 @@
         },
         {
           "company": "Accenture Pte Ltd",
-          "companyWebsite": "#",
+          "companyWebsite": "https://www.accenture.com/sg-en/new-applied-now",
           "jobTitle": "Accenture Discovery Internship Programme",
           "jobDescriptionLink": "",
           "date": "May – Jul 2016; May – Jul 2017",

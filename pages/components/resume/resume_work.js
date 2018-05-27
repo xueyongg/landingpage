@@ -28,7 +28,6 @@ export default class Resume_work extends Component {
             padding: "96px 16px 24px 16px"
           }}
         >
-          {/* Work Experience  |  Description */}
 
           <Grid>
             <Grid.Column width={5}>
