@@ -16,9 +16,9 @@ import {
   Responsive
 } from "semantic-ui-react";
 import Link from "next/link";
+const data = require("../../../static/assets/data.json");
 
 export class Home_introduction extends Component {
-
   state = {
     normalStyle: {
       padding: "21px 34px",
@@ -89,48 +89,20 @@ export class Home_introduction extends Component {
 
               <Grid style={{ padding: 0 }} stackable textAlign="center">
                 <Grid.Row columns={3}>
-                  <Grid.Column>
-                    <Header as="h2" icon>
-                      <Icon name="wait" size="huge" />
-                      Account Settings
-                    </Header>
-                    <p style={{ fontSize: "1.33em" }}>
-                      Instead of focusing on content creation and hard work, we
-                      have learned how to master the art of doing nothing by
-                      providing massive amounts of whitespace and generic
-                      content that can seem massive, monolithic and worth your
-                      attention.
-                    </p>
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Header as="h2" icon>
-                      <Icon name="browser" size="huge" />
-                      Account Settings
-                    </Header>
-                    <p style={{ fontSize: "1.33em" }}>
-                      Instead of focusing on content creation and hard work, we
-                      have learned how to master the art of doing nothing by
-                      providing massive amounts of whitespace and generic
-                      content that can seem massive, monolithic and worth your
-                      attention.
-                    </p>
-                  </Grid.Column>
-                  <Grid.Column>
-                    <Header as="h2" icon>
-                      <Icon name="code" size="huge" />
-                      Account Settings
-                    </Header>
-                    <p style={{ fontSize: "1.33em" }}>
-                      Instead of focusing on content creation and hard work, we
-                      have learned how to master the art of doing nothing by
-                      providing massive amounts of whitespace and generic
-                      content that can seem massive, monolithic and worth your
-                      attention.
-                    </p>
-                  </Grid.Column>
+                  {data.home.introduction.map((element, i) => {
+                    let { icon, icon_size, header, description } = element;
+                    return (
+                      <Grid.Column key={i}>
+                        <Header as="h2" icon>
+                          <Icon name={icon} size={icon_size} />
+                          {header}
+                        </Header>
+                        <p style={{ fontSize: "1.33em" }}>{description}</p>
+                      </Grid.Column>
+                    );
+                  })}
                 </Grid.Row>
               </Grid>
-
               <Grid>
                 <Grid.Row>
                   <Grid.Column textAlign="center">

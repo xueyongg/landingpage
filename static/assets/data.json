@@ -1,6 +1,28 @@
 {
   "home": {
-    "introduction": {},
+    "introduction": [
+      {
+        "icon": "odnoklassniki",
+        "icon_size": "large",
+        "header": "Self-Learner",
+        "description":
+          "Love to ideate and explore new possibilities. Love to immerse myself with like-minded people that wishes to make the world a little better. Hook me up to discuss the possibilities beyond."
+      },
+      {
+        "icon": "heart outline",
+        "icon_size": "huge",
+        "header": "Love Change, Challenges & life",
+        "description":
+          "Always wanted to be a consultant but all that changed when I saw the possibility and capacity for bigger things through development. "
+      },
+      {
+        "icon": "code",
+        "icon_size": "huge",
+        "header": "Self-Learner",
+        "description":
+          "Focuses on full stack web development in JavaScript. Love spending my free time creating new code projects. These projects serves both as a platform to learn and also a way for me to serve my clients"
+      }
+    ],
     "projects": {},
     "about": {}
   },
