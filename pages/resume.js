@@ -10,7 +10,8 @@ import {
   Icon,
   Input,
   Menu,
-  Container
+  Container,
+  Form
 } from "semantic-ui-react";
 import Link from "next/link";
 import { TopMenu } from "./components/menu";
@@ -30,9 +31,9 @@ export default class Resume extends Component {
       fontWeight: "400",
       letterSpacing: ".1em",
       fontFamily: "proxima-nova",
-      color: "white",
+      color: "black",
       border: "2px solid",
-      borderColor: "white",
+      borderColor: "black",
       borderShadow: "0",
       backgroundColor: "transparent",
       transition: {
@@ -68,7 +69,7 @@ export default class Resume extends Component {
           text
           style={{
             position: "absolute",
-            top: "30%",
+            top: "35%",
             left: "50%",
             transform: "translate(-50%, -50%)"
           }}
@@ -94,28 +95,33 @@ export default class Resume extends Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column>
-                <Button
-                  size="big"
-                  icon
-                  style={
-                    hover
-                      ? {
-                          ...normalStyle,
-                          color: "black",
-                          backgroundColor: "white"
-                        }
-                      : normalStyle
-                  }
-                  onMouseOver={() => {
-                    this.onHover();
-                  }}
-                  onMouseOut={() => {
-                    this.offHover();
-                  }}
+                <a
+                  href="/static/assets/resume/Resume - Phua Xue Yong Joshua.pdf"
+                  download
                 >
-                  <Icon name="download" />
-                  Download Resume
-                </Button>
+                  <Button
+                    size="big"
+                    icon
+                    style={
+                      hover
+                        ? {
+                            ...normalStyle,
+                            color: "white",
+                            backgroundColor: "black"
+                          }
+                        : normalStyle
+                    }
+                    onMouseOver={() => {
+                      this.onHover();
+                    }}
+                    onMouseOut={() => {
+                      this.offHover();
+                    }}
+                  >
+                    <Icon name="download" />
+                    Download Resume
+                  </Button>
+                </a>
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -206,7 +212,7 @@ export default class Resume extends Component {
             </Grid.Column>
           </Grid>
         </Container>
-        <BottomMenu />
+        <BottomMenu currentPage="resume"/>
       </div>
     );
   }

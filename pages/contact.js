@@ -105,15 +105,14 @@ export default class Contact extends Component {
           fluid
           style={{
             opacity: "0.8",
-            maxHeight: 750,
-            
+            maxHeight: 750
           }}
         />
         <Container
           text
           style={{
             position: "absolute",
-            top: "30%",
+            top: "35%",
             left: "50%",
             transform: "translate(-50%, -50%)"
           }}
@@ -236,7 +235,7 @@ export default class Contact extends Component {
             </Grid>
           </div>
         </Container>
-        <BottomMenu />
+        <BottomMenu currentPage="contact" />
       </div>
     );
   }

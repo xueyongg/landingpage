@@ -50,7 +50,7 @@ export default class About extends Component {
           text
           style={{
             position: "absolute",
-            top: "30%",
+            top: "35%",
             left: "50%",
             transform: "translate(-50%, -50%)"
           }}
@@ -106,7 +106,7 @@ export default class About extends Component {
         {/* Resume segment */}
         <About_resume />
 
-        <BottomMenu />
+        <BottomMenu currentPage="about"/>
       </div>
     );
   }

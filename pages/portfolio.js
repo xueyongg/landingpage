@@ -35,11 +35,18 @@ export default class Portfolio extends Component {
           text
           style={{
             position: "absolute",
-            top: "30%",
+            top: "35%",
             left: "50%",
             transform: "translate(-50%, -50%)"
           }}
         >
+          <Header
+            as="h4"
+            textAlign="center"
+            style={{ textTransform: "uppercase" }}
+          >
+            Take a look at what I've done
+          </Header>
           <Header
             as="h1"
             textAlign="center"
@@ -174,7 +181,7 @@ export default class Portfolio extends Component {
             </Grid.Row>
           </Grid>
         </Container>
-        <BottomMenu />
+        <BottomMenu currentPage="portfolio"/>
       </div>
     );
   }

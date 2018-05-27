@@ -21,18 +21,26 @@ import { Home_contact } from "./home/home_contact";
 export class BottomMenu extends Component {
   state = {};
 
+  componentDidMount() {
+    console.log(this.props);
+    this.setState({
+      currentPage: this.props.currentPage
+    });
+  }
+
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
   static async getInitialprops({}) {
     return activeLink;
   }
   render() {
-    const { activeItem } = this.state;
+    const { activeItem, currentPage } = this.state;
 
     return (
       <div>
         {/* Footnote */}
 
-        <Home_contact />
+        {currentPage !== "contact" ? <Home_contact /> : ""}
+
         <Segment
           inverted
           style={{

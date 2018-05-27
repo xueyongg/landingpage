@@ -54,7 +54,7 @@ export class Home extends Component {
             text
             style={{
               position: "absolute",
-              top: "30%",
+              top: "35%",
               left: "50%",
               transform: "translate(-50%, -50%)"
             }}
@@ -68,6 +68,13 @@ export class Home extends Component {
               </p>
             </div>
             <span id="typed" /> */}
+            <Header
+              as="h4"
+              textAlign="center"
+              style={{ textTransform: "uppercase" }}
+            >
+              Find out more about me here
+            </Header>
             <Header
               as="h1"
               textAlign="center"
@@ -87,8 +94,11 @@ export class Home extends Component {
           {/* Projects */}
           <Home_projects />
 
+          {/* Projects */}
+          <Home_about />
+
           {/* Include in an arrow from garysheng.com as reference */}
-          <BottomMenu />
+          <BottomMenu currentPage="home" />
         </Responsive>
       </div>
     );
