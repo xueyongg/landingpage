@@ -27,7 +27,7 @@ export default class Resume_technology extends Component {
             padding: "96px 16px 24px 16px"
           }}
         >
-          <Grid>
+          <Grid stackable>
             <Grid.Row columns={3}>
               <Grid.Column>
                 <Header as="h2" textAlign="left">

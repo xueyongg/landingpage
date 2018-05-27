@@ -28,7 +28,7 @@ export default class Resume_education extends Component {
           }}
         >
           {/* Education  |  Description */}
-          <Grid>
+          <Grid stackable>
             <Grid.Column width={5}>
               <Header as="h2" textAlign="left">
                 <Icon name="student" />

@@ -59,9 +59,9 @@ export class Home extends Component {
           <Home_introduction />
 
           {/* Projects */}
-          <Home_projects />
+          {/* <Home_projects /> */}
 
-          {/* Projects */}
+          {/* About you */}
           {/* <Home_about /> */}
           {/* Include in an arrow from garysheng.com as reference */}
           <BottomMenu currentPage={this.state.currentPage} />

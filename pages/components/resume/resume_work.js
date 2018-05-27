@@ -27,7 +27,7 @@ export default class Resume_work extends Component {
             padding: "96px 16px 24px 16px"
           }}
         >
-          <Grid>
+          <Grid stackable>
             <Grid.Column width={5}>
               <Header as="h2" textAlign="left">
                 <Icon name="users" />
