@@ -20,7 +20,7 @@ import { About_photos } from "./components/about/about_photos";
 import { About_resume } from "./components/about/about_resume";
 import { About_funfact } from "./components/about/about_funfact";
 import { About_understand } from "./components/about/about_whoiam";
-import { PageHeader } from "./components/pageHeader";
+import { PageHeader } from "./components/page/page_header";
 
 export default class About extends Component {
   state = {

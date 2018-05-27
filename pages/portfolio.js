@@ -16,7 +16,7 @@ import {
 import Link from "next/link";
 import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
-import { PageHeader } from "./components/pageHeader";
+import { PageHeader } from "./components/page/page_header";
 const data = require("../static/assets/data.json");
 
 export default class Portfolio extends Component {

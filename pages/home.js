@@ -21,8 +21,7 @@ import { Home_about } from "./components/home/home-about";
 import { BottomMenu } from "./components/bottom_menu";
 import { Todo } from "./components/todo";
 import { Home_introduction } from "./components/home/home_introduction";
-import { Home_contact } from "./components/home/home_contact";
-import { PageHeader } from "./components/pageHeader";
+import { PageHeader } from "./components/page/page_header";
 
 const moment = require("moment");
 

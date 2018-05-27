@@ -21,7 +21,7 @@ import {
 } from "semantic-ui-react";
 import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
-import { PageHeader } from "./components/pageHeader";
+import { PageHeader } from "./components/page/page_header";
 
 export default class Contact extends Component {
   state = {
