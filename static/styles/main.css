@@ -11,34 +11,36 @@ body {
   background: #fff;
 }
 
-.styled_button {
-  padding: "21 34 21 34";
-  text-transform: "uppercase";
-  font-size: "15px";
-  font-style: "normal";
-  font-weight: "400";
-  letter-spacing: ".1em";
-  font-family: "proxima-nova";
-  color: "black";
-  border: "2px solid";
-  border-color: "black";
-  background-color: "transparent";
+.styledButton {
+  padding: 21px 34px 21px 34px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .1em;
+  font-family: proxima-nova;
+  color: black;
+  border: 2px solid;
+  border-color: black;
+  background-color: transparent;
   transition-duration: 0.3;
+  border-radius: 5px;
 }
 
-.styled_button:hover{
-  padding: "21px 34px";
-  text-transform: "uppercase";
-  font-size: "15px";
-  font-style: "normal";
-  font-weight: "400";
-  letter-spacing: ".1em";
-  font-family: "proxima-nova";
-  color: "white";
-  border: "2px solid";
-  border-color: "black";
-  background-color: "black";
+.styledButton:hover {
+  padding: 21px 34px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .1em;
+  font-family: proxima-nova;
+  color: white;
+  border: 2px solid;
+  border-color: black;
+  background-color: black;
   transition-duration: 0.3;
+  border-radius: 3px;
 }
 
 .example {

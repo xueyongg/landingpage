@@ -165,16 +165,16 @@ export class PageHeader extends Component {
               <Button
                 icon
                 size="huge"
-                class="styled_button"
-                // style={
-                //   hover
-                //     ? {
-                //         ...normalStyle,
-                //         color: "white",
-                //         backgroundColor: "black"
-                //       }
-                //     : normalStyle
-                // }
+                // class="styledButton"
+                style={
+                  hover
+                    ? {
+                        ...normalStyle,
+                        color: "white",
+                        backgroundColor: "black"
+                      }
+                    : normalStyle
+                }
                 onMouseOver={() => {
                   this.onHover();
                 }}
