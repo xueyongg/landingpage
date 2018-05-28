@@ -129,7 +129,7 @@ export default class Home_projects extends Component {
               </Grid.Row>
               <Grid.Row>
                 <Grid.Column textAlign="center">
-                  <Link href="/portfolio" passHref>
+                  <Link prefetch href="./portfolio" passHref>
                     <Button
                       icon
                       size="huge"

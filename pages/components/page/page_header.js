@@ -161,7 +161,7 @@ export default class PageHeader extends Component {
               </Button>
             </a>
           ) : url === "home" ? (
-            <Link href="/about" passHref>
+            <Link prefetch href="./about" passHref>
               <Button
                 icon
                 size="huge"

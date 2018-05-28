@@ -207,7 +207,7 @@ export default class TopMenu extends Component {
                 <Icon name="sidebar" size="large" />
               </Menu.Item>
 
-              <Link href="/" passHref>
+              <Link prefetch href="./" passHref>
                 <Menu.Item name="home">
                   <Icon name="home" size="large" />
                 </Menu.Item>

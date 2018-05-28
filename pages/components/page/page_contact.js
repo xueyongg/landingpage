@@ -150,7 +150,7 @@ const ResponsiveButton = ({ mobile }) => {
     : normalStyle;
 
   return (
-    <Link href="/contact" passHref>
+    <Link prefetch href="./contact" passHref>
       <Button
         style={
           hover

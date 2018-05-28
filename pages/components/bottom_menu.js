@@ -55,27 +55,27 @@ export default class BottomMenu extends Component {
                   <Header inverted as="h4" content="Site Map" />
                   <List link inverted>
                     <List.Item as="a">
-                      <Link href="/" passHref>
+                      <Link prefetch href="./" passHref>
                         <p>Home</p>
                       </Link>
                     </List.Item>
                     <List.Item as="a">
-                      <Link href="/about" passHref>
+                      <Link prefetch href="./about" passHref>
                         <p>About</p>
                       </Link>
                     </List.Item>
                     <List.Item as="a">
-                      <Link href="/portfolio" passHref>
+                      <Link prefetch href="./portfolio" passHref>
                         <p>Portfolio</p>
                       </Link>
                     </List.Item>
                     <List.Item as="a">
-                      <Link href="/resume" passHref>
+                      <Link prefetch href="./resume" passHref>
                         <p>Resume</p>
                       </Link>
                     </List.Item>
                     <List.Item as="a">
-                      <Link href="/contact" passHref>
+                      <Link prefetch href="./contact" passHref>
                         <p>Contact</p>
                       </Link>
                     </List.Item>
@@ -104,13 +104,13 @@ export default class BottomMenu extends Component {
             {/* <List horizontal inverted divided link>
               <List.Item>Site Map</List.Item>
               <List.Item>
-                <Link href="/contact" passHref>
+                <Link prefetch href="./contact" passHref>
                   <a>Contact Us</a>
                 </Link>
               </List.Item>
               <List.Item as='a' href='#'>Terms and Conditions</List.Item>
               <List.Item>
-                <Link href="/contact" passHref>
+                <Link prefetch href="./contact" passHref>
                   <a>Privacy Policy</a>
                 </Link>
               </List.Item>
