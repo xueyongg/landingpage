@@ -17,12 +17,12 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { TopMenu } from "./components/menu";
-import { BottomMenu } from "./components/bottom_menu";
-import { PageHeader } from "./components/page/page_header";
-import { Resume_education } from "./components/resume/resume_education";
-import { Resume_work } from "./components/resume/resume_work";
-import { Resume_technology } from "./components/resume/resume_technology";
+import TopMenu from "./components/menu";
+import BottomMenu from "./components/bottom_menu";
+import PageHeader from "./components/page/page_header";
+import Resume_education from "./components/resume/resume_education";
+import Resume_work from "./components/resume/resume_work";
+import Resume_technology from "./components/resume/resume_technology";
 const data = require("../static/assets/data.json");
 import Head from "next/head";
 

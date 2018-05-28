@@ -18,7 +18,7 @@ import {
 import Link from "next/link";
 const data = require("../../../static/assets/data.json");
 
-export class Home_introduction extends Component {
+export default class Home_introduction extends Component {
   state = {
     normalStyle: {
       padding: "21px 34px",

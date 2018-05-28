@@ -17,7 +17,7 @@ import {
   Visibility
 } from "semantic-ui-react";
 
-export class PageHeader extends Component {
+export default class PageHeader extends Component {
   state = {
     mobile: false,
     url: "/",

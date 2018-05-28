@@ -14,12 +14,10 @@ import {
   Divider
 } from "semantic-ui-react";
 import Link from "next/link";
-import { Clock } from "./clock";
-// import '../static/semantic/out/semantic.min.css';
-import { Page_contact } from "./page/page_contact";
+import Page_contact from "./page/page_contact";
 const data = require("../../static/assets/data.json");
 
-export class BottomMenu extends Component {
+export default class BottomMenu extends Component {
   state = {};
 
   componentDidMount() {
@@ -44,7 +42,7 @@ export class BottomMenu extends Component {
 
         <Segment
           inverted
-          style={{            
+          style={{
             padding: "5em 0em",
             position: "relative"
           }}

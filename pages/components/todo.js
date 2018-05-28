@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 const moment = require("moment");
 
-export class Todo extends Component {
+export default class Todo extends Component {
   static async getInitialProps({ query }) {
     // console.log(query);
     return true;

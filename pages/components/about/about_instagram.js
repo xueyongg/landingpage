@@ -14,7 +14,7 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 
-export class About_instagram extends Component {
+export default class About_instagram extends Component {
 
   render() {
     return (

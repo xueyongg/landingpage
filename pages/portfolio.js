@@ -14,9 +14,9 @@ import {
   Menu
 } from "semantic-ui-react";
 import Link from "next/link";
-import { TopMenu } from "./components/menu";
-import { BottomMenu } from "./components/bottom_menu";
-import { PageHeader } from "./components/page/page_header";
+import TopMenu from "./components/menu";
+import BottomMenu from "./components/bottom_menu";
+import PageHeader from "./components/page/page_header";
 import Head from "next/head";
 const data = require("../static/assets/data.json");
 

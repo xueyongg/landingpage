@@ -18,7 +18,7 @@ import {
 import Link from "next/link";
 const data = require("../../../static/assets/data.json");
 
-export class Resume_education extends Component {
+export default class Resume_education extends Component {
   render() {
     return (
       <div>

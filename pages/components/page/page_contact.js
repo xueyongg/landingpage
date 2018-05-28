@@ -18,7 +18,7 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 
-export class Page_contact extends Component {
+export default class Page_contact extends Component {
   static async getInitialProps({ query }) {
     // console.log(query);
     return true;

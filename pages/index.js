@@ -12,9 +12,10 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 import Head from "next/head";
-import { TopMenu } from "./components/menu";
-import { Home } from "./home";
+import TopMenu from "./components/menu";
+import Home from "./home";
 import "../static/styles/main.css";
+// import "../static/semantic/semantic.min.css";
 
 export default class extends Component {
   state = {};
@@ -33,7 +34,6 @@ export default class extends Component {
     return (
       <div>
         <Head>
-          
           <title>Xueyong's Site</title>
           <meta
             name="viewport"

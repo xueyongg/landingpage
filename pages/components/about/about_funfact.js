@@ -14,7 +14,7 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 
-export class About_funfact extends Component {
+export default class About_funfact extends Component {
   render() {
     return (
       <div>

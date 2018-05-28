@@ -13,8 +13,8 @@ import {
   Menu
 } from "semantic-ui-react";
 import Link from "next/link";
-import { TopMenu } from "./components/menu";
-import { BottomMenu } from "./components/bottom_menu";
+import TopMenu from "./components/menu";
+import BottomMenu from "./components/bottom_menu";
 
 export default class Privacy extends Component {
   static async getInitialProps({ pathname, query }) {

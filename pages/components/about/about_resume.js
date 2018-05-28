@@ -14,7 +14,7 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 
-export class About_resume extends Component {
+export default class About_resume extends Component {
   state = {
     normalStyle: {
       padding: "21px 34px",

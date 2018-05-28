@@ -17,7 +17,7 @@ import {
 } from "semantic-ui-react";
 import Link from "next/link";
 
-export class Home_about extends Component {
+export default class Home_about extends Component {
   state = {
     normalStyle: {
       padding: "21px 34px",

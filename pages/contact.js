@@ -19,9 +19,9 @@ import {
   Form,
   TextArea
 } from "semantic-ui-react";
-import { TopMenu } from "./components/menu";
-import { BottomMenu } from "./components/bottom_menu";
-import { PageHeader } from "./components/page/page_header";
+import TopMenu from "./components/menu";
+import BottomMenu from "./components/bottom_menu";
+import PageHeader from "./components/page/page_header";
 import Head from "next/head";
 export default class Contact extends Component {
   state = {

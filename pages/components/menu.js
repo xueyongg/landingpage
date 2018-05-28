@@ -19,12 +19,10 @@ import {
   Sidebar
 } from "semantic-ui-react";
 import Link from "next/link";
-import { Clock } from "./clock";
 import { PropTypes } from "prop-types";
 import Router from "next/router";
 
-
-export class TopMenu extends Component {
+export default class TopMenu extends Component {
   state = {
     menuFixed: false,
     overlayFixed: false,

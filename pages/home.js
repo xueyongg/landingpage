@@ -15,17 +15,16 @@ import {
   Responsive
 } from "semantic-ui-react";
 import Link from "next/link";
-import { TopMenu } from "./components/menu";
-import { Home_projects } from "./components/home/home_projects";
-import { Home_about } from "./components/home/home-about";
-import { BottomMenu } from "./components/bottom_menu";
-import { Todo } from "./components/todo";
-import { Home_introduction } from "./components/home/home_introduction";
-import { PageHeader } from "./components/page/page_header";
+import TopMenu from "./components/menu";
+import Home_projects from "./components/home/home_projects";
+import Home_about from "./components/home/home-about";
+import BottomMenu from "./components/bottom_menu";
+import Todo from "./components/todo";
+import Home_introduction from "./components/home/home_introduction";
+import PageHeader from "./components/page/page_header";
 const moment = require("moment");
 
-
-export class Home extends Component {
+export default class Home extends Component {
   state = {
     currentPage: "home"
   };

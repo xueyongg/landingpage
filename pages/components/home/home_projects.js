@@ -17,7 +17,7 @@ import {
 import Link from "next/link";
 const moment = require("moment");
 
-export class Home_projects extends Component {
+export default class Home_projects extends Component {
   state = {
     normalStyle: {
       padding: "21px 34px",
