@@ -33,10 +33,7 @@ export default class extends Component {
     return (
       <div>
         <Head>
-          <link
-            rel="shortcut icon"
-            href="/static/images/favicon/favicon.ico?v=2"
-          />
+          
           <title>Xueyong's Site</title>
           <meta
             name="viewport"

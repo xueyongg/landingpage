@@ -21,7 +21,7 @@ import { About_resume } from "./components/about/about_resume";
 import { About_funfact } from "./components/about/about_funfact";
 import { About_understand } from "./components/about/about_whoiam";
 import { PageHeader } from "./components/page/page_header";
-
+import Head from "next/head";
 export default class About extends Component {
   state = {
     currentPage: "about"
@@ -33,6 +33,9 @@ export default class About extends Component {
 
     return (
       <div>
+        <Head>
+          <title>About me</title>
+        </Head>
         <TopMenu currentPage={this.state.currentPage} />
         <PageHeader
           mobile={false}

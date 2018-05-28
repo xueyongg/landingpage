@@ -24,6 +24,7 @@ import { Resume_education } from "./components/resume/resume_education";
 import { Resume_work } from "./components/resume/resume_work";
 import { Resume_technology } from "./components/resume/resume_technology";
 const data = require("../static/assets/data.json");
+import Head from "next/head";
 
 export default class Resume extends Component {
   state = {
@@ -33,6 +34,9 @@ export default class Resume extends Component {
     const { hover } = this.state;
     return (
       <div>
+        <Head>
+          <title>My Resume</title>
+        </Head>
         <TopMenu currentPage={this.state.currentPage} />
         <PageHeader
           mobile={false}

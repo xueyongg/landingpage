@@ -22,7 +22,7 @@ import {
 import { TopMenu } from "./components/menu";
 import { BottomMenu } from "./components/bottom_menu";
 import { PageHeader } from "./components/page/page_header";
-
+import Head from "next/head";
 export default class Contact extends Component {
   state = {
     first_name_error: false,
@@ -101,6 +101,9 @@ export default class Contact extends Component {
   render() {
     return (
       <div>
+        <Head>
+          <title>Contact me</title>
+        </Head>
         <TopMenu currentPage={this.state.currentPage} />
         <PageHeader
           mobile={false}
