@@ -14,6 +14,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { TopMenu } from "./components/menu";
 import { Home } from "./home";
+import "../static/styles/main.css";
 
 export default class extends Component {
   state = {};
@@ -42,6 +43,12 @@ export default class extends Component {
             content="initial-scale=1.0, width=device-width"
             key="viewport"
           />
+          <meta name="description" content="Personal site" />
+          <meta
+            name="keywords"
+            content="HTML,CSS,XML,JavaScript,Full stack, React, Node, Web development, Website building"
+          />
+          <meta name="author" content="Phua Xue Yong" />
         </Head>
         <TopMenu currentPage="home" />
         <Home />

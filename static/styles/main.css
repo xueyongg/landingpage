@@ -11,7 +11,22 @@ body {
   background: #fff;
 }
 
-.home_buttons button{
+.styled_button {
+  padding: "21 34 21 34";
+  text-transform: "uppercase";
+  font-size: "15px";
+  font-style: "normal";
+  font-weight: "400";
+  letter-spacing: ".1em";
+  font-family: "proxima-nova";
+  color: "black";
+  border: "2px solid";
+  border-color: "black";
+  background-color: "transparent";
+  transition-duration: 0.3;
+}
+
+.styled_button:hover{
   padding: "21px 34px";
   text-transform: "uppercase";
   font-size: "15px";
@@ -19,6 +34,14 @@ body {
   font-weight: "400";
   letter-spacing: ".1em";
   font-family: "proxima-nova";
-  background-color: "transparent";
-  color: "black";
+  color: "white";
+  border: "2px solid";
+  border-color: "black";
+  background-color: "black";
+  transition-duration: 0.3;
+}
+
+.example {
+  font-size: 50px;
+  color: red;
 }

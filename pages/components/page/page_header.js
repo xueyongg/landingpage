@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 import {
   Button,
-  
   Container,
   Divider,
   Grid,
@@ -15,7 +14,7 @@ import {
   Responsive,
   Segment,
   Sidebar,
-  Visibility,
+  Visibility
 } from "semantic-ui-react";
 
 export class PageHeader extends Component {
@@ -140,15 +139,16 @@ export class PageHeader extends Component {
               <Button
                 size="big"
                 icon
-                style={
-                  hover
-                    ? {
-                        ...normalStyle,
-                        color: "white",
-                        backgroundColor: "black"
-                      }
-                    : normalStyle
-                }
+                class="styled_button"
+                // style={
+                //   hover
+                //     ? {
+                //         ...normalStyle,
+                //         color: "white",
+                //         backgroundColor: "black"
+                //       }
+                //     : normalStyle
+                // }
                 onMouseOver={() => {
                   this.onHover();
                 }}
@@ -163,18 +163,18 @@ export class PageHeader extends Component {
           ) : url === "home" ? (
             <Link href="/about" passHref>
               <Button
-                className="home_buttons"
                 icon
                 size="huge"
-                style={
-                  hover
-                    ? {
-                        ...normalStyle,
-                        color: "white",
-                        backgroundColor: "black"
-                      }
-                    : normalStyle
-                }
+                class="styled_button"
+                // style={
+                //   hover
+                //     ? {
+                //         ...normalStyle,
+                //         color: "white",
+                //         backgroundColor: "black"
+                //       }
+                //     : normalStyle
+                // }
                 onMouseOver={() => {
                   this.onHover();
                 }}

@@ -23,6 +23,7 @@ import { Clock } from "./clock";
 import { PropTypes } from "prop-types";
 import Router from "next/router";
 
+
 export class TopMenu extends Component {
   state = {
     menuFixed: false,

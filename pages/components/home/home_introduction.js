@@ -85,6 +85,7 @@ export class Home_introduction extends Component {
                 as="h2"
                 textAlign="center"
                 content="My life as a developer"
+                class="example"
               />
 
               <Grid style={{ padding: 0 }} stackable textAlign="center">

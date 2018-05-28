@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
           />
-          <link rel="stylesheet" href="../static/styles/main.css" />
+          <link rel="stylesheet" href="/_next/static/style.css" />
         </Head>
         <body className="custom_class">
           <Main />
