@@ -31,7 +31,7 @@ export default class Resume_technology extends Component {
             <Grid.Row columns={3}>
               <Grid.Column>
                 <Header as="h2" textAlign="left">
-                  <Image src="../static/images/tech.png" circular />
+                  <Image src="/static/images/tech.png" circular />
                   <Header.Content>Technologies</Header.Content>
                 </Header>
               </Grid.Column>

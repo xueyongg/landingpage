@@ -93,6 +93,7 @@
     "funfact": {
       "header": "Fun facts about me",
       "icon": "student",
+      "image": "self.JPG",
       "description": [
         "Loves Basketball and a fan of Golden State Warriors; mainly for their ball movement, team play and ability to groom rookies to gain confidence amidst star players, reflecting selflessness in their culture. ",
         "Loves food but mostly Asian cusines. Loves non-fictional books. Especially the ones that triggers the mind; books such as Mere Christianity. ",
@@ -112,13 +113,7 @@
       "icon": "smile",
       "description": [
         "Started my journey as a developer only in University. Started first with Java, slowly found my passion in JavaScript during my Junior year during Final Year Project. Picked up Metoer React.js, MongoDB and Node.js for a start. And since there began exploring on my own. ",
-        "Never coin myself as a genius coder but one that is determined to grind through and learn. This perhaps is what they call the growth mentality. “Mere change is not growth. Growth is the synthesis of change and continuity, and where there is no continuity there is no growth.” - C.S. Lewis",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "Never coin myself as a genius coder but one that is determined to grind through and learn. This perhaps is what they call the growth mentality. “Mere change is not growth. Growth is the synthesis of change and continuity, and where there is no continuity there is no growth.” - C.S. Lewis"
       ]
     },
     "instagram": [""],

@@ -142,8 +142,10 @@ export default class TopMenu extends Component {
                     <Image
                       size="mini"
                       src="https://78.media.tumblr.com/81fcb39644fef1ff91fd5db001a86743/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
+                      // src="/static/images/about/protrait.JPG"
                       circular
                     />
+                    
                   </Link>
                 </Menu.Item>
               </Menu.Menu>

@@ -15,7 +15,7 @@ import Head from "next/head";
 import TopMenu from "./components/menu";
 import Home from "./home";
 import "../static/styles/main.css";
-// import "../static/semantic/semantic.min.css";
+
 
 export default class extends Component {
   state = {};
@@ -49,7 +49,7 @@ export default class extends Component {
         </Head>
         <TopMenu currentPage="home" />
         <Home />
-        <span style={{ position: "fixed", right: "2em", bottom: "5em" }}>
+        {/* <span style={{ position: "fixed", right: "2em", bottom: "5em" }}>
           <Button icon onClick={this.onClickUp}>
             <Icon name="chevron up" />
           </Button>
@@ -58,7 +58,7 @@ export default class extends Component {
           <Button icon onClick={this.onClickDown}>
             <Icon name="chevron down" />
           </Button>
-        </span>
+        </span> */}
       </div>
     );
   }

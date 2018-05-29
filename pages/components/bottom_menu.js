@@ -83,9 +83,9 @@ export default class BottomMenu extends Component {
                   </List>
                 </Grid.Column>
                 <Grid.Column>
-                  <Header inverted as="h4" content="Footer Header" />
+                  {/* <Header inverted as="h4" content="Footer Header" /> */}
                   <p>
-                    Welcome to my humble site. Do feel free to explore the page as you wish. 
+                    Welcome to my humble site. <br/>Do feel free to explore the page as you wish. 
                   </p>
                 </Grid.Column>
               </Grid.Row>

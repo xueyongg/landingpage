@@ -39,7 +39,7 @@ export default class About_photos extends Component {
                 return (
                   <Grid.Column style={{ padding: 0 }} key={i}>
                     <Image
-                      src={"../../../static/images/about/" + image}
+                      src={"/static/images/about/" + image}
                       alt={image}
                     />
                   </Grid.Column>
@@ -55,7 +55,7 @@ export default class About_photos extends Component {
                 return (
                   <Grid.Column style={{ padding: 0 }} key={i}>
                     <Image
-                      src={"../../../static/images/about/" + image}
+                      src={"/static/images/about/" + image}
                       alt={image}
                     />
                   </Grid.Column>
