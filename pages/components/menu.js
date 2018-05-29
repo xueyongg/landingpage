@@ -145,7 +145,6 @@ export default class TopMenu extends Component {
                       // src="/static/images/about/protrait.JPG"
                       circular
                     />
-                    
                   </Link>
                 </Menu.Item>
               </Menu.Menu>

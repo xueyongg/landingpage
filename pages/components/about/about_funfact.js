@@ -22,7 +22,7 @@ export default class About_funfact extends Component {
     return (
       <div>
         <Container style={{ padding: "8em 0em", margin: 0 }}>
-          <Grid textAlign="center">
+          <Grid textAlign="center" stackable>
             <Header as="h2">
               <Icon name={funfact.icon} />
               <Header.Content>{funfact.header} </Header.Content>
@@ -33,7 +33,7 @@ export default class About_funfact extends Component {
                   src={"/static/images/about/" + funfact.image}
                   alt={"/static/images/about/" + funfact.image}
                   rounded
-                  style={{width:"100%", borderWidth: "thin"}}
+                  style={{ width: "100%", borderWidth: "thin" }}
                   bordered
                 />
               </Grid.Column>

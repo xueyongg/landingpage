@@ -101,12 +101,12 @@
       ]
     },
     "images": [
-      "phone/1.jpg",
-      "phone/2.jpg",
-      "phone/3.jpg",
-      "phone/6.jpg",
-      "phone/4.jpg",
-      "phone/5.jpg"
+      "one.jpg",
+      "two.jpg",
+      "three.jpg",
+      "six.jpg",
+      "four.jpg",
+      "five.jpg"
     ],
     "understand": {
       "header": "Understand who I am as a person",

@@ -39,8 +39,8 @@ export default class About_photos extends Component {
                 return (
                   <Grid.Column style={{ padding: 0 }} key={i}>
                     <Image
-                      src={"/static/images/about/" + image}
-                      alt={image}
+                      src={"/static/images/about/phone/" + image}
+                      alt={"/static/images/about/phone/" + image}
                     />
                   </Grid.Column>
                 );
@@ -51,12 +51,12 @@ export default class About_photos extends Component {
         <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
           <Grid>
             <Grid.Row columns={2} style={{ padding: 0 }}>
-            {about.images.map((image, i) => {
+              {about.images.map((image, i) => {
                 return (
                   <Grid.Column style={{ padding: 0 }} key={i}>
                     <Image
-                      src={"/static/images/about/" + image}
-                      alt={image}
+                      src={"/static/images/about/phone/" + image}
+                      alt={"/static/images/about/phone/" + image}
                     />
                   </Grid.Column>
                 );
