@@ -60,15 +60,16 @@ export default class BottomMenu extends Component {
                       </Link>
                     </List.Item>
                     <List.Item as="a">
-                      <Link prefetch href="./about" passHref>
-                        <p>About</p>
-                      </Link>
-                    </List.Item>
-                    <List.Item as="a">
                       <Link prefetch href="./portfolio" passHref>
                         <p>Portfolio</p>
                       </Link>
                     </List.Item>
+                    <List.Item as="a">
+                      <Link prefetch href="./about" passHref>
+                        <p>About</p>
+                      </Link>
+                    </List.Item>
+
                     <List.Item as="a">
                       <Link prefetch href="./resume" passHref>
                         <p>Resume</p>
@@ -84,8 +85,7 @@ export default class BottomMenu extends Component {
                 <Grid.Column>
                   <Header inverted as="h4" content="Footer Header" />
                   <p>
-                    Extra space for a call to action inside the footer that
-                    could help re-engage users.
+                    Welcome to my humble site. Do feel free to explore the page as you wish. 
                   </p>
                 </Grid.Column>
               </Grid.Row>
