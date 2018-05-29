@@ -55,28 +55,28 @@ export default class BottomMenu extends Component {
                   <Header inverted as="h4" content="Site Map" />
                   <List link inverted>
                     <List.Item as="a">
-                      <Link prefetch href="./" passHref>
+                      <Link prefetch href="/" passHref>
                         <p>Home</p>
                       </Link>
                     </List.Item>
                     <List.Item as="a">
-                      <Link prefetch href="./portfolio" passHref>
+                      <Link prefetch href="/portfolio" passHref>
                         <p>Portfolio</p>
                       </Link>
                     </List.Item>
                     <List.Item as="a">
-                      <Link prefetch href="./about" passHref>
+                      <Link prefetch href="/about" passHref>
                         <p>About</p>
                       </Link>
                     </List.Item>
 
                     <List.Item as="a">
-                      <Link prefetch href="./resume" passHref>
+                      <Link prefetch href="/resume" passHref>
                         <p>Resume</p>
                       </Link>
                     </List.Item>
                     <List.Item as="a">
-                      <Link prefetch href="./contact" passHref>
+                      <Link prefetch href="/contact" passHref>
                         <p>Contact</p>
                       </Link>
                     </List.Item>
@@ -85,7 +85,8 @@ export default class BottomMenu extends Component {
                 <Grid.Column>
                   {/* <Header inverted as="h4" content="Footer Header" /> */}
                   <p>
-                    Welcome to my humble site. <br/>Do feel free to explore the page as you wish. 
+                    Welcome to my humble site. <br />Do feel free to explore the
+                    page as you wish.
                   </p>
                 </Grid.Column>
               </Grid.Row>

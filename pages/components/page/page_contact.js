@@ -123,57 +123,79 @@ export default class Page_contact extends Component {
   }
 }
 
-const ResponsiveButton = ({ mobile }) => {
-  let normalStyle = {
-    padding: "21px 34px",
-    textTransform: "uppercase",
-    fontSize: "15px",
-    fontStyle: "normal",
-    fontWeight: "400",
-    letterSpacing: ".1em",
-    fontFamily: "proxima-nova",
-    color: "black",
-    border: "2px solid",
-    borderColor: "#272727",
-    borderShadow: "0",
-    backgroundColor: "transparent",
-    maxWidth: 250,
-    zIndex: 10,
-    transition: {
-      transitionDuration: 0.3
-    }
+class ResponsiveButton extends Component {
+  getInitialProps({ mobile }) {
+    return { mobile };
+  }
+
+  state = {
+    normalStyle: {
+      padding: "21px 34px",
+      textTransform: "uppercase",
+      fontSize: "15px",
+      fontStyle: "normal",
+      fontWeight: "400",
+      letterSpacing: ".1em",
+      fontFamily: "proxima-nova",
+      color: "black",
+      border: "2px solid",
+      borderColor: "#272727",
+      borderShadow: "0",
+      backgroundColor: "transparent",
+      maxWidth: 250,
+      zIndex: 10,
+      transition: {
+        transitionDuration: 0.3
+      }
+    },
+    hover: false,
+    mobile: this.props.mobile
   };
-  let hover = false;
 
-  let modifiedNormal = mobile
-    ? { ...normalStyle, padding: "10px 4.5px" }
-    : normalStyle;
+  onHover() {
+    let state = this.state;
+    state.hover = true;
+    this.setState(state);
+  }
 
-  return (
-    <Link prefetch href="./contact" passHref>
-      <Button
-        style={
-          hover
-            ? {
-                ...modifiedNormal,
-                color: "white",
-                backgroundColor: "black"
-              }
-            : modifiedNormal
-        }
-        onMouseOver={() => {
-          this.onHover();
-        }}
-        onMouseOut={() => {
-          this.offHover();
-        }}
-      >
-        {/* <Icon name="mail outline" size="small" /> */}
-        Contact me today
-      </Button>
-    </Link>
-  );
-};
+  offHover() {
+    let state = this.state;
+    state.hover = false;
+    this.setState(state);
+  }
+
+  render() {
+    let { normalStyle, hover, mobile } = this.state;
+
+    let modifiedNormal = mobile
+      ? { ...normalStyle, padding: "10px 4.5px" }
+      : normalStyle;
+    return (
+      <Link prefetch href="/contact" passHref>
+        <Button
+          style={
+            hover
+              ? {
+                  ...modifiedNormal,
+                  color: "white",
+                  backgroundColor: "black"
+                }
+              : modifiedNormal
+          }
+          onMouseOver={() => {
+            this.onHover();
+          }}
+          onMouseOut={() => {
+            this.offHover();
+          }}
+        >
+          {/* <Icon name="mail outline" size="small" /> */}
+          Contact me today
+        </Button>
+      </Link>
+    );
+  }
+}
 ResponsiveButton.propTypes = {
   mobile: PropTypes.bool
 };

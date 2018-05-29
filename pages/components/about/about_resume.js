@@ -77,7 +77,7 @@ export default class About_resume extends Component {
             </Grid.Row>
             <Grid.Row>
               <Grid.Column>
-                <Link prefetch href="./resume" passHref>
+                <Link prefetch href="/resume" passHref>
                   <Button
                     icon
                     size="huge"
