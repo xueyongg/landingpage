@@ -47,3 +47,8 @@ body {
   font-size: 50px;
   color: red;
 }
+
+
+h1, h2, h3 {
+  text-rendering: optimizeLegibility;
+}

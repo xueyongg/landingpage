@@ -59,7 +59,7 @@ export default class About extends Component {
         <About_understand />
 
         {/* Instagram Feed */}
-        <About_instagram />
+        {/* <About_instagram /> */}
 
         {/* Resume segment */}
         <About_resume />

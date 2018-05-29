@@ -55,13 +55,25 @@ export default class About_resume extends Component {
         <Container>
           <Grid textAlign="center">
             {/* What I've done and what I can do */}
-            <Header as="h2" style={{ margin: "3em 0em" }}>
+            <Header as="h2">
               <Icon name="vcard outline" />
               <Header.Content>What I've done and what I can do</Header.Content>
             </Header>
-
             <Grid.Row>
-              <p>Link to resume</p>
+              <Grid.Column width={12}>
+                <h4
+                  style={{
+                    fontFamily: "proxima-nova",
+                    fontSize: 26,
+                    lineHeight: "1.4em",
+                    fontWeight: 200
+                  }}
+                >
+                  Take a look at what I've accomplished over the years through
+                  my University days till now. Love to learn and collaborate so
+                  do check it out!
+                </h4>
+              </Grid.Column>
             </Grid.Row>
             <Grid.Row>
               <Grid.Column>

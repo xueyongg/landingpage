@@ -14,9 +14,11 @@ import {
   Responsive
 } from "semantic-ui-react";
 import Link from "next/link";
+const data = require("../../../static/assets/data.json");
 
 export default class About_photos extends Component {
   render() {
+    let about = data.about;
     return (
       <div>
         <Responsive
@@ -28,65 +30,37 @@ export default class About_photos extends Component {
           maxWidth={
             Responsive.onlyWidescreen.maxWidth
               ? Responsive.onlyWidescreen.maxWidth
-              : 1500
+              : 2500
           }
         >
-          <p>
-            This will show a total of 6 photos with no borders padding or margin
-          </p>
           <Grid>
             <Grid.Row columns={3} style={{ padding: 0 }}>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-              <Grid.Column style={{ padding: 0 }} size="medium">
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-              <Grid.Column style={{ padding: 0 }} size="medium">
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={3} style={{ padding: 0 }}>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
+              {about.images.map((image, i) => {
+                return (
+                  <Grid.Column style={{ padding: 0 }} key={i}>
+                    <Image
+                      src={"../../../static/images/about/" + image}
+                      alt={image}
+                    />
+                  </Grid.Column>
+                );
+              })}
             </Grid.Row>
           </Grid>
         </Responsive>
         <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
-          <p>
-            This will show a total of 6 photos with no borders padding or margin
-          </p>
           <Grid>
             <Grid.Row columns={2} style={{ padding: 0 }}>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={2} style={{ padding: 0 }}>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={2} style={{ padding: 0 }}>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
-              <Grid.Column style={{ padding: 0 }}>
-                <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
-              </Grid.Column>
+            {about.images.map((image, i) => {
+                return (
+                  <Grid.Column style={{ padding: 0 }} key={i}>
+                    <Image
+                      src={"../../../static/images/about/" + image}
+                      alt={image}
+                    />
+                  </Grid.Column>
+                );
+              })}
             </Grid.Row>
           </Grid>
         </Responsive>
