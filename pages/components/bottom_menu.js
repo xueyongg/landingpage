@@ -75,11 +75,11 @@ export default class BottomMenu extends Component {
                         <p>Resume</p>
                       </Link>
                     </List.Item>
-                    <List.Item as="a">
+                    {/* <List.Item as="a">
                       <Link prefetch href="/contact" passHref>
                         <p>Contact</p>
                       </Link>
-                    </List.Item>
+                    </List.Item> */}
                   </List>
                 </Grid.Column>
                 <Grid.Column>

@@ -171,7 +171,7 @@ class ResponsiveButton extends Component {
       ? { ...normalStyle, padding: "10px 4.5px" }
       : normalStyle;
     return (
-      <Link prefetch href="/contact" passHref>
+      <Link href="mailto:xueyongjoshua@gmail.com" passHref>
         <Button
           style={
             hover

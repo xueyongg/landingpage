@@ -173,11 +173,11 @@ export default class TopMenu extends Component {
                     <p>Resume</p>
                   </Menu.Item>
                 </Link>
-                <Link prefetch href={{ pathname: "/contact" }} passHref>
+                {/* <Link prefetch href={{ pathname: "/contact" }} passHref>
                   <Menu.Item name="contact" active={activeItem === "contact"}>
                     <p>Contact</p>
                   </Menu.Item>
-                </Link>
+                </Link> */}
               </Menu.Menu>
             </Menu>
           </Visibility>
