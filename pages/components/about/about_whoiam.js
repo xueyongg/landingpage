@@ -20,7 +20,7 @@ export default class About_understand extends Component {
     const understand = data.about.understand;
     return (
       <div>
-        <Container style={{ padding: "8em 2em" }}>
+        <Container style={{ padding: "8em 0em", margin: 0 }}>
           <Grid textAlign="center">
             <Header as="h2">
               <Icon name={understand.icon} />
@@ -28,21 +28,23 @@ export default class About_understand extends Component {
             </Header>
 
             <Grid.Row>
-              {understand.description.map((des, i) => {
-                return (
-                  <h4
-                    key={i}
-                    style={{
-                      fontFamily: "proxima-nova",
-                      fontSize: 26,
-                      lineHeight: "1.4em",
-                      fontWeight: 200
-                    }}
-                  >
-                    {des}
-                  </h4>
-                );
-              })}
+              <Grid.Column textAlign="justified">
+                {understand.description.map((des, i) => {
+                  return (
+                    <h4
+                      key={i}
+                      style={{
+                        fontFamily: "proxima-nova",
+                        fontSize: 26,
+                        lineHeight: "1.4em",
+                        fontWeight: 200
+                      }}
+                    >
+                      {des}
+                    </h4>
+                  );
+                })}
+              </Grid.Column>
             </Grid.Row>
           </Grid>
         </Container>

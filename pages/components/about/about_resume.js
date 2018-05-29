@@ -52,7 +52,7 @@ export default class About_resume extends Component {
     const { hover, normalStyle } = this.state;
     return (
       <div>
-        <Container>
+        <Container style={{ padding: "2em 0em", margin: 0}}>
           <Grid textAlign="center">
             {/* What I've done and what I can do */}
             <Header as="h2">
@@ -60,7 +60,7 @@ export default class About_resume extends Component {
               <Header.Content>What I've done and what I can do</Header.Content>
             </Header>
             <Grid.Row>
-              <Grid.Column width={12}>
+              <Grid.Column width={12} textAlign="center">
                 <h4
                   style={{
                     fontFamily: "proxima-nova",
