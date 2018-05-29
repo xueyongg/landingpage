@@ -21,7 +21,7 @@ export default class PageHeader extends Component {
   state = {
     mobile: false,
     url: "/",
-    imageName: "",
+    imageName: "workdesk",
     headerContent: "",
     subHeaderContent: "",
     headerColor: "",

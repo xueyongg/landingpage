@@ -106,7 +106,7 @@ export default class Home_introduction extends Component {
               <Grid>
                 <Grid.Row>
                   <Grid.Column textAlign="center">
-                    <Link prefetch href="./resume" passHref>
+                    <Link prefetch href="/resume" passHref>
                       <Button
                         className="home_buttons"
                         icon
