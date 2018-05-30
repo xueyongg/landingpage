@@ -120,7 +120,82 @@ export default class About_instagram extends Component {
           </Responsive>
           <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
             <Grid textAlign="center">
-              <About_instagram_mobile />
+              {/* <About_instagram_mobile /> */}
+              <Grid.Row columns={2}>
+                {instagram.map((element, i) => {
+                  if (Number(i) < 2) {
+                    return (
+                      <Grid.Column key={i}>
+                        <Image
+                          size="big"
+                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + element}
+                        />
+                      </Grid.Column>
+                    );
+                  }
+                })}
+              </Grid.Row>
+              <Grid.Row columns={2}>
+                {instagram.map((element, i) => {
+                  if (1 < Number(i) && Number(i) < 4) {
+                    return (
+                      <Grid.Column key={i}>
+                        <Image
+                          size="big"
+                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + element}
+                        />
+                      </Grid.Column>
+                    );
+                  }
+                })}
+              </Grid.Row>
+              <Grid.Row columns={2}>
+                {instagram.map((element, i) => {
+                  if (3 < Number(i) && Number(i) < 6) {
+                    return (
+                      <Grid.Column key={i}>
+                        <Image
+                          size="big"
+                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + element}
+                        />
+                      </Grid.Column>
+                    );
+                  }
+                })}
+              </Grid.Row>
+              <Grid.Row columns={2}>
+                {instagram.map((element, i) => {
+                  if (5 < Number(i) && Number(i) < 8) {
+                    return (
+                      <Grid.Column key={i}>
+                        <Image
+                          size="big"
+                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + element}
+                        />
+                      </Grid.Column>
+                    );
+                  }
+                })}
+              </Grid.Row>
+              <Grid.Row columns={2}>
+                {instagram.map((element, i) => {
+                  if (7 < Number(i) && Number(i) < 10) {
+                    return (
+                      <Grid.Column key={i}>
+                        <Image
+                          size="big"
+                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + element}
+                        />
+                      </Grid.Column>
+                    );
+                  }
+                })}
+              </Grid.Row>
             </Grid>
           </Responsive>
         </Container>
