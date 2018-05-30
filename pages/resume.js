@@ -41,8 +41,8 @@ export default class Resume extends Component {
         <PageHeader
           mobile={false}
           url={this.state.currentPage}
-          headerColor={"black"}
-          subHeaderColor={"black"}
+          headerColor={"white"}
+          subHeaderColor={"white"}
           imageName={"resume"}
           headerContent={"resume"}
           subHeaderContent={"Find out what I have accomplished over the years."}

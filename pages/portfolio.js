@@ -35,8 +35,8 @@ export default class Portfolio extends Component {
         <PageHeader
           mobile={false}
           url={this.state.currentPage}
-          headerColor={"black"}
-          subHeaderColor={"black"}
+          headerColor={"white"}
+          subHeaderColor={"white"}
           imageName={"portfoliotest"}
           subHeaderContent={"Take a look at what I've done"}
           headerContent={"My humble portfolio"}

@@ -26,12 +26,23 @@ const moment = require("moment");
 
 export default class Home extends Component {
   state = {
-    currentPage: "home"
+    currentPage: "home",
+    mobile: false
   };
-  handleOnUpdate() {}
+  handleOnUpdate(data) {
+    let width = data.width;
+
+    let currentState = this.state;
+    if (Number(width) < 691) {
+      currentState.mobile = true;
+    } else {
+      currentState.mobile = false;
+    }
+    this.setState(currentState);
+  }
 
   render() {
-    const { activeItem } = this.state;
+    const { mobile } = this.state;
     // var typed = new Typed(".element", {
     //   stringsElement: "#typed-strings",
     //   strings: ["First sentence.", "Second sentence."],
@@ -40,13 +51,17 @@ export default class Home extends Component {
 
     return (
       <div>
-        <Responsive onUpdate={this.handleOnUpdate}>
+        <Responsive
+          onUpdate={(e, data) => {
+            this.handleOnUpdate(data);
+          }}
+        >
           <PageHeader
-            mobile={false}
+            mobile={mobile}
             url={this.state.currentPage}
-            headerColor={"black"}
-            subHeaderColor={"black"}
-            imageName={"workdesk"}
+            headerColor={"white"}
+            subHeaderColor={"white"}
+            imageName={"home"}
             subHeaderContent={"Find out more about me here."}
             headerContent={"Peek into my life"}
             additionalSegmentStyle={{}}
