@@ -185,7 +185,7 @@ export default class TopMenu extends Component {
 
         {/* Mobile view */}
         <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
-          <Sidebar.Pushable as={Segment}>
+          <Sidebar.Pushable as={Segment} style={{borderRadius:0}}>
             <Sidebar
               as={Menu}
               animation="overlay"
@@ -197,7 +197,7 @@ export default class TopMenu extends Component {
               style={{
                 height: "100%",
                 overflowX: "hidden",
-                overflowY: "hidden"
+                overflowY: "hidden",
               }}
             >
               <Menu.Item
@@ -236,7 +236,12 @@ export default class TopMenu extends Component {
               </Link> */}
             </Sidebar>
             <Sidebar.Pusher width="very thin">
-              <Menu borderless fluid icon style={{ border: 0 }}>
+              <Menu
+                borderless
+                fluid
+                icon
+                style={{ border: 0, borderRadius: 0 }}
+              >
                 <Menu.Menu position="left">
                   <Menu.Item
                     name="mobile-home"
