@@ -20,7 +20,7 @@ export default class About_understand extends Component {
     const understand = data.about.understand;
     return (
       <div>
-        <Container style={{ padding: "8em 0em 6em 0em", margin: 0 }}>
+        <Container style={{ padding: "8em 0em 2em 0em", margin: 0 }}>
           <Grid textAlign="center">
             <Header as="h2">
               <Icon name={understand.icon} />
