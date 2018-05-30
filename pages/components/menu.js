@@ -183,6 +183,7 @@ export default class TopMenu extends Component {
           </Visibility>
         </Responsive>
 
+        {/* Mobile view */}
         <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
           <Sidebar.Pushable as={Segment}>
             <Sidebar
@@ -228,11 +229,11 @@ export default class TopMenu extends Component {
                   <Icon name="file text outline" size="large" />
                 </Menu.Item>
               </Link>
-              <Link href={{ pathname: "/contact" }} passHref>
+              {/* <Link href={{ pathname: "/contact" }} passHref>
                 <Menu.Item name="contact" link>
                   {<Icon name="mail outline" size="large" />}
                 </Menu.Item>
-              </Link>
+              </Link> */}
             </Sidebar>
             <Sidebar.Pusher width="very thin">
               <Menu borderless fluid icon style={{ border: 0 }}>
