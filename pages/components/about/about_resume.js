@@ -52,7 +52,14 @@ export default class About_resume extends Component {
     const { hover, normalStyle } = this.state;
     return (
       <div>
-        <Container style={{ padding: "2em 0em", margin: 0}}>
+        <Container
+          style={{
+            padding: "2em 0em",
+            margin: 0,
+            width: "100%",
+            backgroundColor: "#fafafa"
+          }}
+        >
           <Grid textAlign="center">
             {/* What I've done and what I can do */}
             <Header as="h2">
