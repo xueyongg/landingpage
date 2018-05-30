@@ -16,7 +16,6 @@ import TopMenu from "./components/menu";
 import Home from "./home";
 import "../static/styles/main.css";
 
-
 export default class extends Component {
   state = {};
 
@@ -36,6 +35,11 @@ export default class extends Component {
         <Head>
           <title>Xueyong's Site</title>
           <meta name="description" content="Personal site" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width,, maximum-scale=1"
+            key="viewport"
+          />
           <meta
             name="keywords"
             content="HTML,CSS,XML,JavaScript,Full stack, React, Node, Web development, Website building"
