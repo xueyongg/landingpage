@@ -168,7 +168,7 @@ class ResponsiveButton extends Component {
     let { normalStyle, hover, mobile } = this.state;
 
     let modifiedNormal = mobile
-      ? { ...normalStyle, padding: "10px 4.5px" }
+      ? { ...normalStyle, padding: "1em 1em" }
       : normalStyle;
     return (
       <Link href="mailto:xueyongjoshua@gmail.com" passHref>
