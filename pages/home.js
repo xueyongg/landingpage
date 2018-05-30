@@ -22,6 +22,7 @@ import BottomMenu from "./components/bottom_menu";
 import Todo from "./components/todo";
 import Home_introduction from "./components/home/home_introduction";
 import PageHeader from "./components/page/page_header";
+import About_instagram from "./components/about/about_instagram";
 const moment = require("moment");
 
 export default class Home extends Component {
@@ -74,6 +75,8 @@ export default class Home extends Component {
 
           {/* Projects */}
           {/* <Home_projects /> */}
+
+          <About_instagram />
 
           {/* About you */}
           {/* <Home_about /> */}

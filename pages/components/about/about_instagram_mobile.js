@@ -1,0 +1,108 @@
+import React, { Component } from "react";
+import {
+  Modal,
+  Header,
+  Segment,
+  Grid,
+  Image,
+  Container,
+  Button,
+  List,
+  Icon,
+  Input,
+  Menu,
+  Responsive
+} from "semantic-ui-react";
+import Link from "next/link";
+const data = require("../../../static/assets/data.json");
+
+export default class About_instagram_mobile extends Component {
+  render() {
+    let instagram = data.about.instagram;
+    return (
+      
+        <div>
+          <Header as="h2">
+            <Icon name="instagram" />
+            <Header.Content>My Instagram</Header.Content>
+          </Header>
+          <Grid.Row columns={2}>
+            {instagram.map((element, i) => {
+              if (Number(i) < 2) {
+                return (
+                  <Grid.Column key={i}>
+                    <Image
+                      size="big"
+                      src={"/static/images/about/instagram/" + element}
+                      alt={"/static/images/about/instagram/" + element}
+                    />
+                  </Grid.Column>
+                );
+              }
+            })}
+          </Grid.Row>
+          <Grid.Row columns={2}>
+            {instagram.map((element, i) => {
+              if (2 <= Number(i)  < 4) {
+                return (
+                  <Grid.Column key={i}>
+                    <Image
+                      size="big"
+                      src={"/static/images/about/instagram/" + element}
+                      alt={"/static/images/about/instagram/" + element}
+                    />
+                  </Grid.Column>
+                );
+              }
+            })}
+          </Grid.Row>
+          <Grid.Row columns={2}>
+            {instagram.map((element, i) => {
+              if (4 <= Number(i)  < 6) {
+                return (
+                  <Grid.Column key={i}>
+                    <Image
+                      size="big"
+                      src={"/static/images/about/instagram/" + element}
+                      alt={"/static/images/about/instagram/" + element}
+                    />
+                  </Grid.Column>
+                );
+              }
+            })}
+          </Grid.Row>
+          <Grid.Row columns={2}>
+            {instagram.map((element, i) => {
+              if (6 <= Number(i)  < 8) {
+                return (
+                  <Grid.Column key={i}>
+                    <Image
+                      size="big"
+                      src={"/static/images/about/instagram/" + element}
+                      alt={"/static/images/about/instagram/" + element}
+                    />
+                  </Grid.Column>
+                );
+              }
+            })}
+          </Grid.Row>
+          <Grid.Row columns={2}>
+            {instagram.map((element, i) => {
+              if (8 <= Number(i)  < 10) {
+                return (
+                  <Grid.Column key={i}>
+                    <Image
+                      size="big"
+                      src={"/static/images/about/instagram/" + element}
+                      alt={"/static/images/about/instagram/" + element}
+                    />
+                  </Grid.Column>
+                );
+              }
+            })}
+          </Grid.Row>
+        
+      </div>
+    );
+  }
+}
