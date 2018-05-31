@@ -79,12 +79,18 @@ export default class Home_introduction extends Component {
           {/* About */}
           <Segment vertical>
             <Container
-              style={{ backgroundColor: "#ffff", padding: "80px 48px" }}
+              style={{
+                padding: "2em 0em 2em 0em",
+                margin: 0,
+                
+                backgroundColor: "#ffff"
+              }}
             >
               <Header
                 as="h2"
                 textAlign="center"
                 content="My life as a developer"
+                size="huge"
               />
 
               <Grid style={{ padding: 0 }} stackable textAlign="center">

@@ -60,7 +60,7 @@ export default class About_instagram extends Component {
       <div>
         <Container
           style={{
-            padding: "1em 0em 2em 0em",
+            padding: "2em 0em 2em 0em",
             margin: 0,
             width: "100%",
             backgroundColor: "#fafafa"
