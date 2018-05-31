@@ -40,7 +40,7 @@ export default class Portfolio extends Component {
             headerColor={"white"}
             subHeaderColor={"white"}
             imageName={"portfoliotest"}
-            subHeaderContent={"Take a look at what I've done"}
+            subHeaderContent={"Take a look at what I've done."}
             headerContent={"My humble portfolio"}
             additionalSegmentStyle={{}}
             additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}

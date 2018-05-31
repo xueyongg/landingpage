@@ -35,10 +35,6 @@ export default class Resume_work extends Component {
               </Header>
             </Grid.Column>
             <Grid.Column width={11}>
-              <Grid>
-                <Grid.Row />
-              </Grid>
-
               <Item.Group divided>
                 {data.resume.work_experience.experiences.map(
                   (element, index) => {

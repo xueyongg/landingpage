@@ -24,7 +24,7 @@ export default class Resume_technology extends Component {
       <div>
         <Container
           style={{
-            padding: "4em 1em 2em 1em"
+            padding: "6em 1em 2em 1em"
           }}
         >
           <Grid stackable>

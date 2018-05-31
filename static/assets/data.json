@@ -4,9 +4,9 @@
       {
         "icon": "heart outline",
         "icon_size": "huge",
-        "header": "Love Challenges and Change",
+        "header": "Love Challenges and Changes",
         "description":
-          "Always wanted to be a consultant but my path changed when I saw the possibility and capacity for bigger things through development. "
+          "Always wanted to be a consultant but my path changed when I saw the possibility and capacity for bigger things through technology development. "
       },
       {
         "icon": "odnoklassniki",
@@ -20,7 +20,7 @@
         "icon_size": "huge",
         "header": "Code as a passion",
         "description":
-          "Focuses on full stack web development in JavaScript. Love spending my free time creating new code projects serving both as a learning platform and service"
+          "Focuses on full stack web development in JavaScript. Love spending my free time creating new code projects serving both as a learning platform and service."
       }
     ],
     "projects": {},
@@ -32,7 +32,7 @@
         "title": "MaiMai (Final Year Project)",
         "link": "https://app.maimai.com",
         "descriptions": [
-          "eCommerce Transaction Platform",
+          "eCommerce Transaction Platform.",
           "MaiMai is a C2C marketplace platform for people to buy and sell products as well as services.",
           "The key feature that enables MaiMai to become safer is the ability to create smart contracts between buyers and sellers."
         ],
@@ -60,7 +60,7 @@
         "title": "PHDIS web Application",
         "link": "",
         "descriptions": [
-          "Leave Management System for PHD Students in SMU",
+          "Leave Management System for PHD Students in SMU.",
           "Engaged in numerous open source Javascript APIs to implement more user-friendly functions."
         ],
         "date": "Jun 2015 – Dec 2016",
@@ -99,10 +99,10 @@
       "icon": "student",
       "image": "self.JPG",
       "description": [
-        "Loves Basketball. I'm a fan of the 2015-2016 NBA Champions, Golden State Warriors. I love them hugely for unselfish plays and amazing ball movement.",
-        "Loves reading non-fictional self-help books and Medium. Do you know they have tons of interesting articles?",
+        "Love Basketball. I'm a fan of the 2015-2016 NBA Champions, Golden State Warriors. I love them hugely for unselfish plays and amazing ball movement.",
+        "Love reading non-fictional self-help books and Medium. Do you know they have tons of interesting articles?",
         "Love Canada and its national parks. So in an attempt to capture some of these natural wonder, I decided to share them with you below!",
-        "Love coding on a regular basis. That's pretty weird isn't it? Do check out them out in my portfolio."
+        "Love coding on a regular basis. That's pretty weird isn't it? Do check them out in my portfolio."
       ]
     },
     "images": [
@@ -118,7 +118,7 @@
       "icon": "smile",
       "description": [
         "Started my journey as a developer in University. It all began with Java / JSP. All that changed during my Final Year Project in Junior year. We decided on Metoer, React.js, MongoDB and Node.js. I found my passion for JavaScript since then and it was just tons of self driving from then on. ",
-        "Never coin myself as a genius coder but rather, an individual determined to raise above challenges and prioritises on the learning process. I would like to leave you with this quote: “Mere change is not growth. Growth is the synthesis of change and continuity, and where there is no continuity there is no growth.” - C.S. Lewis",
+        "I've never coin myself as a genius coder but rather, an individual determined to raise above challenges and prioritises on the learning process. I would like to leave you with this quote: “Mere change is not growth. Growth is the synthesis of change and continuity, and where there is no continuity there is no growth.” - C.S. Lewis",
         "Always be faithful with the opportunities and talents given to you. No matter how small or insignificant these talents may seem today, who knows what you may find yourself in tomorrow."
       ]
     },
@@ -161,8 +161,7 @@
         { "name": "Matlab" },
         { "name": "HTML5/ CSS3" },
         { "name": "SAP / LSMW Tool" },
-        { "name": "Ruby" },
-        { "name": "Microsoft SQL" }
+        { "name": "Ruby" }
       ]
     },
     "work_experience": {
@@ -271,5 +270,11 @@
     ],
     "verse":
       "I can do all this through him who gives me strength - Philippians 4:13"
+  },
+  "overall_settings": {
+    "fontFamily": "",
+    "h1_font_size": "",
+    "h2_font_size": "",
+    "h3_font_size": ""
   }
 }

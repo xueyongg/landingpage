@@ -34,7 +34,6 @@ export default class About_understand extends Component {
                     <h4
                       key={i}
                       style={{
-                        fontFamily: "proxima-nova",
                         fontSize: 26,
                         lineHeight: "1.4em",
                         fontWeight: 200

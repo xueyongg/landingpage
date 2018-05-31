@@ -73,13 +73,14 @@ export default class About_resume extends Component {
               <Grid.Column width={12} textAlign="center">
                 <h4
                   style={{
-                    fontFamily: "proxima-nova",
                     fontSize: 26,
                     lineHeight: "1.4em",
                     fontWeight: 200
                   }}
                 >
-                  Take a look at what I've accomplished over the years from my University days till now. <br/>Love to learn and collaborate so do check it out!
+                  Take a look at what I've accomplished over the years from my
+                  University days till now. <br />Love to learn and collaborate
+                  so do check it out!
                 </h4>
               </Grid.Column>
             </Grid.Row>

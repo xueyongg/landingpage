@@ -45,7 +45,7 @@ export default class About extends Component {
             headerColor={"white"}
             subHeaderColor={"white"}
             imageName={"about"}
-            headerContent={"My passions and personality"}
+            headerContent={"My passion and personality"}
             subHeaderContent={"Discover who I am as a person."}
             additionalSegmentStyle={{}}
             additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
