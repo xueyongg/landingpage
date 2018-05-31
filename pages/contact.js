@@ -23,6 +23,7 @@ import TopMenu from "./components/menu";
 import BottomMenu from "./components/bottom_menu";
 import PageHeader from "./components/page/page_header";
 import Head from "next/head";
+import Layout from "./utils/layout";
 export default class Contact extends Component {
   state = {
     first_name_error: false,
@@ -100,124 +101,126 @@ export default class Contact extends Component {
   }
   render() {
     return (
-      <div>
-        <Head>
-          <title>Contact me</title>
-        </Head>
-        <TopMenu currentPage={this.state.currentPage} />
-        <PageHeader
-          mobile={false}
-          url={this.state.currentPage}
-          headerColor={"black"}
-          subHeaderColor={"black"}
-          imageName={"contact"}
-          subHeaderContent={"Let's have a little chat."}
-          headerContent={"Contact me"}
-          additionalSegmentStyle={{}}
-          additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
-          additionalSubHeaderStyle={{ zIndex: 1 }}
-        />
+      <Layout>
+        <div>
+          <Head>
+            <title>Contact me</title>
+          </Head>
+          <TopMenu currentPage={this.state.currentPage} />
+          <PageHeader
+            mobile={false}
+            url={this.state.currentPage}
+            headerColor={"black"}
+            subHeaderColor={"black"}
+            imageName={"contact"}
+            subHeaderContent={"Let's have a little chat."}
+            headerContent={"Contact me"}
+            additionalSegmentStyle={{}}
+            additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
+            additionalSubHeaderStyle={{ zIndex: 1 }}
+          />
 
-        <Container
-          text
-          style={{ backgroundColor: "#ffff", padding: "96px 48px" }}
-        >
-          <div className="login-form">
-            <Grid
-              style={{ height: "100%" }}
-              verticalAlign="middle"
-              textAlign="center"
-            >
-              <Grid.Column style={{ maxWidth: 450 }}>
-                <Header as="h2" color="teal" textAlign="center">
-                  Fix up a meet up with me
-                </Header>
-                <Form
-                  size="large"
-                  loading={this.state.loading}
-                  style={{ textAlign: "left" }}
-                >
-                  <Segment stacked>
-                    <Form.Group widths="equal">
+          <Container
+            text
+            style={{ backgroundColor: "#ffff", padding: "96px 48px" }}
+          >
+            <div className="login-form">
+              <Grid
+                style={{ height: "100%" }}
+                verticalAlign="middle"
+                textAlign="center"
+              >
+                <Grid.Column style={{ maxWidth: 450 }}>
+                  <Header as="h2" color="teal" textAlign="center">
+                    Fix up a meet up with me
+                  </Header>
+                  <Form
+                    size="large"
+                    loading={this.state.loading}
+                    style={{ textAlign: "left" }}
+                  >
+                    <Segment stacked>
+                      <Form.Group widths="equal">
+                        <Form.Input
+                          fluid
+                          id="form-subcomponent-shorthand-input-first-name"
+                          label="First name"
+                          placeholder="First name"
+                          error={this.state.first_name_error}
+                          value={this.state.first_name}
+                          name="first_name"
+                          onChange={(e, value) => this.onChange(e)}
+                          autoFocus
+                          required
+                        />
+                        <Form.Input
+                          fluid
+                          id="form-subcomponent-shorthand-input-last-name"
+                          label="Last name"
+                          placeholder="Last name"
+                          error={this.state.last_name_error}
+                          value={this.state.last_name}
+                          onChange={(e, value) => this.onChange(e)}
+                          name="last_name"
+                          required
+                        />
+                      </Form.Group>
                       <Form.Input
                         fluid
-                        id="form-subcomponent-shorthand-input-first-name"
-                        label="First name"
-                        placeholder="First name"
-                        error={this.state.first_name_error}
-                        value={this.state.first_name}
-                        name="first_name"
+                        icon="user"
+                        label="Email Address"
+                        iconPosition="left"
+                        placeholder="Email Address"
+                        error={this.state.email_error}
+                        value={this.state.email}
                         onChange={(e, value) => this.onChange(e)}
-                        autoFocus
+                        name="email"
                         required
                       />
-                      <Form.Input
-                        fluid
-                        id="form-subcomponent-shorthand-input-last-name"
-                        label="Last name"
-                        placeholder="Last name"
-                        error={this.state.last_name_error}
-                        value={this.state.last_name}
-                        onChange={(e, value) => this.onChange(e)}
-                        name="last_name"
+                      <Form.Field
+                        control={TextArea}
+                        label="About"
+                        placeholder="Tell us more about you..."
+                        error={this.state.about_error}
+                        value={this.state.about}
+                        onChange={(e, value) => {
+                          this.onChange(e);
+                        }}
+                        name="about"
                         required
                       />
-                    </Form.Group>
-                    <Form.Input
-                      fluid
-                      icon="user"
-                      label="Email Address"
-                      iconPosition="left"
-                      placeholder="Email Address"
-                      error={this.state.email_error}
-                      value={this.state.email}
-                      onChange={(e, value) => this.onChange(e)}
-                      name="email"
-                      required
-                    />
-                    <Form.Field
-                      control={TextArea}
-                      label="About"
-                      placeholder="Tell us more about you..."
-                      error={this.state.about_error}
-                      value={this.state.about}
-                      onChange={(e, value) => {
-                        this.onChange(e);
-                      }}
-                      name="about"
-                      required
-                    />
 
-                    <Button
-                      color="teal"
-                      fluid
-                      size="large"
-                      onClick={event => this.onSubmit(event)}
-                    >
-                      Send Inquiry
-                    </Button>
-                  </Segment>
-                </Form>
-                <Message
-                  hidden={this.state.hideSuccessMessage}
-                  style={{ textAlign: "centered" }}
-                  success
-                  header="Form Completed"
-                  content="Your request has been sent."
-                />
-                <Message
-                  hidden={this.state.hideErrorMessage}
-                  style={{ textAlign: "centered" }}
-                  error
-                  header="Error"
-                  content="All fields should be filled in."
-                />
-              </Grid.Column>
-            </Grid>
-          </div>
-        </Container>
-        <BottomMenu currentPage={this.state.currentPage} />
-      </div>
+                      <Button
+                        color="teal"
+                        fluid
+                        size="large"
+                        onClick={event => this.onSubmit(event)}
+                      >
+                        Send Inquiry
+                      </Button>
+                    </Segment>
+                  </Form>
+                  <Message
+                    hidden={this.state.hideSuccessMessage}
+                    style={{ textAlign: "centered" }}
+                    success
+                    header="Form Completed"
+                    content="Your request has been sent."
+                  />
+                  <Message
+                    hidden={this.state.hideErrorMessage}
+                    style={{ textAlign: "centered" }}
+                    error
+                    header="Error"
+                    content="All fields should be filled in."
+                  />
+                </Grid.Column>
+              </Grid>
+            </div>
+          </Container>
+          <BottomMenu currentPage={this.state.currentPage} />
+        </div>
+      </Layout>
     );
   }
 }

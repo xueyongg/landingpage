@@ -59,14 +59,14 @@ export default class TopMenu extends Component {
 
   stickTopMenu = () => {
     this.setState({ menuFixed: true });
-    console.log("stickTopMenu: menufixed is true");
+    // console.log("stickTopMenu: menufixed is true");
   };
 
   unStickOverlay = () => this.setState({ overlayFixed: false });
 
   unStickTopMenu = () => {
     this.setState({ menuFixed: false });
-    console.log("unStickTopMenu: menufixed is false");
+    // console.log("unStickTopMenu: menufixed is false");
   };
 
   static async getInitialprops({}) {
@@ -185,7 +185,7 @@ export default class TopMenu extends Component {
 
         {/* Mobile view */}
         <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
-          <Sidebar.Pushable as={Segment} style={{borderRadius:0}}>
+          <Sidebar.Pushable as={Segment} style={{ borderRadius: 0 }}>
             <Sidebar
               as={Menu}
               animation="overlay"
@@ -197,7 +197,7 @@ export default class TopMenu extends Component {
               style={{
                 height: "100%",
                 overflowX: "hidden",
-                overflowY: "hidden",
+                overflowY: "hidden"
               }}
             >
               <Menu.Item

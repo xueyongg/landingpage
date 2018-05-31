@@ -22,6 +22,7 @@ import About_funfact from "./components/about/about_funfact";
 import About_understand from "./components/about/about_whoiam";
 import PageHeader from "./components/page/page_header";
 import Head from "next/head";
+import { Label } from "../.next/5.60d890fea67e0291f7ae.hot-update";
 export default class About extends Component {
   state = {
     currentPage: "about"
@@ -32,40 +33,42 @@ export default class About extends Component {
     let { currentPage } = this.state;
 
     return (
-      <div>
-        <Head>
-          <title>About me</title>
-        </Head>
-        <TopMenu currentPage={this.state.currentPage} />
-        <PageHeader
-          mobile={false}
-          url={this.state.currentPage}
-          headerColor={"white"}
-          subHeaderColor={"white"}
-          imageName={"about"}
-          headerContent={"My passions and personality"}
-          subHeaderContent={"Discover who I am as a person."}
-          additionalSegmentStyle={{}}
-          additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
-          additionalSubHeaderStyle={{ zIndex: 1 }}
-        />
+      <Label>
+        <div>
+          <Head>
+            <title>About me</title>
+          </Head>
+          <TopMenu currentPage={this.state.currentPage} />
+          <PageHeader
+            mobile={false}
+            url={this.state.currentPage}
+            headerColor={"white"}
+            subHeaderColor={"white"}
+            imageName={"about"}
+            headerContent={"My passions and personality"}
+            subHeaderContent={"Discover who I am as a person."}
+            additionalSegmentStyle={{}}
+            additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
+            additionalSubHeaderStyle={{ zIndex: 1 }}
+          />
 
-        {/* Fun fact about myself*/}
-        <About_funfact />
-        {/* Some photos of Canada and nature */}
-        <About_photos />
+          {/* Fun fact about myself*/}
+          <About_funfact />
+          {/* Some photos of Canada and nature */}
+          <About_photos />
 
-        {/* Understand who I am as a person */}
-        <About_understand />
+          {/* Understand who I am as a person */}
+          <About_understand />
 
-        {/* Instagram Feed */}
-        <About_instagram />
+          {/* Instagram Feed */}
+          <About_instagram />
 
-        {/* Resume segment */}
-        <About_resume />
+          {/* Resume segment */}
+          <About_resume />
 
-        <BottomMenu currentPage={this.state.currentPage} />
-      </div>
+          <BottomMenu currentPage={this.state.currentPage} />
+        </div>
+      </Label>
     );
   }
 }

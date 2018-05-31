@@ -15,6 +15,7 @@ import Head from "next/head";
 import TopMenu from "./components/menu";
 import Home from "./home";
 import "../static/styles/main.css";
+import Layout from "./utils/layout";
 
 export default class extends Component {
   state = {};
@@ -31,25 +32,25 @@ export default class extends Component {
     const { activeItem } = this.state;
 
     return (
-      
-      <div>
-        <Head>
-          <title>Xueyong's Site</title>
-          <meta name="description" content="Personal site" />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width,, maximum-scale=1"
-            key="viewport"
-          />
-          <meta
-            name="keywords"
-            content="HTML,CSS,XML,JavaScript,Full stack, React, Node, Web development, Website building"
-          />
-          <meta name="author" content="Phua Xue Yong" />
-        </Head>
-        <TopMenu currentPage="home" />
-        <Home />
-        {/* <span style={{ position: "fixed", right: "2em", bottom: "5em" }}>
+      <Layout>
+        <div>
+          <Head>
+            <title>Xueyong's Site</title>
+            <meta name="description" content="Personal site" />
+            <meta
+              name="viewport"
+              content="initial-scale=1.0, width=device-width,, maximum-scale=1"
+              key="viewport"
+            />
+            <meta
+              name="keywords"
+              content="HTML,CSS,XML,JavaScript,Full stack, React, Node, Web development, Website building"
+            />
+            <meta name="author" content="Phua Xue Yong" />
+          </Head>
+          <TopMenu currentPage="home" />
+          <Home />
+          {/* <span style={{ position: "fixed", right: "2em", bottom: "5em" }}>
           <Button icon onClick={this.onClickUp}>
             <Icon name="chevron up" />
           </Button>
@@ -59,7 +60,8 @@ export default class extends Component {
             <Icon name="chevron down" />
           </Button>
         </span> */}
-      </div>
+        </div>
+      </Layout>
     );
   }
 }

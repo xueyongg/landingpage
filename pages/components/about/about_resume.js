@@ -57,7 +57,7 @@ export default class About_resume extends Component {
       <div>
         <Container
           style={{
-            padding: "2em 0em",
+            padding: "3em 0em",
             margin: 0,
             width: "100%",
             backgroundColor: "#fafafa"
