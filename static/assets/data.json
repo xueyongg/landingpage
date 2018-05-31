@@ -166,15 +166,15 @@
         {
           "company": "KeyReply",
           "companyWebsite": "http://keyreply.com/",
-          "jobTitle": "Forward Deployed Software Engineer",
+          "jobTitle": "Forward Deployed Software Engineer Intern",
           "jobDescriptionLink": "",
           "year": "2018",
           "date": "Jan 2018 – Mar 2018",
           "duration": "2018",
           "description": [
-            "Indepdently dealt with clients from gathering requirements to technical implementation, with 0 complains",
-            "Implemented users’ requirements based on Javascript NodeJS",
-            "Debugged up to 100 bugs over 3 months, which helped to speed up the operations of KeyReply and meet deadlines promptly"
+            "Independently dealt with clients from gathering requirements to technical implementation with 0 complaints",
+            "Implemented users’ requirements based on Javascript Node.JS Vue.js",
+            "Debugged up to 100 bugs over 3 months helping to speed up the operations of KeyReply and meet deadlines promptly"
           ],
           "skills": [
             { "icon": "devicon-javascript-plain", "name": "JavaScript" },
@@ -191,10 +191,10 @@
           "date": "May – Jul 2016; May – Jul 2017",
           "duration": "2017",
           "description": [
-            "Anchored the VBA scripts used for internal reporting and external communications in raising service request that is used daily by clients, which helped to streamline the business service request process by at least 50%",
+            "Anchored the VBA scripts used for internal reporting and external communications in raising service request, which helped to streamline the business service request process by at least 50%",
             "Independently created a SAP Financial Data Migration and Data Reconciliation Manual for the internal project team’s usage, which helped to reduce more than 50% of required operational effort through the consolidated instructions and knowledge transfer from the overseas team",
             "Actively involved in the data reconciliation and financial disprepancy investigation for a client’s 90 company codes",
-            "Assisted the Data Migration Team Lead with Full Dream Rehearsal Planning and execution processes prior to Actual Cut Over"
+            "Assisted the Data Migration Team Lead with Full Dream Rehearsal Planning and execution processes prior to Actual Cut Over (ACO)"
           ],
           "skills": [
             { "icon": "feed", "name": "SAP" },
@@ -207,8 +207,8 @@
           "companyWebsite": "",
           "jobTitle": "Student-Consultant, Consulting Internship",
           "jobDescriptionLink": "",
-          "date": "",
-          "duration": "Jul 2015 – Jul 2016",
+          "date": "Jul 2015 – Jul 2016",
+          "duration": "",
           "description": [
             "Laid out multiple marketing strategies, which helped the company effectively reach out to youths via school platforms",
             "Applied analytics on data collected via market research (surveys and focus groups), which helped the company identify timely trends in the marketing industry"
@@ -224,16 +224,6 @@
           "duration": "",
           "description": ["test", "test"],
           "skills": [{ "icon": "feed", "name": "Javascript" }]
-        },
-        {
-          "company": "",
-          "companyWebsite": "",
-          "jobTitle": "",
-          "jobDescriptionLink": "",
-          "date": "",
-          "duration": "",
-          "description": ["test", "test"],
-          "skills": [{ "icon": "", "name": "" }]
         }
       ]
     },
@@ -252,7 +242,7 @@
         },
         {
           "school": "Mcmaster University",
-          "academicFocus": "Business Student Exchange",
+          "academicFocus": "Business Student Exchange Programme",
           "date": "Aug 2017 – Dec 2017",
           "description": [""]
         },
