@@ -86,7 +86,7 @@ export default class Portfolio extends Component {
                         {screenshots.map((screenshot, i) => {
                           if (screenshot)
                             return (
-                              <Grid.Column>
+                              <Grid.Column key={i}>
                                 <Modal
                                   basic
                                   trigger={
@@ -112,7 +112,6 @@ export default class Portfolio extends Component {
                                         "large/" +
                                         screenshot.replace("tn_", "")
                                       }
-                                      size="medium"
                                       src={
                                         baseurl +
                                         "large/" +
