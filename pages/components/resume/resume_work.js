@@ -24,7 +24,7 @@ export default class Resume_work extends Component {
       <div>
         <Container
           style={{
-            padding: "96px 16px 24px 16px"
+            padding: "4em 1em 2em 1em"
           }}
         >
           <Grid stackable>
