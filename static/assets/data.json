@@ -99,9 +99,10 @@
       "icon": "student",
       "image": "self.JPG",
       "description": [
-        "Loves Basketball and a fan of Golden State Warriors; mainly for their ball movement, team play and ability to groom rookies to gain confidence amidst star players, reflecting selflessness in their culture. ",
-        "Loves food but mostly Asian cuisines. Loves non-fictional books. Especially the ones that triggers the mind; books such as Mere Christianity. ",
-        "Tries many sports ranging from golf, basketball, soccer, badminton, table tennis. Reads Medium during free time. Love Canada and nature. Below are just some photos taken on my student exchange in Vancouver, Italy, Banff National Park, Rome, Grand Canyon National Park and Orlando. "
+        "Loves Basketball. I'm a fan of the 2015-2016 NBA Champions, Golden State Warriors. I love them hugely for unselfish plays and amazing ball movement.",
+        "Loves reading non-fictional self-help books and Medium. Do you know they have tons of interesting articles?",
+        "Love Canada and its national parks. So in an attempt to capture some of these natural wonder, I decided to share them with you below!",
+        "Love coding on a regular basis. That's pretty weird isn't it? Do check out them out in my portfolio."
       ]
     },
     "images": [
@@ -116,8 +117,9 @@
       "header": "Understand who I am as a person",
       "icon": "smile",
       "description": [
-        "Started my journey as a developer only in University. Started first with Java, slowly found my passion in JavaScript during my Junior year during Final Year Project. Picked up Metoer React.js, MongoDB and Node.js for a start. And since there began exploring on my own. ",
-        "Never coin myself as a genius coder but one that is determined to grind through and learn. This perhaps is what they call the growth mentality. “Mere change is not growth. Growth is the synthesis of change and continuity, and where there is no continuity there is no growth.” - C.S. Lewis"
+        "Started my journey as a developer only in University. Started first with Java, slowly found my passion in JavaScript for my Final Year Project during Junior year. Picked up Metoer React.js, MongoDB and Node.js for a start. And since there began exploring on my own. ",
+        "Never coin myself as a genius coder but rather, an individual determined to raise above challenges and prioritises on the learning process. I would like to leave you with this quote: “Mere change is not growth. Growth is the synthesis of change and continuity, and where there is no continuity there is no growth.” - C.S. Lewis",
+        "Always be faithful with the abilities and talents bestowed on you. No matter how small or insignificant these talents may be, one day these will all make sense."
       ]
     },
     "instagram": [
@@ -261,7 +263,8 @@
   },
   "contact": {},
   "bottom_menu": {
-    "footer_header": "Get a website that actually looks amazing and within a week ",
+    "footer_header":
+      "Get a website that actually looks amazing and within a week ",
     "footer": [
       "Welcome!",
       "This website is proudly made in Node.js, Next.js (React.js framework) over the course of a few days."

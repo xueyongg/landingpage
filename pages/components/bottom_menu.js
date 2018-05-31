@@ -52,6 +52,7 @@ export default class BottomMenu extends Component {
           vertical
         >
           <Container textAlign="center">
+            
             <p style={{ marginBottom: "0.025em", fontColor: "white" }}>
               {bottom_menu.verse}
             </p>
