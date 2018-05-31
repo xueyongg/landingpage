@@ -44,7 +44,13 @@ export default class Portfolio extends Component {
           additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
           additionalSubHeaderStyle={{ zIndex: 1 }}
         />
-        <Container>
+        <Container
+          style={{
+            margin: "0em 0em 0em 0em",
+            padding: "2em 0em 2em 0em "
+          }}
+        >
+          <Header as="h2" content="My Projects" textAlign="center" />
           <Grid celled stackable columns={3} textAlign="center" stretched>
             {data.portfolio.projects.map((project, index) => {
               let {

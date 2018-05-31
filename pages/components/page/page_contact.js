@@ -76,13 +76,15 @@ export default class Page_contact extends Component {
               style={{
                 backgroundColor: "transparent",
                 position: "absolute",
-                top: "60%",
+                top: "55%",
                 left: "50%",
                 transform: "translate(-50%, -50%)"
               }}
             >
               <Header as="h2" icon>
                 <Header.Subheader>Need help for your website?</Header.Subheader>
+
+                {/* Computer view */}
                 <Responsive
                   minWidth={Responsive.onlyTablet.minWidth}
                   maxWidth={Responsive.onlyWidescreen.maxWidth}
@@ -99,6 +101,7 @@ export default class Page_contact extends Component {
                   <ResponsiveButton />
                 </Responsive>
 
+                {/* Mobile view */}
                 <Responsive
                   minWidth={150}
                   maxWidth={Responsive.onlyMobile.maxWidth}
