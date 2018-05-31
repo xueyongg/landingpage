@@ -2,25 +2,25 @@
   "home": {
     "introduction": [
       {
+        "icon": "heart outline",
+        "icon_size": "huge",
+        "header": "Love Challenges and Change",
+        "description":
+          "Always wanted to be a consultant but my path changed when I saw the possibility and capacity for bigger things through development. "
+      },
+      {
         "icon": "odnoklassniki",
         "icon_size": "large",
         "header": "Self-Learner",
         "description":
-          "Love to ideate and explore new possibilities. Love to immerse myself with like-minded people that wishes to make the world a little better. Hook me up to discuss the possibilities beyond."
-      },
-      {
-        "icon": "heart outline",
-        "icon_size": "huge",
-        "header": "Love Change, Challenges & life",
-        "description":
-          "Always wanted to be a consultant but all that changed when I saw the possibility and capacity for bigger things through development. "
+          "Love to ideate and explore new possibilities. Love to surround myself with like-minded people that wishes to make the world a better place."
       },
       {
         "icon": "code",
         "icon_size": "huge",
-        "header": "Self-Learner",
+        "header": "Code as a passion",
         "description":
-          "Focuses on full stack web development in JavaScript. Love spending my free time creating new code projects. These projects serves both as a platform to learn and also a way for me to serve my clients"
+          "Focuses on full stack web development in JavaScript. Love spending my free time creating new code projects serving both as a learning platform and service"
       }
     ],
     "projects": {},
@@ -117,9 +117,9 @@
       "header": "Understand who I am as a person",
       "icon": "smile",
       "description": [
-        "Started my journey as a developer only in University. Started first with Java, slowly found my passion in JavaScript for my Final Year Project during Junior year. Picked up Metoer React.js, MongoDB and Node.js for a start. And since there began exploring on my own. ",
+        "Started my journey as a developer in University. It all began with Java / JSP. All that changed during my Final Year Project in Junior year. We decided on Metoer, React.js, MongoDB and Node.js. I found my passion for JavaScript since then and it was just tons of self driving from then on. ",
         "Never coin myself as a genius coder but rather, an individual determined to raise above challenges and prioritises on the learning process. I would like to leave you with this quote: “Mere change is not growth. Growth is the synthesis of change and continuity, and where there is no continuity there is no growth.” - C.S. Lewis",
-        "Always be faithful with the abilities and talents bestowed on you. No matter how small or insignificant these talents may be, one day these will all make sense."
+        "Always be faithful with the opportunities and talents given to you. No matter how small or insignificant these talents may seem today, who knows what you may find yourself in tomorrow."
       ]
     },
     "instagram": [
@@ -133,8 +133,8 @@
       "nine.JPG"
     ],
     "about_resume": {
-      "header": "",
-      "icon": "",
+      "header": "I've made it Mum!",
+      "icon": "vcard outline",
       "description": "",
       "link": ""
     }

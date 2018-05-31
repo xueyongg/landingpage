@@ -13,6 +13,7 @@ import {
   Menu
 } from "semantic-ui-react";
 import Link from "next/link";
+const data = require("../../../static/assets/data.json");
 
 export default class About_resume extends Component {
   state = {
@@ -50,6 +51,8 @@ export default class About_resume extends Component {
 
   render() {
     const { hover, normalStyle } = this.state;
+    const about_resume = data.about.about_resume;
+
     return (
       <div>
         <Container
@@ -63,8 +66,8 @@ export default class About_resume extends Component {
           <Grid textAlign="center">
             {/* What I've done and what I can do */}
             <Header as="h2">
-              <Icon name="vcard outline" />
-              <Header.Content>What I've done and what I can do</Header.Content>
+              <Icon name={about_resume.icon} />
+              <Header.Content>{about_resume.header}</Header.Content>
             </Header>
             <Grid.Row>
               <Grid.Column width={12} textAlign="center">
@@ -76,9 +79,7 @@ export default class About_resume extends Component {
                     fontWeight: 200
                   }}
                 >
-                  Take a look at what I've accomplished over the years through
-                  my University days till now. Love to learn and collaborate so
-                  do check it out!
+                  Take a look at what I've accomplished over the years from my University days till now. <br/>Love to learn and collaborate so do check it out!
                 </h4>
               </Grid.Column>
             </Grid.Row>
