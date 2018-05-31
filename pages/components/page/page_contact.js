@@ -60,7 +60,7 @@ export default class Page_contact extends Component {
             textAlign="center"
             style={{
               margin: "0em 0em 0em 0em",
-              padding: "2em 0em 0em 0em ",
+              padding: "0em 0em 0em 0em ",
               borderRadius: 0,
               borderShadow: 0,
               border: 0
