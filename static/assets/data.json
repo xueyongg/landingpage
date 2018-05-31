@@ -66,7 +66,7 @@
         "date": "Jun 2015 – Dec 2016",
         "duration": "1 Year 6 Months",
         "baseurl": "/static/images/phdis/",
-        "screenshots": ["1.JPG","2.JPG"],
+        "screenshots": ["1.JPG", "2.JPG"],
         "skills": [
           { "icon": "devicon-java-plain", "name": "Java / JSP" },
           { "icon": "devicon-mysql-plain", "name": "mySQL" },
@@ -261,6 +261,11 @@
   },
   "contact": {},
   "bottom_menu": {
+    "footer_header": "Get a website that actually looks amazing and within a week ",
+    "footer": [
+      "Welcome!",
+      "This website is proudly made in Node.js, Next.js (React.js framework) over the course of a few days."
+    ],
     "verse":
       "I can do all this through him who gives me strength - Philippians 4:13"
   }

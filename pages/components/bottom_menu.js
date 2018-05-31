@@ -18,115 +18,60 @@ import Page_contact from "./page/page_contact";
 const data = require("../../static/assets/data.json");
 
 export default class BottomMenu extends Component {
-  state = {};
+  state = {
+    footerStyle: {
+      fontWeight: 400,
+      fontFamily: "adobe-garamond-pro",
+      fontStyle: "normal",
+      lineHeight: "1em",
+      fontSize: 25
+    },
+    currentPage: ""
+  };
 
   componentDidMount() {
     // console.log(this.props);
-    this.setState({
-      currentPage: this.props.currentPage
-    });
-  }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
-  static async getInitialprops({}) {
-    return activeLink;
+    let currentState = this.state;
+    currentState.currentPage = this.props.currentPage;
+    this.setState(currentState);
   }
   render() {
-    const { activeItem, currentPage } = this.state;
-
+    const { activeItem, currentPage, footerStyle } = this.state;
+    let bottom_menu = data.bottom_menu;
     return (
       <div>
         {/* Footnote */}
-
         {currentPage !== "contact" ? <Page_contact /> : ""}
 
         <Segment
           inverted
           style={{
-            padding: "5em 0em",
+            padding: "2em 0em 2em 0em",
             position: "relative"
           }}
           vertical
         >
           <Container textAlign="center">
-            <Grid columns={2} divided stackable inverted>
-              <Grid.Row>
-                <Grid.Column>
-                  <Header inverted as="h4" content="Site Map" />
-                  <List link inverted>
-                    <List.Item as="a">
-                      <Link prefetch href="/" passHref>
-                        <p>Home</p>
-                      </Link>
-                    </List.Item>
-                    <List.Item as="a">
-                      <Link prefetch href="/portfolio" passHref>
-                        <p>Portfolio</p>
-                      </Link>
-                    </List.Item>
-                    <List.Item as="a">
-                      <Link prefetch href="/about" passHref>
-                        <p>About</p>
-                      </Link>
-                    </List.Item>
-
-                    <List.Item as="a">
-                      <Link prefetch href="/resume" passHref>
-                        <p>Resume</p>
-                      </Link>
-                    </List.Item>
-                    {/* <List.Item as="a">
-                      <Link prefetch href="/contact" passHref>
-                        <p>Contact</p>
-                      </Link>
-                    </List.Item> */}
-                  </List>
-                </Grid.Column>
-                <Grid.Column>
-                  {/* <Header inverted as="h4" content="Footer Header" /> */}
-                  <p>
-                    Welcome to my humble site. <br />Do feel free to explore the
-                    page as you wish.
-                  </p>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-            <Divider inverted section />
-            {/* <Image
-              src="../../static/images/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
-              size="mini"
-              centered
-              circular
-              style={{ marginBottom: 10 }}
-            /> */}
             <p style={{ marginBottom: "0.025em", fontColor: "white" }}>
-              {data.bottom_menu.verse}
+              {bottom_menu.verse}
             </p>
-            {/* <List horizontal inverted divided link>
-              <List.Item>Site Map</List.Item>
-              <List.Item>
-                <Link prefetch href="./contact" passHref>
-                  <a>Contact Us</a>
-                </Link>
-              </List.Item>
-              <List.Item as='a' href='#'>Terms and Conditions</List.Item>
-              <List.Item>
-                <Link prefetch href="./contact" passHref>
-                  <a>Privacy Policy</a>
-                </Link>
-              </List.Item>
-            </List> */}
             <br />
             <List horizontal inverted link>
               <List.Item as="a" href="https://github.com/xueyongg">
                 <Icon name="github" size="large" />
               </List.Item>
-              <List.Item as="a" href="#">
+              <List.Item
+                as="a"
+                href="https://www.linkedin.com/in/xueyongjoshua/"
+              >
                 <Icon name="linkedin" size="large" />
               </List.Item>
-              {/* <List.Item as="a" href="">
-                <Icon name="tumblr" size="large" />
-              </List.Item> */}
+              <List.Item
+                as="a"
+                href="https://www.instagram.com/xueyongg/?hl=en"
+              >
+                <Icon name="instagram" size="large" />
+              </List.Item>
               <List.Item as="a" href="https://www.facebook.com/joshuaphua">
                 <Icon name="facebook f" size="large" />
               </List.Item>
