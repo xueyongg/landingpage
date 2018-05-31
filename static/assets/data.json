@@ -31,9 +31,13 @@
       {
         "title": "MaiMai (Final Year Project)",
         "link": "https://app.maimai.com",
-        "descriptions": ["eCommerce Transaction Platform"],
+        "descriptions": [
+          "eCommerce Transaction Platform",
+          "MaiMai is a C2C marketplace platform for people to buy and sell products as well as services.",
+          "The key feature that enables MaiMai to become safer is the ability to create smart contracts between buyers and sellers."
+        ],
         "date": "Jun 2016 - Dec 2016",
-        "duration": "",
+        "duration": "6 Months",
         "baseurl": "/static/images/maimai/",
         "screenshots": [
           "tn_MaiMai Landing Page.png",
@@ -60,11 +64,11 @@
           "Engaged in numerous open source Javascript APIs to implement more user-friendly functions."
         ],
         "date": "Jun 2015 – Dec 2016",
-        "duration": "",
+        "duration": "1 Year 6 Months",
         "baseurl": "/static/images/phdis/",
-        "screenshots": [""],
+        "screenshots": ["1.JPG","2.JPG"],
         "skills": [
-          { "icon": "devicon-java-plain", "name": "Java/JSP" },
+          { "icon": "devicon-java-plain", "name": "Java / JSP" },
           { "icon": "devicon-mysql-plain", "name": "mySQL" },
           { "icon": "devicon-bootstrap-plain", "name": "Bootstrap" }
         ]
@@ -73,16 +77,16 @@
         "title": "Telegram Bot - @bible_butler_bot",
         "link": "",
         "descriptions": [
-          "Implemented up to 10 different APIs across different platforms, such as telegram, yelp and google, to acquire data for different functions",
-          "Utilized webpack to bundle and reduced response time by up to ~1000ms per reply."
+          "Implemented up to 10 different APIs across different platforms, such as telegram, yelp and google, to acquire data for different functions.",
+          "Utilized Webpack.js to bundle and reduced response time by up to ~1000ms per reply."
         ],
-        "date": "Jun 2015 – Dec 2016",
-        "duration": "",
+        "date": "Jun 2016 – Dec 2017",
+        "duration": "6 Months",
         "baseurl": "/static/images/marvin/",
-        "screenshots": [""],
+        "screenshots": ["1.JPG"],
         "skills": [
           { "icon": "devicon-nodejs-plain", "name": "Node.js" },
-          { "icon": "devicon-webpack-plain", "name": "Webpack" },
+          { "icon": "devicon-webpack-plain", "name": "Webpack.js" },
           { "icon": "feed", "name": "Jest" },
           { "icon": "devicon-github-plain", "name": "Github" }
         ]

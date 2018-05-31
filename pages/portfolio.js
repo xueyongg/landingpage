@@ -51,13 +51,14 @@ export default class Portfolio extends Component {
           }}
         >
           <Header as="h2" content="My Projects" textAlign="center" />
-          <Grid celled stackable columns={3} textAlign="center" stretched>
+          <Grid celled stackable columns={3} textAlign="center">
             {data.portfolio.projects.map((project, index) => {
               let {
                 title,
                 link,
                 descriptions,
                 date,
+                duration,
                 skills,
                 baseurl,
                 screenshots
@@ -67,13 +68,19 @@ export default class Portfolio extends Component {
                   <Grid.Column width={3}>
                     <Header as="h4" content="Date and duration of project" />
                     <p>{date}</p>
+                    <p>({duration})</p>
                   </Grid.Column>
                   <Grid.Column width={10} textAlign="left">
                     <Header as="h3" content={title} textAlign="center" />
-                    {descriptions.map((description, i) => {
-                      return <p key={i}>{description}</p>;
-                    })}
-
+                    <List as="ul">
+                      {descriptions.map((description, i) => {
+                        return (
+                          <List.Item as="li" key={i}>
+                            {description}
+                          </List.Item>
+                        );
+                      })}
+                    </List>
                     <Grid>
                       <Grid.Row columns={3}>
                         {screenshots.map((screenshot, i) => {
