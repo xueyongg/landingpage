@@ -22,7 +22,7 @@ import About_funfact from "./components/about/about_funfact";
 import About_understand from "./components/about/about_whoiam";
 import PageHeader from "./components/page/page_header";
 import Head from "next/head";
-import { Label } from "../.next/5.60d890fea67e0291f7ae.hot-update";
+import Layout from "./utils/layout";
 export default class About extends Component {
   state = {
     currentPage: "about"
@@ -33,7 +33,7 @@ export default class About extends Component {
     let { currentPage } = this.state;
 
     return (
-      <Label>
+      <Layout>
         <div>
           <Head>
             <title>About me</title>
@@ -68,7 +68,7 @@ export default class About extends Component {
 
           <BottomMenu currentPage={this.state.currentPage} />
         </div>
-      </Label>
+      </Layout>
     );
   }
 }

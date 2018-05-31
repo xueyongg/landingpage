@@ -2,7 +2,9 @@ import ReactGA from "react-ga";
 
 export const initGA = () => {
   console.log("GA init");
-  ReactGA.initialize("UA-119971042-1");
+  ReactGA.initialize("UA-119971042-1", {
+    gaOptions: { userId: window.document.cookie, debug: true }
+  });
 };
 
 export const logPageView = () => {
