@@ -66,7 +66,7 @@
         "date": "Jun 2015 – Dec 2016",
         "duration": "1 Year 6 Months",
         "baseurl": "/static/images/phdis/",
-        "screenshots": ["1.JPG", "2.JPG"],
+        "screenshots": [""],
         "skills": [
           { "icon": "devicon-java-plain", "name": "Java / JSP" },
           { "icon": "devicon-mysql-plain", "name": "mySQL" },
