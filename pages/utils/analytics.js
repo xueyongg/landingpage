@@ -3,7 +3,11 @@ import ReactGA from "react-ga";
 export const initGA = () => {
   console.log("GA init");
   ReactGA.initialize("UA-119971042-1", {
-    gaOptions: { userId: window.document.cookie, debug: true }
+    gaOptions: {
+      userId: window.document.cookie,
+      debug: true,
+      testmode: window.document.domain === "localhost" ? true : false
+    }
   });
 };
 
