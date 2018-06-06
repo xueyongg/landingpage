@@ -1,19 +1,23 @@
-import React from 'react'
-import { initGA, logPageView } from './analytics'
+import React from "react";
+import { initGA, logPageView } from "./analytics";
+import Head from "next/head";
 
 export default class Layout extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
+      initGA();
+      window.GA_INITIALIZED = true;
     }
-    logPageView()
+    logPageView();
   }
-  render () {
+  render() {
     return (
       <div>
+        <Head>
+          <meta http-equiv="Expires" content="30" />
+        </Head>
         {this.props.children}
       </div>
-    )
+    );
   }
 }
