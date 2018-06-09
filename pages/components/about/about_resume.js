@@ -1,17 +1,5 @@
 import React, { Component } from "react";
-import {
-  Modal,
-  Header,
-  Segment,
-  Grid,
-  Image,
-  Container,
-  Button,
-  List,
-  Icon,
-  Input,
-  Menu
-} from "semantic-ui-react";
+import { Header, Grid, Container, Button, Icon } from "semantic-ui-react";
 import Link from "next/link";
 const data = require("../../../static/assets/data.json");
 
@@ -52,6 +40,11 @@ export default class About_resume extends Component {
   render() {
     const { hover, normalStyle } = this.state;
     const about_resume = data.about.about_resume;
+    const hoverStyle = {
+      ...normalStyle,
+      color: "white",
+      backgroundColor: "black"
+    };
 
     return (
       <div>
@@ -70,7 +63,7 @@ export default class About_resume extends Component {
               <Header.Content>{about_resume.header}</Header.Content>
             </Header>
             <Grid.Row>
-              <Grid.Column width={12} textAlign="center">
+              <Grid.Column textAlign="center" width={12}>
                 <h4
                   style={{
                     fontSize: 26,
@@ -79,32 +72,25 @@ export default class About_resume extends Component {
                   }}
                 >
                   Take a look at what I've accomplished over the years from my
-                  University days till now. <br />Love to learn and collaborate
-                  so do check it out!
+                  University days till now.
+                  <br />
+                  Love to learn and collaborate so do check it out!
                 </h4>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
               <Grid.Column>
-                <Link prefetch href="/resume" passHref>
+                <Link href="/resume" passHref prefetch>
                   <Button
                     icon
-                    size="huge"
-                    style={
-                      hover
-                        ? {
-                            ...normalStyle,
-                            color: "white",
-                            backgroundColor: "black"
-                          }
-                        : normalStyle
-                    }
-                    onMouseOver={() => {
-                      this.onHover();
-                    }}
                     onMouseOut={() => {
                       this.offHover();
                     }}
+                    onMouseOver={() => {
+                      this.onHover();
+                    }}
+                    size="huge"
+                    style={hover ? hoverStyle : normalStyle}
                   >
                     <Icon name="clone" />
                     View my resume

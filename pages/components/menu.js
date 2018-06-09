@@ -1,26 +1,16 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import {
-  Modal,
-  Header,
   Segment,
-  Grid,
   Image,
-  Container,
-  Button,
-  List,
   Icon,
-  Input,
   Menu,
-  Divider,
   Visibility,
-  Dropdown,
   Responsive,
   Sidebar
 } from "semantic-ui-react";
 import Link from "next/link";
 import { PropTypes } from "prop-types";
-import Router from "next/router";
 
 export default class TopMenu extends Component {
   state = {
@@ -32,8 +22,9 @@ export default class TopMenu extends Component {
 
   componentDidMount() {
     // console.log(this.props);
+    const { currentPage } = this.props;
     this.setState({
-      activeItem: this.props.currentPage
+      activeItem: currentPage
     });
   }
 
@@ -69,7 +60,7 @@ export default class TopMenu extends Component {
     // console.log("unStickTopMenu: menufixed is false");
   };
 
-  static async getInitialprops({}) {
+  static async getInitialprops({ empty }) {
     let activeLink = "home";
     return activeLink;
   }
@@ -121,8 +112,8 @@ export default class TopMenu extends Component {
       <div>
         <Responsive
           // {...Responsive.onlyComputer}
-          minWidth={Responsive.onlyTablet.minWidth}
           maxWidth={Responsive.onlyWidescreen.maxWidth}
+          minWidth={Responsive.onlyTablet.minWidth}
         >
           <Visibility
             onBottomPassed={this.stickTopMenu}
@@ -130,46 +121,46 @@ export default class TopMenu extends Component {
             once={false}
           >
             <Menu
-              secondary={!menuFixed}
-              pointing={!menuFixed}
               fixed={menuFixed ? "top" : false}
-              style={menuFixed ? fixedMenuStyle : menuStyle}
+              pointing={!menuFixed}
+              secondary={!menuFixed}
               size="large"
+              style={menuFixed ? fixedMenuStyle : menuStyle}
             >
               <Menu.Menu>
                 <Menu.Item>
-                  <Link prefetch href="/" passHref>
+                  <Link href="/" passHref prefetch>
                     <Image
-                      size="mini"
-                      src="https://78.media.tumblr.com/81fcb39644fef1ff91fd5db001a86743/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
-                      // src="/static/images/about/protrait.JPG"
                       circular
+                      size="mini"
+                      // src="/static/images/about/protrait.JPG"
+                      src="https://78.media.tumblr.com/81fcb39644fef1ff91fd5db001a86743/tumblr_nttd5mxlym1rjoj3ho2_r1_500.jpg"
                     />
                   </Link>
                 </Menu.Item>
               </Menu.Menu>
 
               <Menu.Menu position="right">
-                <Link prefetch href={{ pathname: "/" }} passHref>
-                  <Menu.Item name="home" active={activeItem === "home"}>
+                <Link href={{ pathname: "/" }} passHref prefetch>
+                  <Menu.Item active={activeItem === "home"} name="home">
                     <p>Home</p>
                   </Menu.Item>
                 </Link>
-                <Link prefetch href={{ pathname: "/portfolio" }} passHref>
+                <Link href={{ pathname: "/portfolio" }} passHref prefetch>
                   <Menu.Item
-                    name="portfolio"
                     active={activeItem === "portfolio"}
+                    name="portfolio"
                   >
                     <p>Portfolio</p>
                   </Menu.Item>
                 </Link>
-                <Link prefetch href={{ pathname: "/about" }} passHref>
-                  <Menu.Item name="about" active={activeItem === "about"}>
+                <Link href={{ pathname: "/about" }} passHref prefetch>
+                  <Menu.Item active={activeItem === "about"} name="about">
                     <p>About</p>
                   </Menu.Item>
                 </Link>
-                <Link prefetch href={{ pathname: "/resume" }} passHref>
-                  <Menu.Item name="resume" active={activeItem === "resume"}>
+                <Link href={{ pathname: "/resume" }} passHref prefetch>
+                  <Menu.Item active={activeItem === "resume"} name="resume">
                     <p>Resume</p>
                   </Menu.Item>
                 </Link>
@@ -184,21 +175,21 @@ export default class TopMenu extends Component {
         </Responsive>
 
         {/* Mobile view */}
-        <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
+        <Responsive maxWidth={Responsive.onlyMobile.maxWidth} minWidth={150}>
           <Sidebar.Pushable as={Segment} style={{ borderRadius: 0 }}>
             <Sidebar
-              as={Menu}
               animation="overlay"
-              width="very thin"
-              visible={visible}
-              icon
+              as={Menu}
               direction="top"
+              icon
               inverted
               style={{
                 height: "100%",
                 overflowX: "hidden",
                 overflowY: "hidden"
               }}
+              visible={visible}
+              width="very thin"
             >
               <Menu.Item
                 name="toggle"
@@ -209,7 +200,7 @@ export default class TopMenu extends Component {
                 <Icon name="sidebar" size="large" />
               </Menu.Item>
 
-              <Link prefetch href="./" passHref>
+              <Link href="./" passHref prefetch>
                 <Menu.Item name="home">
                   <Icon name="home" size="large" />
                 </Menu.Item>
@@ -249,7 +240,7 @@ export default class TopMenu extends Component {
                       this.toggleVisibility();
                     }}
                   >
-                    <Icon name="sidebar" size="large" link />
+                    <Icon link name="sidebar" size="large" />
                   </Menu.Item>
                 </Menu.Menu>
               </Menu>

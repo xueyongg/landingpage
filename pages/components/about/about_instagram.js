@@ -1,21 +1,15 @@
 import React, { Component } from "react";
 import {
-  Modal,
   Header,
-  Segment,
   Grid,
   Image,
   Container,
   Button,
-  List,
   Icon,
-  Input,
-  Menu,
   Responsive
 } from "semantic-ui-react";
 import Link from "next/link";
-import About_instagram_computer from "./about_instagram_comp";
-import About_instagram_mobile from "./about_instagram_mobile";
+
 const data = require("../../../static/assets/data.json");
 
 export default class About_instagram extends Component {
@@ -54,8 +48,12 @@ export default class About_instagram extends Component {
 
   render() {
     let { hover, normalStyle } = this.state;
-    let about = data.about;
     let instagram = data.about.instagram;
+    const hoverStyle = {
+      ...normalStyle,
+      color: "white",
+      backgroundColor: "black"
+    };
     return (
       <div>
         <Container
@@ -219,15 +217,7 @@ export default class About_instagram extends Component {
                 <Button
                   icon
                   size="huge"
-                  style={
-                    hover
-                      ? {
-                          ...normalStyle,
-                          color: "white",
-                          backgroundColor: "black"
-                        }
-                      : normalStyle
-                  }
+                  style={hover ? hoverStyle : normalStyle}
                   onMouseOver={() => {
                     this.onHover();
                   }}

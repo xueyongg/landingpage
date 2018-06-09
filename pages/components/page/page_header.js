@@ -72,7 +72,6 @@ export default class PageHeader extends Component {
   componentDidMount() {
     this.setState({ ...this.props, loading: false });
   }
-  componentDidUpdate(nextProps) {}
 
   onHover() {
     let state = this.state;

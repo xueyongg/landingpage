@@ -1,21 +1,13 @@
 import React, { Component } from "react";
 import {
-  Modal,
   Header,
-  Segment,
   Grid,
-  Image,
-  Button,
   List,
   Icon,
-  Input,
-  Menu,
   Container,
-  Form,
   Item,
   Label
 } from "semantic-ui-react";
-import Link from "next/link";
 const data = require("../../../static/assets/data.json");
 
 export default class Resume_work extends Component {
@@ -44,7 +36,7 @@ export default class Resume_work extends Component {
                       jobTitle,
                       jobDescriptionLink,
                       date,
-                      duration,
+
                       description,
                       skills
                     } = element;

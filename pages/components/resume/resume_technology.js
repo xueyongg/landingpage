@@ -1,21 +1,6 @@
 import React, { Component } from "react";
-import {
-  Modal,
-  Header,
-  Segment,
-  Grid,
-  Image,
-  Button,
-  List,
-  Icon,
-  Input,
-  Menu,
-  Container,
-  Form,
-  Item,
-  Label
-} from "semantic-ui-react";
-import Link from "next/link";
+import { Header, Grid, List, Icon, Container } from "semantic-ui-react";
+
 const data = require("../../../static/assets/data.json");
 
 export default class Resume_technology extends Component {
@@ -31,7 +16,7 @@ export default class Resume_technology extends Component {
             <Grid.Row columns={3}>
               <Grid.Column>
                 <Header as="h2" textAlign="left">
-                  <Icon name="qrcode"/>
+                  <Icon name="qrcode" />
                   <Header.Content>Technologies</Header.Content>
                 </Header>
               </Grid.Column>

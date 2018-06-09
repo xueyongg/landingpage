@@ -1,21 +1,5 @@
 import React, { Component } from "react";
-import {
-  Modal,
-  Header,
-  Segment,
-  Grid,
-  Image,
-  Button,
-  List,
-  Icon,
-  Input,
-  Menu,
-  Container,
-  Form,
-  Item,
-  Label
-} from "semantic-ui-react";
-import Link from "next/link";
+import { Header, Grid, List, Icon, Container, Item } from "semantic-ui-react";
 const data = require("../../../static/assets/data.json");
 
 export default class Resume_education extends Component {

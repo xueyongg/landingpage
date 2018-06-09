@@ -1,18 +1,5 @@
 import React, { Component } from "react";
-import {
-  Modal,
-  Header,
-  Segment,
-  Grid,
-  Image,
-  Container,
-  Button,
-  List,
-  Icon,
-  Input,
-  Menu
-} from "semantic-ui-react";
-import Link from "next/link";
+import { Header, Grid, Image, Container, Icon } from "semantic-ui-react";
 const data = require("../../../static/assets/data.json");
 
 export default class About_funfact extends Component {

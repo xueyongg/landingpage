@@ -23,7 +23,6 @@ import Todo from "./components/todo";
 import Home_introduction from "./components/home/home_introduction";
 import PageHeader from "./components/page/page_header";
 import About_instagram from "./components/about/about_instagram";
-const moment = require("moment");
 
 export default class Home extends Component {
   state = {
@@ -58,16 +57,16 @@ export default class Home extends Component {
           }}
         >
           <PageHeader
-            mobile={mobile}
-            url={this.state.currentPage}
-            headerColor={"white"}
-            subHeaderColor={"white"}
-            imageName={"home"}
-            subHeaderContent={"Find out more about me here."}
-            headerContent={"Peek into my life"}
+            additionalHeaderStyle={{ zIndex: 1 }}
             additionalSegmentStyle={{}}
             additionalSubHeaderStyle={{ zIndex: 1 }}
-            additionalHeaderStyle={{ zIndex: 1 }}
+            headerColor={"white"}
+            headerContent={"Peek into my life"}
+            imageName={"home"}
+            mobile={mobile}
+            subHeaderColor={"white"}
+            subHeaderContent={"Find out more about me here."}
+            url={this.state.currentPage}
           />
 
           {/* Introduction */}

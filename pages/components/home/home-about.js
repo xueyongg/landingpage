@@ -1,21 +1,5 @@
 import React, { Component } from "react";
-import {
-  Modal,
-  Header,
-  Button,
-  List,
-  Icon,
-  Input,
-  Menu,
-  Segment,
-  Container,
-  Grid,
-  Image,
-  Dimmer,
-  Divider,
-  Responsive
-} from "semantic-ui-react";
-import Link from "next/link";
+import { Header, Container, Grid, Image, Responsive } from "semantic-ui-react";
 
 export default class Home_about extends Component {
   state = {
@@ -63,16 +47,6 @@ export default class Home_about extends Component {
   };
 
   render() {
-    const {
-      active,
-      active1,
-      active2,
-      active3,
-      hover,
-      normalStyle,
-      mobile
-    } = this.state;
-
     return (
       <div>
         <div>

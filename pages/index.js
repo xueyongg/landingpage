@@ -17,25 +17,19 @@ import Home from "./home";
 import "../static/styles/main.css";
 import Layout from "./utils/layout";
 
-export default class extends Component {
+export default class Index extends Component {
   state = {};
-
-  onKeyPress(e) {
-    console.log(e);
-  }
 
   onClickUp = () => {};
 
   onClickDown = () => {};
 
   render() {
-    const { activeItem } = this.state;
-
     return (
       <Layout>
         <div>
           <Head>
-            <title>Xueyong's Site</title>
+            <title>{"Xueyong's Site"}</title>
             <meta name="description" content="Personal site" />
             <meta
               name="viewport"

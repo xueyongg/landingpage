@@ -1,19 +1,6 @@
 import React, { Component } from "react";
-import {
-  Modal,
-  Header,
-  Segment,
-  Grid,
-  Image,
-  Container,
-  Button,
-  List,
-  Icon,
-  Input,
-  Menu,
-  Responsive
-} from "semantic-ui-react";
-import Link from "next/link";
+import { Grid, Image, Responsive } from "semantic-ui-react";
+
 const data = require("../../../static/assets/data.json");
 
 export default class About_photos extends Component {
@@ -22,25 +9,25 @@ export default class About_photos extends Component {
     return (
       <div>
         <Responsive
-          minWidth={
-            Responsive.onlyTablet.minWidth
-              ? Responsive.onlyTablet.minWidth
-              : 500
-          }
           maxWidth={
             Responsive.onlyWidescreen.maxWidth
               ? Responsive.onlyWidescreen.maxWidth
               : 2500
+          }
+          minWidth={
+            Responsive.onlyTablet.minWidth
+              ? Responsive.onlyTablet.minWidth
+              : 500
           }
         >
           <Grid>
             <Grid.Row columns={3} style={{ padding: 0 }}>
               {about.images.map((image, i) => {
                 return (
-                  <Grid.Column style={{ padding: 0 }} key={i}>
+                  <Grid.Column key={i} style={{ padding: 0 }}>
                     <Image
-                      src={"/static/images/about/phone/" + image}
                       alt={"/static/images/about/phone/" + image}
+                      src={"/static/images/about/phone/" + image}
                     />
                   </Grid.Column>
                 );
@@ -48,15 +35,15 @@ export default class About_photos extends Component {
             </Grid.Row>
           </Grid>
         </Responsive>
-        <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
+        <Responsive maxWidth={Responsive.onlyMobile.maxWidth} minWidth={150}>
           <Grid>
             <Grid.Row columns={2} style={{ padding: 0 }}>
               {about.images.map((image, i) => {
                 return (
-                  <Grid.Column style={{ padding: 0 }} key={i}>
+                  <Grid.Column key={i} style={{ padding: 0 }}>
                     <Image
-                      src={"/static/images/about/phone/" + image}
                       alt={"/static/images/about/phone/" + image}
+                      src={"/static/images/about/phone/" + image}
                     />
                   </Grid.Column>
                 );

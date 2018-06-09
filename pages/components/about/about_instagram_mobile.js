@@ -1,19 +1,5 @@
 import React, { Component } from "react";
-import {
-  Modal,
-  Header,
-  Segment,
-  Grid,
-  Image,
-  Container,
-  Button,
-  List,
-  Icon,
-  Input,
-  Menu,
-  Responsive
-} from "semantic-ui-react";
-import Link from "next/link";
+import { Grid, Image } from "semantic-ui-react";
 const data = require("../../../static/assets/data.json");
 
 export default class About_instagram_mobile extends Component {
