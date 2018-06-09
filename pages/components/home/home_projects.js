@@ -62,14 +62,12 @@ export default class Home_projects extends Component {
   }
 
   render() {
-    const {
-      active,
-      active1,
-      active2,
-      active3,
-      hover,
-      normalStyle
-    } = this.state;
+    const { active, hover, normalStyle } = this.state;
+    const hoverStyle = {
+      ...normalStyle,
+      color: "white",
+      backgroundColor: "black"
+    };
     const content = (
       <div>
         <Header as="h2" inverted>
@@ -87,7 +85,6 @@ export default class Home_projects extends Component {
       <div>
         {/* Projects */}
         <Segment
-          
           style={{
             backgroundColor: "#D3D3D3",
             padding: "96px 48px",
@@ -99,8 +96,8 @@ export default class Home_projects extends Component {
         >
           <Header
             as="h2"
-            textAlign="center"
             content="My projects over the years"
+            textAlign="center"
           />
           <Container>
             <Grid stackable>
@@ -118,7 +115,6 @@ export default class Home_projects extends Component {
                     }}
                     src="https://react.semantic-ui.com/assets/images/wireframe/image.png"
                   />
-                 
                 </Grid.Column>
                 <Grid.Column>
                   <Image src="https://react.semantic-ui.com/assets/images/wireframe/image.png" />
@@ -129,25 +125,17 @@ export default class Home_projects extends Component {
               </Grid.Row>
               <Grid.Row>
                 <Grid.Column textAlign="center">
-                  <Link prefetch href="./portfolio" passHref>
+                  <Link href="./portfolio" passHref prefetch>
                     <Button
                       icon
-                      size="huge"
-                      style={
-                        hover
-                          ? {
-                              ...normalStyle,
-                              color: "white",
-                              backgroundColor: "black"
-                            }
-                          : normalStyle
-                      }
-                      onMouseOver={() => {
-                        this.onHover();
-                      }}
                       onMouseOut={() => {
                         this.offHover();
                       }}
+                      onMouseOver={() => {
+                        this.onHover();
+                      }}
+                      size="huge"
+                      style={hover ? hoverStyle : normalStyle}
                     >
                       <Icon name="clone" />
                       View more projects

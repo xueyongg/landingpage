@@ -22,9 +22,8 @@ export default class TopMenu extends Component {
 
   componentDidMount() {
     // console.log(this.props);
-    const { currentPage } = this.props;
     this.setState({
-      activeItem: currentPage
+      activeItem: this.props.currentPage
     });
   }
 
@@ -252,6 +251,6 @@ export default class TopMenu extends Component {
   }
 }
 
-TopMenu.prototypes = {
+TopMenu.propTypes = {
   currentPage: PropTypes.string
 };
