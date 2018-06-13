@@ -66,7 +66,7 @@ export default class PageHeader extends Component {
     loading: true
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setState({ ...this.props });
   }
   componentDidMount() {
@@ -108,11 +108,11 @@ export default class PageHeader extends Component {
         {loading ? (
           <Segment
             inverted
-            textAlign="center"
             style={{
               ...defaultTemplate,
-              backgroundImage: `url(/static/images/${imageName}.jpg), linear-gradient(rgba(65, 65, 65, 0.50), rgba(65, 65, 65, 1.0))`
+              backgroundImage: `url(/static/images/${imageName}.jpg), url(/static/images/default.jpg))`
             }}
+            textAlign="center"
           >
             <Container style={{ ...containerStyle, marginTop: "15em" }}>
               <Header
@@ -153,24 +153,24 @@ export default class PageHeader extends Component {
         ) : (
           <div>
             <Responsive
-              minWidth={
-                Responsive.onlyTablet.minWidth
-                  ? Responsive.onlyTablet.minWidth
-                  : 500
-              }
               maxWidth={
                 Responsive.onlyWidescreen.maxWidth
                   ? Responsive.onlyWidescreen.maxWidth
                   : 2500
               }
+              minWidth={
+                Responsive.onlyTablet.minWidth
+                  ? Responsive.onlyTablet.minWidth
+                  : 500
+              }
             >
               <Segment
                 inverted
-                textAlign="center"
                 style={{
                   ...defaultTemplate,
                   backgroundImage: `url(/static/images/${imageName}.jpg), linear-gradient(rgba(65, 65, 65, 0.50), rgba(65, 65, 65, 1.0))`
                 }}
+                textAlign="center"
               >
                 <Container style={{ ...containerStyle, marginTop: "15em" }}>
                   <Header
@@ -213,54 +213,54 @@ export default class PageHeader extends Component {
 
                   {url === "resume" ? (
                     <a
-                      href="/static/assets/resume/Resume - Phua Xue Yong Joshua.pdf"
                       download
+                      href="/static/assets/resume/Resume - Phua Xue Yong Joshua.pdf"
                     >
                       <Button
-                        size="big"
                         icon
-                        // class="styled_button"
-                        style={
-                          hover
-                            ? {
-                                ...normalStyle,
-                                color: "white",
-                                backgroundColor: "black"
-                              }
-                            : normalStyle
-                        }
-                        onMouseOver={() => {
-                          this.onHover();
-                        }}
                         onMouseOut={() => {
                           this.offHover();
                         }}
+                        // class="styled_button"
+                        onMouseOver={() => {
+                          this.onHover();
+                        }}
+                        size="big"
+                        style={
+                          hover
+                            ? {
+                              ...normalStyle,
+                              color: "white",
+                              backgroundColor: "black"
+                            }
+                            : normalStyle
+                        }
                       >
                         <Icon name="download" />
                         Download Resume
                       </Button>
                     </a>
                   ) : url === "home" ? (
-                    <Link prefetch href="./about" passHref>
+                    <Link href="./about" passHref prefetch>
                       <Button
                         icon
-                        size="huge"
-                        // class="styledButton"
-                        style={
-                          hover
-                            ? {
-                                ...normalStyle,
-                                color: "white",
-                                backgroundColor: "black"
-                              }
-                            : normalStyle
-                        }
-                        onMouseOver={() => {
-                          this.onHover();
-                        }}
                         onMouseOut={() => {
                           this.offHover();
                         }}
+                        // class="styledButton"
+                        onMouseOver={() => {
+                          this.onHover();
+                        }}
+                        size="huge"
+                        style={
+                          hover
+                            ? {
+                              ...normalStyle,
+                              color: "white",
+                              backgroundColor: "black"
+                            }
+                            : normalStyle
+                        }
                       >
                         <Icon name="user outline" />
                         Learn more about me
@@ -275,18 +275,18 @@ export default class PageHeader extends Component {
 
             {/* Mobile view */}
             <Responsive
-              minWidth={150}
               maxWidth={Responsive.onlyMobile.maxWidth}
+              minWidth={150}
             >
               <Segment
                 inverted
-                textAlign="center"
                 style={{
                   ...defaultTemplate,
                   backgroundImage: `url(/static/images/${imageName}.jpg), url(/static/images/default.jpg)`,
                   minHeight: 500,
                   ...additionalSegmentStyle
                 }}
+                textAlign="center"
               >
                 <Container
                   style={{
@@ -335,54 +335,54 @@ export default class PageHeader extends Component {
 
                   {url === "resume" ? (
                     <a
-                      href="/static/assets/resume/Resume - Phua Xue Yong Joshua.pdf"
                       download
+                      href="/static/assets/resume/Resume - Phua Xue Yong Joshua.pdf"
                     >
                       <Button
-                        size="big"
                         icon
-                        // class="styled_button"
-                        style={
-                          hover
-                            ? {
-                                ...normalStyle,
-                                color: "white",
-                                backgroundColor: "black"
-                              }
-                            : normalStyle
-                        }
-                        onMouseOver={() => {
-                          this.onHover();
-                        }}
                         onMouseOut={() => {
                           this.offHover();
                         }}
+                        // class="styled_button"
+                        onMouseOver={() => {
+                          this.onHover();
+                        }}
+                        size="big"
+                        style={
+                          hover
+                            ? {
+                              ...normalStyle,
+                              color: "white",
+                              backgroundColor: "black"
+                            }
+                            : normalStyle
+                        }
                       >
                         <Icon name="download" />
                         Download Resume
                       </Button>
                     </a>
                   ) : url === "home" ? (
-                    <Link prefetch href="./about" passHref>
+                    <Link href="./about" passHref prefetch>
                       <Button
                         icon
-                        size="huge"
-                        // class="styledButton"
-                        style={
-                          hover
-                            ? {
-                                ...normalStyle,
-                                color: "white",
-                                backgroundColor: "black"
-                              }
-                            : normalStyle
-                        }
-                        onMouseOver={() => {
-                          this.onHover();
-                        }}
                         onMouseOut={() => {
                           this.offHover();
                         }}
+                        // class="styledButton"
+                        onMouseOver={() => {
+                          this.onHover();
+                        }}
+                        size="huge"
+                        style={
+                          hover
+                            ? {
+                              ...normalStyle,
+                              color: "white",
+                              backgroundColor: "black"
+                            }
+                            : normalStyle
+                        }
                       >
                         <Icon name="user outline" />
                         Learn more about me

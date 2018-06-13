@@ -57,7 +57,6 @@ export default class Page_contact extends Component {
         <div>
           {/* About */}
           <Segment
-            textAlign="center"
             style={{
               margin: "0em 0em 0em 0em",
               padding: "0em 0em 0em 0em ",
@@ -65,14 +64,14 @@ export default class Page_contact extends Component {
               borderShadow: 0,
               border: 0
             }}
+            textAlign="center"
           >
             <Image
-              src="/static/images/homeImage.jpg"
               fluid
+              src="/static/images/homeImage.jpg"
               style={{ opacity: "0.5", width: "100%", maxHeight: 500 }}
             />
             <Container
-              text
               style={{
                 backgroundColor: "transparent",
                 position: "absolute",
@@ -80,14 +79,15 @@ export default class Page_contact extends Component {
                 left: "50%",
                 transform: "translate(-50%, -50%)"
               }}
+              text
             >
               <Header as="h2" icon>
                 <Header.Subheader>Need help for your website?</Header.Subheader>
 
                 {/* Computer view */}
                 <Responsive
-                  minWidth={Responsive.onlyTablet.minWidth}
                   maxWidth={Responsive.onlyWidescreen.maxWidth}
+                  minWidth={Responsive.onlyTablet.minWidth}
                 >
                   <p
                     style={{
@@ -96,15 +96,15 @@ export default class Page_contact extends Component {
                       marginBottom: "0.25em"
                     }}
                   >
-                    Hire a web designer
+                    Hire a web developer
                   </p>
                   <ResponsiveButton />
                 </Responsive>
 
                 {/* Mobile view */}
                 <Responsive
-                  minWidth={150}
                   maxWidth={Responsive.onlyMobile.maxWidth}
+                  minWidth={150}
                 >
                   <p
                     style={{
@@ -113,7 +113,7 @@ export default class Page_contact extends Component {
                       marginBottom: "0.5em"
                     }}
                   >
-                    Hire a web designer
+                    Hire a web developer
                   </p>
                   <ResponsiveButton mobile />
                 </Responsive>
@@ -176,21 +176,21 @@ class ResponsiveButton extends Component {
     return (
       <Link href="mailto:xueyongjoshua@gmail.com" passHref>
         <Button
-          style={
-            hover
-              ? {
-                  ...modifiedNormal,
-                  color: "white",
-                  backgroundColor: "black"
-                }
-              : modifiedNormal
-          }
-          onMouseOver={() => {
-            this.onHover();
-          }}
           onMouseOut={() => {
             this.offHover();
           }}
+          onMouseOver={() => {
+            this.onHover();
+          }}
+          style={
+            hover
+              ? {
+                ...modifiedNormal,
+                color: "white",
+                backgroundColor: "black"
+              }
+              : modifiedNormal
+          }
         >
           {/* <Icon name="mail outline" size="small" /> */}
           Contact me today
