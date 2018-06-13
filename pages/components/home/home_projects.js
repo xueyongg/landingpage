@@ -1,21 +1,15 @@
 import React, { Component } from "react";
 import {
-  Modal,
   Header,
   Button,
-  List,
   Icon,
-  Input,
-  Menu,
   Segment,
   Container,
   Grid,
   Image,
-  Dimmer,
-  Divider
+  Dimmer
 } from "semantic-ui-react";
 import Link from "next/link";
-const moment = require("moment");
 
 export default class Home_projects extends Component {
   state = {
@@ -78,8 +72,6 @@ export default class Home_projects extends Component {
         <Button>View</Button>
       </div>
     );
-    const testLink =
-      "https://react.semantic-ui.com/assets/images/wireframe/image.png";
 
     return (
       <div>
