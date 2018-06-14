@@ -101,13 +101,6 @@ export default class About_instagram extends Component {
                               href={"https://www.instagram.com/xueyongg/?hl=en"}
                               src={"/static/images/about/instagram/" + image}
                             />
-
-                            <figcaption>
-                              <div>
-                                <h2>{location ? location : "Canada"}</h2>
-                                <p>{place ? place : "Banff"}</p>
-                              </div>
-                            </figcaption>
                           </div>
                         </div>
                       </Grid.Column>
@@ -129,13 +122,6 @@ export default class About_instagram extends Component {
                               href={"https://www.instagram.com/xueyongg/?hl=en"}
                               src={"/static/images/about/instagram/" + image}
                             />
-
-                            <figcaption>
-                              <div>
-                                <h2>{location ? location : "Canada"}</h2>
-                                <p>{place ? place : "Banff"}</p>
-                              </div>
-                            </figcaption>
                           </div>
                         </div>
                       </Grid.Column>
@@ -152,13 +138,15 @@ export default class About_instagram extends Component {
               {/* <About_instagram_mobile /> */}
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
+                  let { location, image, place } = element;
                   if (Number(i) < 2) {
                     return (
                       <Grid.Column key={i}>
                         <Image
-                          alt={"/static/images/about/instagram/" + element}
-                          size="big"
-                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + image}
+                          as="a"
+                          href={"https://www.instagram.com/xueyongg/?hl=en"}
+                          src={"/static/images/about/instagram/" + image}
                         />
                       </Grid.Column>
                     );
@@ -167,13 +155,15 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
+                  let { location, image, place } = element;
                   if (1 < Number(i) && Number(i) < 4) {
                     return (
                       <Grid.Column key={i}>
                         <Image
-                          alt={"/static/images/about/instagram/" + element}
-                          size="big"
-                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + image}
+                          as="a"
+                          href={"https://www.instagram.com/xueyongg/?hl=en"}
+                          src={"/static/images/about/instagram/" + image}
                         />
                       </Grid.Column>
                     );
@@ -182,13 +172,15 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
+                  let { location, image, place } = element;
                   if (3 < Number(i) && Number(i) < 6) {
                     return (
                       <Grid.Column key={i}>
                         <Image
-                          alt={"/static/images/about/instagram/" + element}
-                          size="big"
-                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + image}
+                          as="a"
+                          href={"https://www.instagram.com/xueyongg/?hl=en"}
+                          src={"/static/images/about/instagram/" + image}
                         />
                       </Grid.Column>
                     );
@@ -197,13 +189,15 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
+                  let { location, image, place } = element;
                   if (5 < Number(i) && Number(i) < 8) {
                     return (
                       <Grid.Column key={i}>
                         <Image
-                          alt={"/static/images/about/instagram/" + element}
-                          size="big"
-                          src={"/static/images/about/instagram/" + element}
+                          alt={"/static/images/about/instagram/" + image}
+                          as="a"
+                          href={"https://www.instagram.com/xueyongg/?hl=en"}
+                          src={"/static/images/about/instagram/" + image}
                         />
                       </Grid.Column>
                     );
@@ -212,14 +206,20 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
+                  let { location, image, place } = element;
                   if (7 < Number(i) && Number(i) < 10) {
                     return (
                       <Grid.Column key={i}>
-                        <Image
-                          alt={"/static/images/about/instagram/" + element}
-                          size="big"
-                          src={"/static/images/about/instagram/" + element}
-                        />
+                        <div className="figure">
+                          <div className="effect-lily">
+                            <Image
+                              alt={"/static/images/about/instagram/" + image}
+                              as="a"
+                              href={"https://www.instagram.com/xueyongg/?hl=en"}
+                              src={"/static/images/about/instagram/" + image}
+                            />
+                          </div>
+                        </div>
                       </Grid.Column>
                     );
                   }
