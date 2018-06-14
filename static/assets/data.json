@@ -123,14 +123,46 @@
       ]
     },
     "instagram": [
-      "three.JPG",
-      "six.JPG",
-      "four.JPG",
-      "five.JPG",
-      "ten.JPG",
-      "seven.JPG",
-      "eight.JPG",
-      "nine.JPG"
+      {
+        "image": "three.JPG",
+        "location": "Canada",
+        "place": "Quebec City"
+      },
+      {
+        "image": "six.JPG",
+        "location": "Florida",
+        "place": "Orlando Beach"
+      },
+      {
+        "image": "four.JPG",
+        "location": "United States",
+        "place": "Grand Canyon National Park"
+      },
+      {
+        "image": "five.JPG",
+        "location": "Canada",
+        "place": "Banff National Park"
+      },
+      {
+        "image": "ten.JPG",
+        "location": "Italy",
+        "place": "Rome"
+      },
+      {
+        "image": "seven.JPG",
+        "location": "Italy",
+        "place": "Venice"
+      },
+      {
+        "image": "eight.JPG",
+        "location": "Canada",
+        "place": "Niagara Falls"
+      },
+      {
+        "image": "nine.JPG",
+        "location": "Florida",
+        "place": "Orlando Beach"
+      }
     ],
     "about_resume": {
       "header": "I've made it Mum!",

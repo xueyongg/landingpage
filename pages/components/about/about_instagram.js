@@ -88,16 +88,28 @@ export default class About_instagram extends Component {
             <Grid textAlign="center">
               <Grid.Row columns={4}>
                 {instagram.map((element, i) => {
+                  let { location, image, place } = element;
+
                   if (Number(i) < 4) {
                     return (
                       <Grid.Column key={i}>
-                        <Image
-                          alt={"/static/images/about/instagram/" + element}
-                          as="a"
-                          className="effect-lily"
-                          href={"https://www.instagram.com/xueyongg/?hl=en"}
-                          src={"/static/images/about/instagram/" + element}
-                        />
+                        <div className="figure">
+                          <div className="effect-lily">
+                            <Image
+                              alt={"/static/images/about/instagram/" + image}
+                              as="a"
+                              href={"https://www.instagram.com/xueyongg/?hl=en"}
+                              src={"/static/images/about/instagram/" + image}
+                            />
+
+                            <figcaption>
+                              <div>
+                                <h2>{location ? location : "Canada"}</h2>
+                                <p>{place ? place : "Banff"}</p>
+                              </div>
+                            </figcaption>
+                          </div>
+                        </div>
                       </Grid.Column>
                     );
                   }
@@ -105,16 +117,27 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={4}>
                 {instagram.map((element, i) => {
+                  let { location, image, place } = element;
                   if (i > 3) {
                     return (
                       <Grid.Column key={i}>
-                        <Image
-                          alt={"/static/images/about/instagram/" + element}
-                          as="a"
-                          className="effect-lily"
-                          href={"https://www.instagram.com/xueyongg/?hl=en"}
-                          src={"/static/images/about/instagram/" + element}
-                        />
+                        <div className="figure">
+                          <div className="effect-lily">
+                            <Image
+                              alt={"/static/images/about/instagram/" + image}
+                              as="a"
+                              href={"https://www.instagram.com/xueyongg/?hl=en"}
+                              src={"/static/images/about/instagram/" + image}
+                            />
+
+                            <figcaption>
+                              <div>
+                                <h2>{location ? location : "Canada"}</h2>
+                                <p>{place ? place : "Banff"}</p>
+                              </div>
+                            </figcaption>
+                          </div>
+                        </div>
                       </Grid.Column>
                     );
                   }
