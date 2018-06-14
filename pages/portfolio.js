@@ -2,18 +2,13 @@ import React, { Component } from "react";
 import {
   Modal,
   Header,
-  Segment,
   Grid,
   Image,
   Container,
-  Button,
   List,
   Icon,
-  Label,
-  Input,
-  Menu
+  Label
 } from "semantic-ui-react";
-import Link from "next/link";
 import TopMenu from "./components/menu";
 import BottomMenu from "./components/bottom_menu";
 import PageHeader from "./components/page/page_header";
@@ -35,16 +30,16 @@ export default class Portfolio extends Component {
           </Head>
           <TopMenu currentPage={this.state.currentPage} />
           <PageHeader
-            mobile={false}
-            url={this.state.currentPage}
-            headerColor={"white"}
-            subHeaderColor={"white"}
-            imageName={"portfoliotest"}
-            subHeaderContent={"Take a look at what I've done."}
-            headerContent={"My humble portfolio"}
-            additionalSegmentStyle={{}}
             additionalHeaderStyle={{ fontWight: 700, zIndex: 1 }}
+            additionalSegmentStyle={{}}
             additionalSubHeaderStyle={{ zIndex: 1 }}
+            headerColor={"white"}
+            headerContent={"My humble portfolio"}
+            imageName={"portfoliotest"}
+            mobile={false}
+            subHeaderColor={"white"}
+            subHeaderContent={"Take a look at what I've done."}
+            url={this.state.currentPage}
           />
           <Container
             style={{
@@ -53,11 +48,11 @@ export default class Portfolio extends Component {
             }}
           >
             <Header as="h2" content="My Projects" textAlign="center" />
-            <Grid celled stackable columns={3} textAlign="center">
+            <Grid celled columns={3} stackable textAlign="center">
               {data.portfolio.projects.map((project, index) => {
                 let {
                   title,
-                  link,
+
                   descriptions,
                   date,
                   duration,
@@ -72,7 +67,7 @@ export default class Portfolio extends Component {
                       <p>{date}</p>
                       <p>({duration})</p>
                     </Grid.Column>
-                    <Grid.Column width={10} textAlign="left">
+                    <Grid.Column textAlign="left" width={10}>
                       <Header as="h3" content={title} textAlign="center" />
                       <List as="ul">
                         {descriptions.map((description, i) => {
@@ -91,35 +86,44 @@ export default class Portfolio extends Component {
                                 <Grid.Column key={i}>
                                   <Modal
                                     basic
+                                    centered
+                                    closeIcon
+                                    style={{ top: "15%" }}
                                     trigger={
                                       <Image
-                                        src={baseurl + screenshot}
-                                        rounded
-                                        bordered
-                                        style={{ borderWidth: 3 }}
                                         alt={baseurl + screenshot}
+                                        bordered
+                                        rounded
+                                        src={baseurl + screenshot}
+                                        style={{ borderWidth: 3 }}
                                       />
                                     }
-                                    // style={{ textAlign: "right" }}
                                   >
-                                    {/* <Modal.Header>
-                                    <Icon name="remove" />
-                                  </Modal.Header> */}
+                                    <Header
+                                      content={title}
+                                      icon="file outline"
+                                    />
                                     <Modal.Content>
                                       <Image
-                                        fluid
-                                        rounded
                                         alt={
                                           baseurl +
                                           "large/" +
                                           screenshot.replace("tn_", "")
                                         }
+                                        centered
+                                        fluid
+                                        rounded
                                         src={
                                           baseurl +
                                           "large/" +
                                           screenshot.replace("tn_", "")
                                         }
-                                        style={{ width: "100%" }}
+                                        style={{
+                                          width: "100%",
+                                          maxHeight: "calc(100vh - 90px)",
+                                          // overflowY: "auto",
+                                          cursor: "auto"
+                                        }}
                                       />
                                     </Modal.Content>
                                   </Modal>

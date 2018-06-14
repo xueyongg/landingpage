@@ -10,26 +10,26 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <style>{`body { margin: 0 } /* custom! */`}</style>
+          <style>{"body { margin: 0 } /* custom! */"}</style>
           <meta
-            name="viewport"
             content="initial-scale=1.0, width=device-width, maximum-scale=1"
             key="viewport"
+            name="viewport"
           />
           <link
+            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"
           />
           <link
-            rel="shortcut icon"
             href="/static/images/favicon/favicon.ico?v=2"
+            rel="shortcut icon"
           />
           <link
-            rel="stylesheet"
             href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css"
+            rel="stylesheet"
           />
 
-          <link rel="stylesheet" href="/_next/static/style.css" />
+          <link href="/_next/static/style.css" rel="stylesheet" />
         </Head>
 
         <body className="custom_class">
