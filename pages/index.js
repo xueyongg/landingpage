@@ -30,17 +30,20 @@ export default class Index extends Component {
         <div>
           <Head>
             <title>{"Xueyong's Site"}</title>
-            <meta name="description" content="Personal site" />
             <meta
-              name="viewport"
+              content="Joshua's a web developer that strives to produce top quality work in everything that he do. Come and take a look."
+              name="description"
+            />
+            <meta
               content="initial-scale=1.0, width=device-width,, maximum-scale=1"
               key="viewport"
+              name="viewport"
             />
             <meta
-              name="keywords"
               content="HTML,CSS,XML,JavaScript,Full stack, React, Node, Web development, Website building"
+              name="keywords"
             />
-            <meta name="author" content="Phua Xue Yong" />
+            <meta content="Phua Xue Yong" name="author" />
           </Head>
           <TopMenu currentPage="home" />
           <Home />

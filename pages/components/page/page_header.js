@@ -65,10 +65,6 @@ export default class PageHeader extends Component {
     },
     loading: true
   };
-
-  UNSAFE_componentWillMount() {
-    this.setState({ ...this.props });
-  }
   componentDidMount() {
     this.setState({ ...this.props, loading: false });
   }
@@ -140,7 +136,7 @@ export default class PageHeader extends Component {
                 style={{
                   fontSize: mobile ? "2em" : "4em",
                   fontWeight: "normal",
-                  marginBottom: 0,
+
                   marginTop: mobile ? "0.2em" : "0.4em",
                   marginBottom: mobile ? "0.05em" : "0.1em",
                   textTransform: "uppercase",
@@ -202,7 +198,7 @@ export default class PageHeader extends Component {
                     style={{
                       fontSize: mobile ? "2em" : "4em",
                       fontWeight: "normal",
-                      marginBottom: 0,
+
                       marginTop: mobile ? "0.2em" : "0.4em",
                       marginBottom: mobile ? "0.05em" : "0.1em",
                       textTransform: "uppercase",
@@ -324,7 +320,6 @@ export default class PageHeader extends Component {
                     style={{
                       fontSize: "2em",
                       fontWeight: "normal",
-                      marginBottom: 0,
                       marginTop: "0.2em",
                       marginBottom: "0.05em",
                       textTransform: "uppercase",
