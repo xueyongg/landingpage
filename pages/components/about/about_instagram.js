@@ -93,6 +93,9 @@ export default class About_instagram extends Component {
                       <Grid.Column key={i}>
                         <Image
                           alt={"/static/images/about/instagram/" + element}
+                          as="a"
+                          className="effect-lily"
+                          href={"https://www.instagram.com/xueyongg/?hl=en"}
                           src={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>
@@ -107,6 +110,9 @@ export default class About_instagram extends Component {
                       <Grid.Column key={i}>
                         <Image
                           alt={"/static/images/about/instagram/" + element}
+                          as="a"
+                          className="effect-lily"
+                          href={"https://www.instagram.com/xueyongg/?hl=en"}
                           src={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>

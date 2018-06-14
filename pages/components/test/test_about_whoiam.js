@@ -15,8 +15,8 @@ export default class About_understand extends Component {
             </Header>
 
             <Grid.Row>
-              <Grid.Column textAlign="justified">
-                {understand.description.map((des, i) => {
+              {/* <Grid.Column textAlign="justified"> */}
+              {/* {understand.description.map((des, i) => {
                   return (
                     <h4
                       key={i}
@@ -31,6 +31,38 @@ export default class About_understand extends Component {
                     </h4>
                   );
                 })}
+              </Grid.Column> */}
+
+              <Grid.Column textAlign="justified">
+                <div class="content">
+                  <h2>Lily</h2>
+                  <div class="grid">
+                    <figure class="effect-lily">
+                      <img alt="img12" src="../../../static/images/about.jpg" />
+                      <figcaption>
+                        <div>
+                          <h2>
+                            Nice <span>Lily</span>
+                          </h2>
+                          <p>Lily likes to play with crayons and pencils</p>
+                        </div>
+                        <a href="#">View more</a>
+                      </figcaption>
+                    </figure>
+                    <figure class="effect-lily">
+                      <img alt="img1" src="../../../static/images/about.jpg" />
+                      <figcaption>
+                        <div>
+                          <h2>
+                            Nice <span>Lily</span>
+                          </h2>
+                          <p>Lily likes to play with crayons and pencils</p>
+                        </div>
+                        <a href="#">View more</a>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
               </Grid.Column>
             </Grid.Row>
           </Grid>

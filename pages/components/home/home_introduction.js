@@ -64,14 +64,7 @@ export default class Home_introduction extends Component {
   };
 
   render() {
-    const {
-      active,
-      active1,
-      active2,
-      active3,
-      hover,
-      normalStyle
-    } = this.state;
+    const { hover, normalStyle } = this.state;
 
     return (
       <div>
@@ -82,18 +75,18 @@ export default class Home_introduction extends Component {
               style={{
                 padding: "2em 0em 2em 0em",
                 margin: 0,
-                
+
                 backgroundColor: "#ffff"
               }}
             >
               <Header
                 as="h2"
-                textAlign="center"
                 content="My life as a developer"
                 size="huge"
+                textAlign="center"
               />
 
-              <Grid style={{ padding: 0 }} stackable textAlign="center">
+              <Grid stackable style={{ padding: 0 }} textAlign="center">
                 <Grid.Row columns={3}>
                   {data.home.introduction.map((element, i) => {
                     let { icon, icon_size, header, description } = element;
@@ -112,10 +105,16 @@ export default class Home_introduction extends Component {
               <Grid>
                 <Grid.Row>
                   <Grid.Column textAlign="center">
-                    <Link prefetch href="/resume" passHref>
+                    <Link href="/resume" passHref prefetch>
                       <Button
                         className="home_buttons"
                         icon
+                        onMouseOut={() => {
+                          this.offHover();
+                        }}
+                        onMouseOver={() => {
+                          this.onHover();
+                        }}
                         size="huge"
                         style={
                           hover
@@ -126,12 +125,6 @@ export default class Home_introduction extends Component {
                               }
                             : normalStyle
                         }
-                        onMouseOver={() => {
-                          this.onHover();
-                        }}
-                        onMouseOut={() => {
-                          this.offHover();
-                        }}
                       >
                         <Icon name="file text outline" />
                         View my resume
