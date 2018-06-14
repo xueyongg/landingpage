@@ -73,15 +73,15 @@ export default class About_instagram extends Component {
             </Grid.Row>
           </Grid>
           <Responsive
-            minWidth={
-              Responsive.onlyTablet.minWidth
-                ? Responsive.onlyTablet.minWidth
-                : 500
-            }
             maxWidth={
               Responsive.onlyWidescreen.maxWidth
                 ? Responsive.onlyWidescreen.maxWidth
                 : 2500
+            }
+            minWidth={
+              Responsive.onlyTablet.minWidth
+                ? Responsive.onlyTablet.minWidth
+                : 500
             }
           >
             {/* <About_instagram_computer /> */}
@@ -92,8 +92,8 @@ export default class About_instagram extends Component {
                     return (
                       <Grid.Column key={i}>
                         <Image
-                          src={"/static/images/about/instagram/" + element}
                           alt={"/static/images/about/instagram/" + element}
+                          src={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>
                     );
@@ -106,8 +106,8 @@ export default class About_instagram extends Component {
                     return (
                       <Grid.Column key={i}>
                         <Image
-                          src={"/static/images/about/instagram/" + element}
                           alt={"/static/images/about/instagram/" + element}
+                          src={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>
                     );
@@ -118,7 +118,7 @@ export default class About_instagram extends Component {
           </Responsive>
 
           {/* mobile view */}
-          <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
+          <Responsive maxWidth={Responsive.onlyMobile.maxWidth} minWidth={150}>
             <Grid textAlign="center">
               {/* <About_instagram_mobile /> */}
               <Grid.Row columns={2}>
@@ -127,9 +127,9 @@ export default class About_instagram extends Component {
                     return (
                       <Grid.Column key={i}>
                         <Image
+                          alt={"/static/images/about/instagram/" + element}
                           size="big"
                           src={"/static/images/about/instagram/" + element}
-                          alt={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>
                     );
@@ -142,9 +142,9 @@ export default class About_instagram extends Component {
                     return (
                       <Grid.Column key={i}>
                         <Image
+                          alt={"/static/images/about/instagram/" + element}
                           size="big"
                           src={"/static/images/about/instagram/" + element}
-                          alt={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>
                     );
@@ -157,9 +157,9 @@ export default class About_instagram extends Component {
                     return (
                       <Grid.Column key={i}>
                         <Image
+                          alt={"/static/images/about/instagram/" + element}
                           size="big"
                           src={"/static/images/about/instagram/" + element}
-                          alt={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>
                     );
@@ -172,9 +172,9 @@ export default class About_instagram extends Component {
                     return (
                       <Grid.Column key={i}>
                         <Image
+                          alt={"/static/images/about/instagram/" + element}
                           size="big"
                           src={"/static/images/about/instagram/" + element}
-                          alt={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>
                     );
@@ -187,9 +187,9 @@ export default class About_instagram extends Component {
                     return (
                       <Grid.Column key={i}>
                         <Image
+                          alt={"/static/images/about/instagram/" + element}
                           size="big"
                           src={"/static/images/about/instagram/" + element}
-                          alt={"/static/images/about/instagram/" + element}
                         />
                       </Grid.Column>
                     );
@@ -205,25 +205,25 @@ export default class About_instagram extends Component {
           }}
         >
           <Grid.Row
-            textAlign="center"
             style={{ padding: "0em 0em 6em 0em", margin: 0 }}
+            textAlign="center"
           >
             <Grid.Column>
               <Link
-                prefetch
                 href="https://www.instagram.com/xueyongg/?hl=en"
                 passHref
+                prefetch
               >
                 <Button
                   icon
-                  size="huge"
-                  style={hover ? hoverStyle : normalStyle}
-                  onMouseOver={() => {
-                    this.onHover();
-                  }}
                   onMouseOut={() => {
                     this.offHover();
                   }}
+                  onMouseOver={() => {
+                    this.onHover();
+                  }}
+                  size="huge"
+                  style={hover ? hoverStyle : normalStyle}
                 >
                   <Icon name="instagram" />
                   Visit my Instagram

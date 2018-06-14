@@ -1,23 +1,6 @@
 import React, { Component } from "react";
 const Typed = require("typed");
-import {
-  Modal,
-  Header,
-  Button,
-  List,
-  Icon,
-  Input,
-  Menu,
-  Segment,
-  Container,
-  Image,
-  Message,
-  Responsive
-} from "semantic-ui-react";
-import Link from "next/link";
-import TopMenu from "./components/menu";
-import Home_projects from "./components/home/home_projects";
-import Home_about from "./components/home/home-about";
+import { Responsive } from "semantic-ui-react";
 import BottomMenu from "./components/bottom_menu";
 import Home_introduction from "./components/home/home_introduction";
 import PageHeader from "./components/page/page_header";
