@@ -22,7 +22,7 @@
     "react/jsx-uses-vars": "error",
     "react/jsx-sort-props": "error",
     "react/no-unknown-property": "off",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "error"
   },
   "plugins": ["react"]
 }

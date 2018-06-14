@@ -88,7 +88,7 @@ export default class About_instagram extends Component {
             <Grid textAlign="center">
               <Grid.Row columns={4}>
                 {instagram.map((element, i) => {
-                  let { location, image, place } = element;
+                  let { image } = element;
 
                   if (Number(i) < 4) {
                     return (
@@ -110,7 +110,7 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={4}>
                 {instagram.map((element, i) => {
-                  let { location, image, place } = element;
+                  let { image } = element;
                   if (i > 3) {
                     return (
                       <Grid.Column key={i}>
@@ -138,7 +138,7 @@ export default class About_instagram extends Component {
               {/* <About_instagram_mobile /> */}
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
-                  let { location, image, place } = element;
+                  let { image } = element;
                   if (Number(i) < 2) {
                     return (
                       <Grid.Column key={i}>
@@ -155,7 +155,7 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
-                  let { location, image, place } = element;
+                  let { image } = element;
                   if (1 < Number(i) && Number(i) < 4) {
                     return (
                       <Grid.Column key={i}>
@@ -172,7 +172,7 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
-                  let { location, image, place } = element;
+                  let { image } = element;
                   if (3 < Number(i) && Number(i) < 6) {
                     return (
                       <Grid.Column key={i}>
@@ -189,7 +189,7 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
-                  let { location, image, place } = element;
+                  let { image } = element;
                   if (5 < Number(i) && Number(i) < 8) {
                     return (
                       <Grid.Column key={i}>
@@ -206,7 +206,7 @@ export default class About_instagram extends Component {
               </Grid.Row>
               <Grid.Row columns={2}>
                 {instagram.map((element, i) => {
-                  let { location, image, place } = element;
+                  let { image } = element;
                   if (7 < Number(i) && Number(i) < 10) {
                     return (
                       <Grid.Column key={i}>
