@@ -14,6 +14,7 @@ import BottomMenu from "./components/bottom_menu";
 import PageHeader from "./components/page/page_header";
 import Head from "next/head";
 import Layout from "./utils/layout";
+import Link from "next/link";
 const data = require("../static/assets/data.json");
 
 export default class Portfolio extends Component {
@@ -52,7 +53,7 @@ export default class Portfolio extends Component {
               {data.portfolio.projects.map((project, index) => {
                 let {
                   title,
-
+                  link,
                   descriptions,
                   date,
                   duration,
@@ -68,8 +69,18 @@ export default class Portfolio extends Component {
                       <p>({duration})</p>
                     </Grid.Column>
                     <Grid.Column textAlign="left" width={10}>
-                      <Header as="h3" content={title} textAlign="center" />
-                      <List as="ul">
+                      {link !== "" ? (
+                        <Header as="h3" content={title} textAlign="center">
+                          {title}
+                          <Header.Subheader as="a" href={link} target="_blank">
+                            {link}
+                          </Header.Subheader>
+                        </Header>
+                      ) : (
+                        <Header as="h3" content={title} textAlign="center" />
+                      )}
+
+                      <List as="ul" link>
                         {descriptions.map((description, i) => {
                           return (
                             <List.Item as="li" key={i}>
