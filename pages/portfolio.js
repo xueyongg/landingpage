@@ -70,10 +70,10 @@ export default class Portfolio extends Component {
                     </Grid.Column>
                     <Grid.Column textAlign="left" width={10}>
                       {link !== "" ? (
-                        <Header as="h3" content={title} textAlign="center">
+                        <Header as="h3" content={title} icon textAlign="center">
                           {title}
                           <Header.Subheader as="a" href={link} target="_blank">
-                            {link}
+                            Check me out
                           </Header.Subheader>
                         </Header>
                       ) : (
