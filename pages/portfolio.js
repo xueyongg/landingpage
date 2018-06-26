@@ -110,10 +110,19 @@ export default class Portfolio extends Component {
                                       />
                                     }
                                   >
-                                    <Header
-                                      content={title}
-                                      icon="file outline"
-                                    />
+                                    {link ? (
+                                      <Header
+                                        as="a"
+                                        content={title}
+                                        href={link}
+                                        icon="file outline"
+                                      />
+                                    ) : (
+                                      <Header
+                                        content={title}
+                                        icon="file outline"
+                                      />
+                                    )}
                                     <Modal.Content>
                                       <Image
                                         alt={
