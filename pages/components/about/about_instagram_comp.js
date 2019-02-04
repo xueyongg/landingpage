@@ -27,8 +27,8 @@ export default class About_instagram_computer extends Component {
               return (
                 <Grid.Column key={i}>
                   <Image
-                    src={"/static/images/about/instagram/" + element}
                     alt={"/static/images/about/instagram/" + element}
+                    src={"/static/images/about/instagram/" + element}
                   />
                 </Grid.Column>
               );
@@ -41,8 +41,8 @@ export default class About_instagram_computer extends Component {
               return (
                 <Grid.Column key={i}>
                   <Image
-                    src={"/static/images/about/instagram/" + element}
                     alt={"/static/images/about/instagram/" + element}
+                    src={"/static/images/about/instagram/" + element}
                   />
                 </Grid.Column>
               );

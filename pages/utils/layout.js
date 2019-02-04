@@ -1,6 +1,7 @@
 import React from "react";
 import { initGA, logPageView } from "./analytics";
 import Head from "next/head";
+import PropTypes from "prop-types";
 
 export default class Layout extends React.Component {
   componentDidMount() {
@@ -14,10 +15,14 @@ export default class Layout extends React.Component {
     return (
       <div>
         <Head>
-          <meta http-equiv="Expires" content="30" />
+          <meta content="30" http-equiv="Expires" />
         </Head>
         {this.props.children}
       </div>
     );
   }
 }
+
+Layout.proptypes = {
+  children: PropTypes.children
+};

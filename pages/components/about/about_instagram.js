@@ -74,6 +74,7 @@ export default class About_instagram extends Component {
           </Grid>
           <Responsive
             maxWidth={
+              Responsive.onlyWidescreen &&
               Responsive.onlyWidescreen.maxWidth
                 ? Responsive.onlyWidescreen.maxWidth
                 : 2500
