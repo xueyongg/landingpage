@@ -45,10 +45,20 @@ export default class Resume_work extends Component {
                         <Item key={index}>
                           <Item.Content>
                             <Item.Header as="h2" href={companyWebsite}>
-                              {company}
+                              {companyWebsite ? (
+                                <a href={companyWebsite}>{company}</a>
+                              ) : (
+                                <div>{company}</div>
+                              )}
                             </Item.Header>
                             <Item.Meta>
-                              <a href={jobDescriptionLink}>{jobTitle} </a>
+                              {jobDescriptionLink ? (
+                                <a href={jobDescriptionLink}>{jobTitle} </a>
+                              ) : (
+                                <div style={{ color: "rgba(0,0,0,.4)" }}>
+                                  {jobTitle}
+                                </div>
+                              )}
                             </Item.Meta>
                             <Item.Meta>{date}</Item.Meta>
 
