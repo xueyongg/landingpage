@@ -99,7 +99,7 @@ export default class About_instagram extends Component {
                             <Image
                               alt={"/static/images/about/instagram/" + image}
                               as="a"
-                              href={"https://www.instagram.com/xueyongg/?hl=en"}
+                              href={"https://www.instagram.com/whatthexue/?hl=en"}
                               src={"/static/images/about/instagram/" + image}
                             />
                           </div>
@@ -120,7 +120,7 @@ export default class About_instagram extends Component {
                             <Image
                               alt={"/static/images/about/instagram/" + image}
                               as="a"
-                              href={"https://www.instagram.com/xueyongg/?hl=en"}
+                              href={"https://www.instagram.com/whatthexue/?hl=en"}
                               src={"/static/images/about/instagram/" + image}
                             />
                           </div>
@@ -146,7 +146,7 @@ export default class About_instagram extends Component {
                         <Image
                           alt={"/static/images/about/instagram/" + image}
                           as="a"
-                          href={"https://www.instagram.com/xueyongg/?hl=en"}
+                          href={"https://www.instagram.com/whatthexue/?hl=en"}
                           src={"/static/images/about/instagram/" + image}
                         />
                       </Grid.Column>
@@ -163,7 +163,7 @@ export default class About_instagram extends Component {
                         <Image
                           alt={"/static/images/about/instagram/" + image}
                           as="a"
-                          href={"https://www.instagram.com/xueyongg/?hl=en"}
+                          href={"https://www.instagram.com/whatthexue/?hl=en"}
                           src={"/static/images/about/instagram/" + image}
                         />
                       </Grid.Column>
@@ -180,7 +180,7 @@ export default class About_instagram extends Component {
                         <Image
                           alt={"/static/images/about/instagram/" + image}
                           as="a"
-                          href={"https://www.instagram.com/xueyongg/?hl=en"}
+                          href={"https://www.instagram.com/whatthexue/?hl=en"}
                           src={"/static/images/about/instagram/" + image}
                         />
                       </Grid.Column>
@@ -197,7 +197,7 @@ export default class About_instagram extends Component {
                         <Image
                           alt={"/static/images/about/instagram/" + image}
                           as="a"
-                          href={"https://www.instagram.com/xueyongg/?hl=en"}
+                          href={"https://www.instagram.com/whatthexue/?hl=en"}
                           src={"/static/images/about/instagram/" + image}
                         />
                       </Grid.Column>
@@ -216,7 +216,7 @@ export default class About_instagram extends Component {
                             <Image
                               alt={"/static/images/about/instagram/" + image}
                               as="a"
-                              href={"https://www.instagram.com/xueyongg/?hl=en"}
+                              href={"https://www.instagram.com/whatthexue/?hl=en"}
                               src={"/static/images/about/instagram/" + image}
                             />
                           </div>
@@ -240,7 +240,7 @@ export default class About_instagram extends Component {
           >
             <Grid.Column>
               <Link
-                href="https://www.instagram.com/xueyongg/?hl=en"
+                href="https://www.instagram.com/whatthexue/?hl=en"
                 passHref
                 prefetch
               >
