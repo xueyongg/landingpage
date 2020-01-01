@@ -69,7 +69,7 @@ export default class BottomMenu extends Component {
               </List.Item>
               <List.Item
                 as="a"
-                href="https://www.instagram.com/xueyongg/?hl=en"
+                href="https://www.instagram.com/whatthexue/?hl=en"
               >
                 <Icon name="instagram" size="large" />
               </List.Item>
