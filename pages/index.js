@@ -40,8 +40,12 @@ export default class Index extends Component {
               name="viewport"
             />
             <meta
-              content="HTML,CSS,XML,JavaScript,Full stack, React, Node, Web development, Website building"
+              content="HTML,CSS,XML,JavaScript,Full stack, React, Vue, Software engineer, Node, Web development, Website building"
               name="keywords"
+            />
+            <meta
+              content="https://phuaxueyong.com/static/images/about/phone/six.JPG"
+              property="og:image"
             />
             <meta content="Phua Xue Yong" name="author" />
           </Head>
