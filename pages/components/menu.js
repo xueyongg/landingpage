@@ -7,7 +7,7 @@ import {
   Menu,
   Visibility,
   Responsive,
-  Sidebar
+  Sidebar,
 } from "semantic-ui-react";
 import Link from "next/link";
 import { PropTypes } from "prop-types";
@@ -17,13 +17,13 @@ export default class TopMenu extends Component {
     menuFixed: false,
     overlayFixed: false,
     visible: false,
-    normalStyle: {}
+    normalStyle: {},
   };
 
   componentDidMount() {
     // console.log(this.props);
     this.setState({
-      activeItem: this.props.currentPage
+      activeItem: this.props.currentPage,
     });
   }
 
@@ -35,11 +35,11 @@ export default class TopMenu extends Component {
     this.setState({ visible: !this.state.visible });
   }
 
-  handleOverlayRef = c => {
+  handleOverlayRef = (c) => {
     const { overlayRect } = this.state;
     if (!overlayRect)
       this.setState({
-        overlayRect: _.pick(c.getBoundingClientRect(), "height", "width")
+        overlayRect: _.pick(c.getBoundingClientRect(), "height", "width"),
       });
   };
 
@@ -69,7 +69,7 @@ export default class TopMenu extends Component {
       overlayFixed,
       overlayRect,
       activeItem,
-      visible
+      visible,
     } = this.state;
 
     let menuStyle = {
@@ -89,7 +89,7 @@ export default class TopMenu extends Component {
 
       fontWeight: 400,
       fontSize: 16,
-      letterSpacing: ".15em"
+      letterSpacing: ".15em",
     };
 
     const fixedMenuStyle = {
@@ -104,7 +104,7 @@ export default class TopMenu extends Component {
       fontWeight: 400,
       fontSize: 16,
       letterSpacing: ".15em",
-      textTransform: "uppercase"
+      textTransform: "uppercase",
     };
 
     return (
@@ -163,6 +163,13 @@ export default class TopMenu extends Component {
                     <p>Resume</p>
                   </Menu.Item>
                 </Link>
+                <Link>
+                  <Menu.Item active={activeItem === "blog"} name="blog">
+                    <a href="https://blog.phuaxueyong.com/">
+                      <p>Blog</p>
+                    </a>
+                  </Menu.Item>
+                </Link>
                 {/* <Link prefetch href={{ pathname: "/contact" }} passHref>
                   <Menu.Item name="contact" active={activeItem === "contact"}>
                     <p>Contact</p>
@@ -185,7 +192,7 @@ export default class TopMenu extends Component {
               style={{
                 height: "100%",
                 overflowX: "hidden",
-                overflowY: "hidden"
+                overflowY: "hidden",
               }}
               visible={visible}
               width="very thin"
@@ -252,5 +259,5 @@ export default class TopMenu extends Component {
 }
 
 TopMenu.propTypes = {
-  currentPage: PropTypes.string
+  currentPage: PropTypes.string,
 };
