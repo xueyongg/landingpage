@@ -7,21 +7,22 @@ import {
   Container,
   List,
   Icon,
-  Label
+  Label,
 } from "semantic-ui-react";
-import TopMenu from "./components/menu";
-import BottomMenu from "./components/bottom_menu";
-import PageHeader from "./components/page/page_header";
+import TopMenu from "../components/menu";
+import BottomMenu from "../components/bottom_menu";
+import PageHeader from "../components/page/page_header";
 import Head from "next/head";
-import Layout from "./utils/layout";
-import _ from "lodash";
-const data = require("../static/assets/data.json");
+import Layout from "../utils/layout";
+const data = require("../../static/assets/data.json");
 
 export default class Portfolio extends Component {
   state = {
-    currentPage: "portfolio"
+    currentPage: "portfolio",
   };
   render() {
+    const projects = data.portfolio.projects.reverse();
+
     return (
       <Layout>
         <div>
@@ -44,12 +45,12 @@ export default class Portfolio extends Component {
           <Container
             style={{
               margin: "0em 0em 0em 0em",
-              padding: "2em 0em 2em 0em "
+              padding: "2em 0em 2em 0em ",
             }}
           >
             <Header as="h2" content="My Projects" textAlign="center" />
             <Grid celled columns={3} stackable textAlign="center">
-              {data.portfolio.projects.reverse().map((project, index) => {
+              {projects.map((project, index) => {
                 let {
                   title,
                   link,
@@ -58,7 +59,7 @@ export default class Portfolio extends Component {
                   duration,
                   skills,
                   baseurl,
-                  screenshots
+                  screenshots,
                 } = project;
                 return (
                   <Grid.Row key={index}>
@@ -141,7 +142,7 @@ export default class Portfolio extends Component {
                                           width: "100%",
                                           maxHeight: "calc(100vh - 90px)",
                                           // overflowY: "auto",
-                                          cursor: "auto"
+                                          cursor: "auto",
                                         }}
                                       />
                                     </Modal.Content>
