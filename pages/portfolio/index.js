@@ -14,7 +14,7 @@ export default class Portfolio extends Component {
     currentPage: "portfolio",
   };
   render() {
-    const projects = data.portfolio.projects.reverse();
+    const projects = data.portfolio.projects;
 
     return (
       <Layout>
