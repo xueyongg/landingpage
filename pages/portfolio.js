@@ -14,6 +14,7 @@ import BottomMenu from "./components/bottom_menu";
 import PageHeader from "./components/page/page_header";
 import Head from "next/head";
 import Layout from "./utils/layout";
+import _ from "lodash";
 const data = require("../static/assets/data.json");
 
 export default class Portfolio extends Component {
@@ -48,7 +49,7 @@ export default class Portfolio extends Component {
           >
             <Header as="h2" content="My Projects" textAlign="center" />
             <Grid celled columns={3} stackable textAlign="center">
-              {data.portfolio.projects.map((project, index) => {
+              {data.portfolio.projects.reverse().map((project, index) => {
                 let {
                   title,
                   link,
